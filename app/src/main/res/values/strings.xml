@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SpaceTrader</string>
+    <string name="name_label">Name:</string>
 </resources>
