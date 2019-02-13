@@ -27,7 +27,8 @@ public class Player {
      * @param traderPoints - points allocated to the trader skill
      * @param engineerPoints - points allocated to the engineer skill
      */
-    public Player (int pilotPoints, int fighterPoints, int traderPoints, int engineerPoints) {
+    public Player (String name, int pilotPoints, int fighterPoints, int traderPoints, int engineerPoints) {
+        this.name = name;
         this.pilotPoints = pilotPoints;
         this.fighterPoints = fighterPoints;
         this.traderPoints = traderPoints;
