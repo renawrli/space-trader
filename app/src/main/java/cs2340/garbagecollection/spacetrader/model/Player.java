@@ -2,6 +2,7 @@ package cs2340.garbagecollection.spacetrader.model;
 
 public class Player {
     private String philena = "Test";
+    private String plzwork = "Test1";
 
     /** player name **/
     private String name;
