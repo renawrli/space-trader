@@ -16,6 +16,6 @@ public class Player {
     /** points for engineer **/
     private int engineerPoints;
 
-    private int andrew;
-    private String philena;
+    private int andrew ;
+    private String philena = "hiiiiiiii we got it fixed!!!";
 }
