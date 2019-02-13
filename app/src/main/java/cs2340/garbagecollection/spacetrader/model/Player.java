@@ -17,4 +17,5 @@ public class Player {
     private int engineerPoints;
 
     private int andrew;
+    private String philena;
 }
