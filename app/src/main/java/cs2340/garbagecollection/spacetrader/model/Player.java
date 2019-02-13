@@ -48,4 +48,45 @@ public class Player {
     public boolean equalsAllowedPoints(int pilotPts, int fighterPts, int traderPts, int engineerPts) {
         return (pilotPts + fighterPts + traderPts + engineerPts) == MAX_POINTS;
     }
+
+    /** Getters and Setters **/
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPilotPoints() {
+        return pilotPoints;
+    }
+
+    public void setPilotPoints(int pilotPoints) {
+        this.pilotPoints = pilotPoints;
+    }
+
+    public int getFighterPoints() {
+        return fighterPoints;
+    }
+
+    public void setFighterPoints(int fighterPoints) {
+        this.fighterPoints = fighterPoints;
+    }
+
+    public int getTraderPoints() {
+        return traderPoints;
+    }
+
+    public void setTraderPoints(int traderPoints) {
+        this.traderPoints = traderPoints;
+    }
+
+    public int getEngineerPoints() {
+        return engineerPoints;
+    }
+
+    public void setEngineerPoints(int engineerPoints) {
+        this.engineerPoints = engineerPoints;
+    }
 }
