@@ -1,6 +1,8 @@
 package cs2340.garbagecollection.spacetrader.model;
 
 public class Player {
+    private String philena = "Test";
+
     /** player name **/
     private String name;
 
