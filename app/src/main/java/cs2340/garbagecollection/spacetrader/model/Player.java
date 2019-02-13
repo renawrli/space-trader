@@ -16,6 +16,35 @@ public class Player {
     /** points for engineer **/
     private int engineerPoints;
 
-    private int andrew ;
-    private String philena = "hiiiiiiii we got it fixed!!!";
+    /** maximum number of allocated points **/
+    private final int MAX_POINTS = 16;
+
+    /**
+     * Create a Player with allocated skill points
+     *
+     * @param pilotPoints - points allocated to the Pilot skill
+     * @param fighterPoints - points allocated to the Fighter skill
+     * @param traderPoints - points allocated to the trader skill
+     * @param engineerPoints - points allocated to the engineer skill
+     */
+    public Player (int pilotPoints, int fighterPoints, int traderPoints, int engineerPoints) {
+        this.pilotPoints = pilotPoints;
+        this.fighterPoints = fighterPoints;
+        this.traderPoints = traderPoints;
+        this.engineerPoints = engineerPoints;
+    }
+
+    /**
+     * Checks if a potential Player's skill points equal the allowed number of points.
+     *
+     * @param pilotPts - amount of allocated pilotPoints
+     * @param fighterPts - amount of allocated fighterPoints
+     * @param traderPts - amount of allocated traderPoints
+     * @param engineerPts - amount of allocated engineerPoints
+     * @return true if the number of allocated points equal the number allowed. false if
+     * not enough or too many points have been allocated.
+     */
+    public boolean equalsAllowedPoints(int pilotPts, int fighterPts, int traderPts, int engineerPts) {
+        return (pilotPts + fighterPts + traderPts + engineerPts) == MAX_POINTS;
+    }
 }
