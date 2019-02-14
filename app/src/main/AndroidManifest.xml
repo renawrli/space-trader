@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".views.MainActivity">
+        </activity>
+        <activity android:name=".views.ConfigurationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
