@@ -20,6 +20,14 @@
         android:paddingLeft="50dp"
         android:hint="@string/name_label"
         android:layout_toRightOf="@+id/nameLabel" />
+    <TextView
+        android:id="@+id/difficultyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameLabel"
+        android:layout_alignTop="@+id/difficultySpinner"
+        android:paddingLeft="50dp"
+        android:text="@string/difficulty_label" />
     <Spinner
         android:id="@+id/difficultySpinner"
         android:layout_width="wrap_content"
@@ -62,6 +70,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/pilotPointsLabel"
+        android:onClick="decPilot"
         android:background="@android:drawable/ic_delete"
         android:paddingLeft="25dp" />
     <TextView
@@ -83,6 +92,7 @@
         android:layout_below="@id/remainingPointsDisplay"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+        android:onClick="incPilot"
         android:layout_toRightOf="@+id/pilotPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:paddingLeft="25dp" />
@@ -101,6 +111,7 @@
         android:layout_below="@id/pilotPointsDisplay"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+        android:onClick="decFighter"
         android:layout_toRightOf="@+id/fighterPointsLabel"
         android:background="@android:drawable/ic_delete"
         android:paddingLeft="25dp" />
@@ -125,6 +136,7 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/fighterPointsDisplay"
         android:background="@android:drawable/ic_input_add"
+        android:onClick="incFighter"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/traderPointsLabel"
@@ -141,6 +153,7 @@
         android:layout_below="@id/fighterPointsDisplay"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+        android:onClick="decTrader"
         android:layout_toRightOf="@+id/traderPointsLabel"
         android:background="@android:drawable/ic_delete"
         android:paddingLeft="25dp" />
@@ -164,6 +177,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/traderPointsDisplay"
+        android:onClick="incTrader"
         android:background="@android:drawable/ic_input_add"
         android:paddingLeft="25dp" />
     <TextView
@@ -182,6 +196,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/engineerPointsLabel"
+        android:onClick="decEngineer"
         android:background="@android:drawable/ic_delete"
         android:paddingLeft="25dp" />
     <TextView
@@ -203,6 +218,7 @@
         android:layout_below="@id/traderPointsDisplay"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+        android:onClick="incEngineer"
         android:layout_toRightOf="@+id/engineerPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:paddingLeft="25dp" />
@@ -211,6 +227,7 @@
         android:id="@+id/createPlayerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="createPlayer"
         android:layout_centerInParent="true"
         android:layout_below="@+id/engineerPointsDisplay"
         android:layout_marginTop="50dp"
