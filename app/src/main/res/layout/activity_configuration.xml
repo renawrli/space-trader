@@ -1,17 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-    android:id="@+id/nameLabel"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/name_label" />
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingLeft="50dp"
+        android:text="@string/name_label" />
     <EditText
         android:id="@+id/nameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingLeft="50dp"
         android:hint="@string/name_label"
         android:layout_toRightOf="@+id/nameLabel" />
+    <Spinner
+        android:id="@+id/difficultySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameInput"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="75dp" />
+    <TextView
+        android:id="@+id/skillPointsLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/difficultySpinner"
+        android:paddingTop="50dp"
+        android:paddingLeft="25dp"
+        android:text="@string/skill_points_label" />
+    <TextView
+        android:id="@+id/remainingPointsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/skillPointsLabel"
+        android:paddingTop="50dp"
+        android:paddingLeft="100dp"
+        android:layout_below="@id/difficultySpinner" />
+    <TextView
+        android:id="@+id/pilotPointsLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/skillPointsLabel"
+        android:paddingTop="50dp"
+        android:paddingLeft="25dp"
+        android:text="@string/pilot_points_label" />
+
+    <Button
+        android:id="@+id/pilotPointsMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/remainingPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/pilotPointsLabel"
+        android:background="@android:drawable/ic_delete"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/pilotPointsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pilotPointsMinus"
+        android:paddingTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="100dp"
+        android:layout_below="@id/remainingPointsDisplay" />
+
+    <Button
+        android:id="@+id/pilotPointsPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/remainingPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/pilotPointsDisplay"
+        android:background="@android:drawable/ic_input_add"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/fighterPointsLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pilotPointsLabel"
+        android:paddingTop="50dp"
+        android:paddingLeft="25dp"
+        android:text="@string/fighter_points_label" />
+    <Button
+        android:id="@+id/fighterPointsMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/pilotPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/fighterPointsLabel"
+        android:background="@android:drawable/ic_delete"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/fighterPointsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fighterPointsMinus"
+        android:paddingTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="100dp"
+        android:layout_below="@id/pilotPointsDisplay" />
+
+    <Button
+        android:id="@+id/fighterPointsPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/pilotPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/fighterPointsDisplay"
+        android:background="@android:drawable/ic_input_add"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/traderPointsLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fighterPointsLabel"
+        android:paddingTop="50dp"
+        android:paddingLeft="25dp"
+        android:text="@string/trader_points_label" />
+    <Button
+        android:id="@+id/traderPointsMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/fighterPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/traderPointsLabel"
+        android:background="@android:drawable/ic_delete"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/traderPointsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/traderPointsMinus"
+        android:paddingTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="100dp"
+        android:layout_below="@id/fighterPointsDisplay" />
+
+    <Button
+        android:id="@+id/traderPointsPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/fighterPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/traderPointsDisplay"
+        android:background="@android:drawable/ic_input_add"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/engineerPointsLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/traderPointsLabel"
+        android:paddingTop="50dp"
+        android:paddingLeft="25dp"
+        android:text="@string/engineer_points_label" />
+    <Button
+        android:id="@+id/engineerPointsMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/traderPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/engineerPointsLabel"
+        android:background="@android:drawable/ic_delete"
+        android:paddingLeft="25dp" />
+    <TextView
+        android:id="@+id/engineerPointsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/engineerPointsMinus"
+        android:paddingTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="100dp"
+        android:layout_below="@id/traderPointsDisplay" />
+
+    <Button
+        android:id="@+id/engineerPointsPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/traderPointsDisplay"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/engineerPointsDisplay"
+        android:background="@android:drawable/ic_input_add"
+        android:paddingLeft="25dp" />
+
+    <Button
+        android:id="@+id/createPlayerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/engineerPointsDisplay"
+        android:layout_marginTop="50dp"
+        android:text="@string/create_player_label" />
+
 </RelativeLayout>

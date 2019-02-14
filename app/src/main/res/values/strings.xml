@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">SpaceTrader</string>
     <string name="name_label">Name:</string>
+    <string name="skill_points_label">Remaining Skill Points:</string>
+    <string name="pilot_points_label">Pilot:</string>
+    <string name="fighter_points_label">Fighter:</string>
+    <string name="trader_points_label">Trader:</string>
+    <string name="engineer_points_label">Engineer:</string>
+    <string name="create_player_label">Ok</string>
 </resources>
