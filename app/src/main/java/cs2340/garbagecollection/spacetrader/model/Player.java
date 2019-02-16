@@ -1,22 +1,6 @@
 package cs2340.garbagecollection.spacetrader.model;
 
 public class Player {
-    /**
-     * enum for the difficulty levels in Player
-     * getDifficulty returns the String representation for each enum
-     */
-    public enum Difficulty {
-        EASY("Easy"), INTERMEDIATE("Intermediate"), EXPERT("Expert");
-        private String difficulty;
-
-        Difficulty(String difficulty) {
-            this.difficulty = difficulty;
-        }
-
-        public String getDifficulty() {
-            return difficulty;
-        }
-    }
     /** player name **/
     private String name;
 
@@ -32,38 +16,30 @@ public class Player {
     /** points for engineer **/
     private int engineerPoints;
 
-    private Difficulty difficulty;
+    /** amount of money the Player has **/
+    private int credits;
+
+    /** the Player's Ship **/
+    private Ship ship;
+
     /**
-     * Create a Player with allocated skill points
+     * Create a Player with 1000 base credits and a Gnat spaceship, along with assigned skill points
      *
+     * @param name - Player's name
      * @param pilotPoints - points allocated to the Pilot skill
      * @param fighterPoints - points allocated to the Fighter skill
      * @param traderPoints - points allocated to the trader skill
      * @param engineerPoints - points allocated to the engineer skill
-     * @param difficulty - Difficulty enum level for this player
      */
-    public Player (String name, int pilotPoints, int fighterPoints, int traderPoints, int engineerPoints, Difficulty difficulty) {
+    public Player (String name, int pilotPoints, int fighterPoints, int traderPoints, int engineerPoints) {
         this.name = name;
         this.pilotPoints = pilotPoints;
         this.fighterPoints = fighterPoints;
         this.traderPoints = traderPoints;
         this.engineerPoints = engineerPoints;
-        this.difficulty = difficulty;
+        this.credits = 1000;
+        this.ship = new Ship(ShipType.GNAT);
     }
-
-//    /**
-//     * Checks if a potential Player's skill points equal the allowed number of points.
-//     *
-//     * @param pilotPts - amount of allocated pilotPoints
-//     * @param fighterPts - amount of allocated fighterPoints
-//     * @param traderPts - amount of allocated traderPoints
-//     * @param engineerPts - amount of allocated engineerPoints
-//     * @return true if the number of allocated points equal the number allowed. false if
-//     * not enough or too many points have been allocated.
-//     */
-//    public boolean equalsAllowedPoints(int pilotPts, int fighterPts, int traderPts, int engineerPts) {
-//        return (pilotPts + fighterPts + traderPts + engineerPts) == MAX_POINTS;
-//    }
 
     /** Getters and Setters **/
     public String getName() {
@@ -105,10 +81,6 @@ public class Player {
     public void setEngineerPoints(int engineerPoints) {
         this.engineerPoints = engineerPoints;
     }
-
-    public void setDifficulty(Difficulty difficulty) { this.difficulty = difficulty; }
-
-    public Difficulty getDifficulty() { return difficulty; }
 
     @Override
     public String toString() {
