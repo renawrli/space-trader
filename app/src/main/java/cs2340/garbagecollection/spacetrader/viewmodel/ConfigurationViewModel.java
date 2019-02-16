@@ -33,6 +33,7 @@ public class ConfigurationViewModel extends AndroidViewModel {
     }
 
     //TODO: get the game and get player the game and get player attributes you want
+    //TODO: make a method to instantiate a player
 
 
 //    public void setCurrentPlayer(Player player) {

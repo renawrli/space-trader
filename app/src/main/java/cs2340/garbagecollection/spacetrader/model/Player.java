@@ -16,9 +16,16 @@ public class Player {
     /** points for engineer **/
     private int engineerPoints;
 
+    /** amount of money the Player has **/
+    private int credits;
+
+    /** the Player's Ship **/
+    private Ship ship;
+
     /**
-     * Create a Player with allocated skill points
+     * Create a Player with 1000 base credits and a Gnat spaceship, along with assigned skill points
      *
+     * @param name - Player's name
      * @param pilotPoints - points allocated to the Pilot skill
      * @param fighterPoints - points allocated to the Fighter skill
      * @param traderPoints - points allocated to the trader skill
@@ -30,6 +37,8 @@ public class Player {
         this.fighterPoints = fighterPoints;
         this.traderPoints = traderPoints;
         this.engineerPoints = engineerPoints;
+        this.credits = 1000;
+        this.ship = new Ship(ShipType.GNAT);
     }
 
     /** Getters and Setters **/
