@@ -1,5 +1,7 @@
 package cs2340.garbagecollection.spacetrader.model;
-
+/**
+ * enum for the Tech Level
+ */
 public enum TechLevel {
     PreAgriculture("Pre-Agriculture"),
     Agriculture("Agriculture"),
