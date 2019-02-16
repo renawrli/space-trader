@@ -5,7 +5,7 @@ package cs2340.garbagecollection.spacetrader.model;
  * getDifficulty returns the String representation for each enum
  */
 public enum Difficulty {
-    EASY("Easy"), INTERMEDIATE("Intermediate"), EXPERT("Expert");
+    BEGINNER("Beginner"), EASY("Easy"), NORMAL("Normal"), HARD("Hard"), IMPOSSIBLE("Impossible");
     private String difficulty;
 
     Difficulty(String difficulty) {
