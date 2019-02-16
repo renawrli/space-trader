@@ -84,6 +84,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return String.format("[Player name:%s, pilotPoints:%d, fighterPoints:%d, traderPoints:%d, engineerPoints:%d]", name, pilotPoints, fighterPoints, traderPoints, engineerPoints);
+        return String.format("Player[name:%s, pilotPoints:%d, fighterPoints:%d, traderPoints:%d, engineerPoints:%d]", name, pilotPoints, fighterPoints, traderPoints, engineerPoints);
     }
 }

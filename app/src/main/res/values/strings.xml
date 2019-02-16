@@ -9,8 +9,10 @@
     <string name="create_player_label">Ok</string>
     <string name="difficulty_label">Difficulty</string>
     <string-array name="difficulties">
+        <item>Beginner</item>
         <item>Easy</item>
-        <item>Intermediate</item>
-        <item>Expert</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Impossible</item>
     </string-array>
 </resources>

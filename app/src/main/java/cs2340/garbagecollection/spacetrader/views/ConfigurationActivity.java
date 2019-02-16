@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.viewmodel.ConfigurationViewModel;
 import cs2340.garbagecollection.spacetrader.R;
@@ -41,18 +42,16 @@ public class ConfigurationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_configuration);
 
         difficultySpinner = findViewById(R.id.difficultySpinner);
-        Player.Difficulty[] difficulties = Player.Difficulty.values();
+        Difficulty[] difficulties = Difficulty.values();
         String[] difficultiesAsString = new String[difficulties.length];
         for (int i = 0; i < difficulties.length; i++) {
             difficultiesAsString[i] = difficulties[i].getDifficulty();
         }
-        //ArrayAdapter<String> difficultyArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, R.array.difficulties);
-        ArrayAdapter<String> difficultyArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, difficultiesAsString);
+        ArrayAdapter<CharSequence> difficultyArrayAdapter = ArrayAdapter.createFromResource(this, R.array.difficulties, android.R.layout.simple_spinner_item);
         difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         difficultySpinner.setAdapter(difficultyArrayAdapter);
         nameField = findViewById(R.id.nameInput);
 
-        playerName = nameField.getText().toString();
         nameField = findViewById(R.id.nameInput);
         pDisplay = findViewById(R.id.pilotPointsDisplay);
         traderDisplay = findViewById(R.id.traderPointsDisplay);
@@ -62,12 +61,13 @@ public class ConfigurationActivity extends AppCompatActivity {
     }
 
     public void createPlayer(View view) {
-        Player.Difficulty difficulty = Player.Difficulty.EASY;
-        for (Player.Difficulty dif : Player.Difficulty.values()) {
+        Difficulty difficulty = Difficulty.EASY; //
+        for (Difficulty dif : Difficulty.values()) {
             if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))
                 difficulty = dif;
         }
-        player = new Player(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints, difficulty);
+        playerName = nameField.getText().toString();
+        player = new Player(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
         Log.d("TEST", player.toString());
     }
 

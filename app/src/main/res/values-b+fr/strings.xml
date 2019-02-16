@@ -9,8 +9,10 @@
     <string name="create_player_label">D"'"Accord</string>
     <string name="difficulty_label">Difficulté</string>
     <string-array name="difficulties">
+        <item>Débutant</item>
         <item>Facile</item>
         <item>Intermédiare</item>
-        <item>Expert</item>
+        <item>Difficile</item>
+        <item>Impossible</item>
     </string-array>
 </resources>
