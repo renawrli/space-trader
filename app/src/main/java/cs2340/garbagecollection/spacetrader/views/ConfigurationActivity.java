@@ -46,7 +46,7 @@ public class ConfigurationActivity extends AppCompatActivity {
         for (int i = 0; i < difficulties.length; i++) {
             difficultiesAsString[i] = difficulties[i].getDifficulty();
         }
-
+        //ArrayAdapter<String> difficultyArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, R.array.difficulties);
         ArrayAdapter<String> difficultyArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, difficultiesAsString);
         difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         difficultySpinner.setAdapter(difficultyArrayAdapter);

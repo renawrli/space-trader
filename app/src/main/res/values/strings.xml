@@ -8,4 +8,9 @@
     <string name="engineer_points_label">Engineer:</string>
     <string name="create_player_label">Ok</string>
     <string name="difficulty_label">Difficulty</string>
+    <string-array name="difficulties">
+        <item>Easy</item>
+        <item>Intermediate</item>
+        <item>Expert</item>
+    </string-array>
 </resources>

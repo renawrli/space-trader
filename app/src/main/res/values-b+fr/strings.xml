@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SpaceTrader</string>
+    <string name="name_label">Nom:</string>
+    <string name="skill_points_label">Points de Compétence:</string>
+    <string name="pilot_points_label">Pilote:</string>
+    <string name="fighter_points_label">Combattant:</string>
+    <string name="trader_points_label">Commerçant:</string>
+    <string name="engineer_points_label">Ingénieur:</string>
+    <string name="create_player_label">D"'"Accord</string>
+    <string name="difficulty_label">Difficulté</string>
+    <string-array name="difficulties">
+        <item>Facile</item>
+        <item>Intermédiare</item>
+        <item>Expert</item>
+    </string-array>
+</resources>
