@@ -1,26 +1,25 @@
 package cs2340.garbagecollection.spacetrader.views;
 
-//import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-
 import android.support.v7.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.Arrays;
-
+import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.viewmodel.ConfigurationViewModel;
 import cs2340.garbagecollection.spacetrader.R;
 
 
 public class ConfigurationActivity extends AppCompatActivity {
-    private ConfigurationViewModel configurationViewModel;
     private static final int MAX_POINTS = 16;
     private int remPoints = MAX_POINTS;
-    private String difficultyLevel;
+
+    private Player player;
 
     private String playerName;
     private int fighterPoints;
@@ -28,6 +27,7 @@ public class ConfigurationActivity extends AppCompatActivity {
     private int traderPoints;
     private int engineerPoints;
 
+    private EditText nameField;
     private Spinner difficultySpinner;
     private TextView pDisplay;
     private TextView remPointsDisplay;
@@ -35,32 +35,40 @@ public class ConfigurationActivity extends AppCompatActivity {
     private TextView traderDisplay;
     private TextView engineerDisplay;
 
-    private enum difficulties {
-        EASY("Easy"), INTERMEDIATE("Intermediate"), EXPERT("Expert");
-
-        difficulties(String s) {
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuration);
-        String[] diffs = {"Easy", "Intermediate", "Expert"};
+
         difficultySpinner = findViewById(R.id.difficultySpinner);
-        ArrayAdapter<String> difficultyArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, diffs);
+        Player.Difficulty[] difficulties = Player.Difficulty.values();
+        String[] difficultiesAsString = new String[difficulties.length];
+        for (int i = 0; i < difficulties.length; i++) {
+            difficultiesAsString[i] = difficulties[i].getDifficulty();
+        }
+
+        ArrayAdapter<String> difficultyArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, difficultiesAsString);
         difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         difficultySpinner.setAdapter(difficultyArrayAdapter);
+        nameField = findViewById(R.id.nameInput);
 
-        pDisplay = (TextView) findViewById(R.id.pilotPointsDisplay);
+        playerName = nameField.getText().toString();
+        nameField = findViewById(R.id.nameInput);
+        pDisplay = findViewById(R.id.pilotPointsDisplay);
         traderDisplay = findViewById(R.id.traderPointsDisplay);
         engineerDisplay = findViewById(R.id.engineerPointsDisplay);
         fighterDisplay = findViewById(R.id.fighterPointsDisplay);
-        remPointsDisplay = (TextView) findViewById(R.id.remainingPointsDisplay);
+        remPointsDisplay = findViewById(R.id.remainingPointsDisplay);
     }
 
     public void createPlayer(View view) {
-//        difficultyLevel = difficultySpinner.getPopupContext();
+        Player.Difficulty difficulty = Player.Difficulty.EASY;
+        for (Player.Difficulty dif : Player.Difficulty.values()) {
+            if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))
+                difficulty = dif;
+        }
+        player = new Player(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints, difficulty);
+        Log.d("TEST", player.toString());
     }
 
     private void updatePointDisplays() {
