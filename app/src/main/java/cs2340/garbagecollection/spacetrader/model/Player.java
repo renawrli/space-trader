@@ -50,9 +50,7 @@ public class Player {
         this.name = name;
     }
 
-    public int getPilotPoints() {
-        return pilotPoints;
-    }
+    public int getPilotPoints() { return pilotPoints; }
 
     public void setPilotPoints(int pilotPoints) {
         this.pilotPoints = pilotPoints;
