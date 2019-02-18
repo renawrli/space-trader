@@ -68,10 +68,10 @@
         android:layout_height="50dp"
         android:layout_below="@id/remainingPointsDisplay"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="36dp"
         android:layout_toRightOf="@+id/pilotPointsLabel"
-        android:onClick="decPilot"
         android:background="@android:drawable/ic_delete"
+        android:onClick="decPilot"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/pilotPointsDisplay"
@@ -91,10 +91,10 @@
         android:layout_height="50dp"
         android:layout_below="@id/remainingPointsDisplay"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:onClick="incPilot"
+        android:layout_marginTop="34dp"
         android:layout_toRightOf="@+id/pilotPointsDisplay"
         android:background="@android:drawable/ic_input_add"
+        android:onClick="incPilot"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/fighterPointsLabel"
@@ -104,16 +104,17 @@
         android:paddingTop="50dp"
         android:paddingLeft="25dp"
         android:text="@string/fighter_points_label" />
+
     <Button
         android:id="@+id/fighterPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/pilotPointsDisplay"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:onClick="decFighter"
+        android:layout_marginTop="32dp"
         android:layout_toRightOf="@+id/fighterPointsLabel"
         android:background="@android:drawable/ic_delete"
+        android:onClick="decFighter"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/fighterPointsDisplay"
@@ -132,8 +133,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/pilotPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="34dp"
         android:layout_toRightOf="@+id/fighterPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:onClick="incFighter"
@@ -146,16 +147,17 @@
         android:paddingTop="50dp"
         android:paddingLeft="25dp"
         android:text="@string/trader_points_label" />
+
     <Button
         android:id="@+id/traderPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/fighterPointsDisplay"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:onClick="decTrader"
+        android:layout_marginTop="35dp"
         android:layout_toRightOf="@+id/traderPointsLabel"
         android:background="@android:drawable/ic_delete"
+        android:onClick="decTrader"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/traderPointsDisplay"
@@ -174,11 +176,11 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/fighterPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="34dp"
         android:layout_toRightOf="@+id/traderPointsDisplay"
-        android:onClick="incTrader"
         android:background="@android:drawable/ic_input_add"
+        android:onClick="incTrader"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/engineerPointsLabel"
@@ -188,16 +190,17 @@
         android:paddingTop="50dp"
         android:paddingLeft="25dp"
         android:text="@string/engineer_points_label" />
+
     <Button
         android:id="@+id/engineerPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/traderPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="35dp"
         android:layout_toRightOf="@+id/engineerPointsLabel"
-        android:onClick="decEngineer"
         android:background="@android:drawable/ic_delete"
+        android:onClick="decEngineer"
         android:paddingLeft="25dp" />
     <TextView
         android:id="@+id/engineerPointsDisplay"
@@ -217,10 +220,10 @@
         android:layout_height="50dp"
         android:layout_below="@id/traderPointsDisplay"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:onClick="incEngineer"
+        android:layout_marginTop="35dp"
         android:layout_toRightOf="@+id/engineerPointsDisplay"
         android:background="@android:drawable/ic_input_add"
+        android:onClick="incEngineer"
         android:paddingLeft="25dp" />
 
     <Button
