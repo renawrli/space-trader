@@ -5,7 +5,7 @@ public class Game {
     private Player player;
 
     /**
-     * Constructs a Game object
+     * Constructs the single Game object
      * @param difficulty - difficulty of the game
      * @param player - Player that plays the game
      */

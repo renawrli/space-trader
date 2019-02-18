@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //TODO: create Game Object with singleton pattern
         //setContentView(R.layout.activity_configuration);
     }
     public void incPilot(View view) {

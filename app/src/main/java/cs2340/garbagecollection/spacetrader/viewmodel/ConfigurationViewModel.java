@@ -4,8 +4,11 @@ package cs2340.garbagecollection.spacetrader.viewmodel;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import cs2340.garbagecollection.spacetrader.model.Player;
+import cs2340.garbagecollection.spacetrader.model.Game;
+import cs2340.garbagecollection.spacetrader.model.Difficulty;
 
 /**
  * This ViewModel supports activities associated with initially creating the Player
@@ -32,9 +35,15 @@ public class ConfigurationViewModel extends AndroidViewModel {
         return name.equals("");
     }
 
-    /** Creates a Player to play the game **/
+    /** Creates a Game **/
+    public Game createGame(Difficulty difficulty, Player player) {
+        return new Game(difficulty, player);
+    }
+    /** Creates a Player **/
     public Player createPlayer(String name, int pilotPts, int fighterPts, int traderPts, int engineerPts) {
-        return new Player(name, pilotPts,fighterPts, traderPts, engineerPts);
+        Player player = new Player(name, pilotPts,fighterPts, traderPts, engineerPts);
+        Log.d("Printing Player", player.toString());
+        return player;
     }
     //TODO: get the game and get player the game and get player attributes you want
     //TODO: make a method to instantiate a player

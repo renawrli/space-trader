@@ -44,15 +44,10 @@ public class ConfigurationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuration);
 
+        /** Sets difficulty spinner values, uses Enum values instead of Strings **/
         difficultySpinner = findViewById(R.id.difficultySpinner);
-        Difficulty[] difficulties = Difficulty.values();
-        String[] difficultiesAsString = new String[difficulties.length];
-        for (int i = 0; i < difficulties.length; i++) {
-            difficultiesAsString[i] = difficulties[i].getDifficulty();
-        }
-        ArrayAdapter<CharSequence> difficultyArrayAdapter = ArrayAdapter.createFromResource(this, R.array.difficulties, android.R.layout.simple_spinner_item);
-        difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        difficultySpinner.setAdapter(difficultyArrayAdapter);
+        difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this, android.R.layout.simple_spinner_item, Difficulty.values()));
+
         nameField = findViewById(R.id.nameInput);
         pDisplay = findViewById(R.id.pilotPointsDisplay);
         traderDisplay = findViewById(R.id.traderPointsDisplay);
@@ -77,12 +72,15 @@ public class ConfigurationActivity extends AppCompatActivity {
                     Toast.makeText(ConfigurationActivity.this, "You used too many points", Toast.LENGTH_SHORT).show();
                 }
                 // resets screen if any invalid data is entered
-                if (!configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
-                        || !configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+                if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+                        || configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)
                         || configVM.invalidName(playerName)) {
                     resetScreen();
                 } else {
-                    //TODO: Create Game and Player
+                    // Create player and Game
+                    player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
+                    Difficulty gameDifficulty = (Difficulty) difficultySpinner.getSelectedItem();
+                    configVM.createGame(gameDifficulty, player);
                 }
             }
         });
