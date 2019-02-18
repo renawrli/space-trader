@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Player;
@@ -35,6 +37,7 @@ public class ConfigurationActivity extends AppCompatActivity {
     private TextView fighterDisplay;
     private TextView traderDisplay;
     private TextView engineerDisplay;
+    private Button createPlayerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +54,52 @@ public class ConfigurationActivity extends AppCompatActivity {
         difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         difficultySpinner.setAdapter(difficultyArrayAdapter);
         nameField = findViewById(R.id.nameInput);
-
-        nameField = findViewById(R.id.nameInput);
         pDisplay = findViewById(R.id.pilotPointsDisplay);
         traderDisplay = findViewById(R.id.traderPointsDisplay);
         engineerDisplay = findViewById(R.id.engineerPointsDisplay);
         fighterDisplay = findViewById(R.id.fighterPointsDisplay);
         remPointsDisplay = findViewById(R.id.remainingPointsDisplay);
+        createPlayerButton = findViewById(R.id.createPlayerButton);
+
+
+        createPlayerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());
+                playerName = nameField.getText().toString();
+                if (configVM.invalidName(playerName)) {
+                    Toast.makeText(ConfigurationActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
+                }
+                if(configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
+                    Toast.makeText(ConfigurationActivity.this, "Please use all points", Toast.LENGTH_SHORT).show();
+                }
+                if(configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
+                    Toast.makeText(ConfigurationActivity.this, "You used too many points", Toast.LENGTH_SHORT).show();
+                }
+                // resets screen if any invalid data is entered
+                if (!configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+                        || !configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+                        || configVM.invalidName(playerName)) {
+                    resetScreen();
+                } else {
+                    //TODO: Create Game and Player
+                }
+            }
+        });
+    }
+
+    private void resetScreen() {
+        remPoints = MAX_POINTS;
+        nameField.setText("");
+        remPointsDisplay.setText(MAX_POINTS + "");
+        pDisplay.setText(0 + "");
+        fighterDisplay.setText(0 + "'");
+        traderDisplay.setText(0+"");
+        engineerDisplay.setText(0+"");
+        fighterPoints = 0;
+        pilotPoints = 0;
+        traderPoints = 0;
+        engineerPoints = 0;
     }
 
     public void createPlayer(View view) {

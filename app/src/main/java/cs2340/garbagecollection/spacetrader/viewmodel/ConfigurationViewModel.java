@@ -28,10 +28,14 @@ public class ConfigurationViewModel extends AndroidViewModel {
     }
 
     /** Checks that the player entered a valid name **/
-    public boolean validName(String name) {
-        return name != null && name.length() > 0;
+    public boolean invalidName(String name) {
+        return name.equals("");
     }
 
+    /** Creates a Player to play the game **/
+    public Player createPlayer(String name, int pilotPts, int fighterPts, int traderPts, int engineerPts) {
+        return new Player(name, pilotPts,fighterPts, traderPts, engineerPts);
+    }
     //TODO: get the game and get player the game and get player attributes you want
     //TODO: make a method to instantiate a player
 
