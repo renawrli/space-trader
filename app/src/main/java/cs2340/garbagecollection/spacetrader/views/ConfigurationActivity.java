@@ -56,12 +56,12 @@ public class ConfigurationActivity extends AppCompatActivity {
         remPointsDisplay = findViewById(R.id.remainingPointsDisplay);
         createPlayerButton = findViewById(R.id.createPlayerButton);
 
-
         createPlayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());
                 playerName = nameField.getText().toString();
+                // prints directions to user if invalid data is entered
                 if (configVM.invalidName(playerName)) {
                     Toast.makeText(ConfigurationActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
                 }
@@ -98,17 +98,6 @@ public class ConfigurationActivity extends AppCompatActivity {
         pilotPoints = 0;
         traderPoints = 0;
         engineerPoints = 0;
-    }
-
-    public void createPlayer(View view) {
-        Difficulty difficulty = Difficulty.EASY; //
-        for (Difficulty dif : Difficulty.values()) {
-            if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))
-                difficulty = dif;
-        }
-        playerName = nameField.getText().toString();
-        player = new Player(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
-        Log.d("TEST", player.toString());
     }
 
     private void updatePointDisplays() {

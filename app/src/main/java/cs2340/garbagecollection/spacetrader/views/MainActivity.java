@@ -14,6 +14,4 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //setContentView(R.layout.activity_configuration);
     }
-    public void incPilot(View view) {
-    }
 }
