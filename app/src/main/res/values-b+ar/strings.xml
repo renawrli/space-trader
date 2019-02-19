@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SpaceTrader</string>
+    <string name="name_label">اسم</string>
+    <string name="skill_points_label">نقاط المهارة</string>
+    <string name="pilot_points_label">طيار</string>
+    <string name="fighter_points_label">مقاتل</string>
+    <string name="trader_points_label">تاجر</string>
+    <string name="engineer_points_label">مهندسة</string>
+    <string name="create_player_label">تام</string>
+    <string name="difficulty_label">صعوبة</string>
+    <string-array name="difficulties">
+        <item>مبتدئ</item>
+        <item>سهل</item>
+        <item>متوسط</item>
+        <item>صعب</item>
+        <item>مستحيل</item>
+    </string-array>
+</resources>
