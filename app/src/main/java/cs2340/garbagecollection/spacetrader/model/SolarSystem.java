@@ -1,11 +1,13 @@
 package cs2340.garbagecollection.spacetrader.model;
 
+import java.util.HashSet;
+
 public class SolarSystem {
 
     /** solar system's planets */
-    private Planet[] planets;
+    private HashSet<Planet>[] planets;
 
     SolarSystem() {
-        planets = new Planet[10];
+        planets = new HashSet[10];
     }
 }

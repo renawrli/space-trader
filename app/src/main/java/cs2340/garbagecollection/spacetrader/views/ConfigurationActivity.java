@@ -88,25 +88,30 @@ public class ConfigurationActivity extends AppCompatActivity {
 
     private void resetScreen() {
         remPoints = MAX_POINTS;
-        nameField.setText("");
-        remPointsDisplay.setText(MAX_POINTS + "");
-        pDisplay.setText(0 + "");
-        fighterDisplay.setText(0 + "'");
-        traderDisplay.setText(0+"");
-        engineerDisplay.setText(0+"");
+//        nameField.setText("");
+//        remPointsDisplay.setText(MAX_POINTS + "");
+//        pDisplay.setText(0 + "");
+//        fighterDisplay.setText(0 + "'");
+//        traderDisplay.setText(0+"");
+//        engineerDisplay.setText(0+"");
+//        commented out since we can utilize the updateDisplays() method instead
         fighterPoints = 0;
         pilotPoints = 0;
         traderPoints = 0;
         engineerPoints = 0;
+        playerName = "";
+        updateDisplays();
     }
 
-    private void updatePointDisplays() {
+    private void updateDisplays() {
         pDisplay.setText(pilotPoints+"");
         engineerDisplay.setText(engineerPoints+"");
         traderDisplay.setText(traderPoints+"");
         fighterDisplay.setText(fighterPoints+"");
 
         remPointsDisplay.setText(remPoints+"");
+
+        nameField.setText(playerName);
     }
 
     public void decFighter(View view) {
@@ -114,7 +119,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             fighterPoints--;
             remPoints++;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void incFighter(View view) {
@@ -122,7 +127,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             fighterPoints++;
             remPoints--;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void decTrader(View view) {
@@ -130,7 +135,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             traderPoints--;
             remPoints++;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void incTrader(View view) {
@@ -138,7 +143,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             traderPoints++;
             remPoints--;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void decEngineer(View view) {
@@ -146,7 +151,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             engineerPoints--;
             remPoints++;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void incEngineer(View view) {
@@ -154,7 +159,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             engineerPoints++;
             remPoints--;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void decPilot(View view) {
@@ -162,7 +167,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             pilotPoints--;
             remPoints++;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
     public void incPilot(View view) {
@@ -170,7 +175,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             pilotPoints++;
             remPoints--;
         }
-        updatePointDisplays();
+        updateDisplays();
     }
 
 }
