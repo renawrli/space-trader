@@ -4,8 +4,9 @@ public class Planet {
     /** planet's name */
     private String name;
 
-    /** planet's location */
-    private Coordinates location;
+    private final int x;
+
+    private final int y;
 
     /** planet's tech level */
     private TechLevel technology;
@@ -22,10 +23,26 @@ public class Planet {
     /** planet's piracy level */
     private int piracyLevel;
 
-    public Planet(String name, Coordinates location, TechLevel technology,
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) return false;
+        else if (!(o instanceof Planet)) return false;
+        Planet other = (Planet) o;
+        return (other.getGovernment().equals(government) && other.getName().equals(name)
+                && other.getTechnology().equals(technology) && other.getResources().equals(resources)
+                && other.getPoliceLevel() == (policeLevel) && other.getPiracyLevel() == piracyLevel);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() + resources.ordinal() + government.ordinal() + policeLevel + piracyLevel;
+    }
+
+    public Planet(String name, int x, int y, TechLevel technology,
                   GovernmentType government, Resources resources, int policeLevel, int piracyLevel) {
         this.name = name;
-        this.location = location;
+        this.x = x;
+        this.y = y;
         this.technology = technology;
         this.government = government;
         this.resources = resources;
@@ -42,12 +59,12 @@ public class Planet {
         this.name = name;
     }
 
-    public Coordinates getLocation() {
-        return location;
+    public int getX() {
+        return x;
     }
 
-    public void setLocation(Coordinates location) {
-        this.location = location;
+    public int getY() {
+        return y;
     }
 
     public TechLevel getTechnology() {
@@ -89,4 +106,6 @@ public class Planet {
     public void setPiracyLevel(int piracyLevel) {
         this.piracyLevel = piracyLevel;
     }
+
+
 }
