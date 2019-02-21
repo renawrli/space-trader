@@ -47,8 +47,10 @@ public class ConfigurationActivity extends AppCompatActivity {
 
         /** Sets difficulty spinner values, uses Enum values instead of Strings **/
         difficultySpinner = findViewById(R.id.difficultySpinner);
-        difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this, android.R.layout.simple_spinner_item, Difficulty.values()));
-
+        //difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this, android.R.layout.simple_spinner_item, Difficulty.values()));
+        ArrayAdapter<CharSequence> difficultyArrayAdapter = ArrayAdapter.createFromResource(this, R.array.difficulties, android.R.layout.simple_spinner_item);
+        difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        difficultySpinner.setAdapter(difficultyArrayAdapter);
         nameField = findViewById(R.id.nameInput);
         pDisplay = findViewById(R.id.pilotPointsDisplay);
         traderDisplay = findViewById(R.id.traderPointsDisplay);
@@ -80,7 +82,12 @@ public class ConfigurationActivity extends AppCompatActivity {
         } else {
             // Create player and Game
             player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
-            Difficulty gameDifficulty = (Difficulty) difficultySpinner.getSelectedItem();
+            Difficulty difficulty = Difficulty.EASY; //
+            for (Difficulty dif : Difficulty.values()) {
+                if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))
+                    difficulty = dif;
+            }
+            Difficulty gameDifficulty = difficulty;
             configVM.createGame(gameDifficulty, player);
             Intent intent = new Intent(this, gameScreenActivity.class);
             this.finish();
