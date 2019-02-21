@@ -1,13 +1,11 @@
 package cs2340.garbagecollection.spacetrader.model;
 
-import java.util.HashSet;
-
 /**
  * Generates the universe
  */
 public class Universe {
     private SolarSystem africa = new SolarSystem();
-    private SolarSystem carribean = new SolarSystem();
+    private SolarSystem caribbean = new SolarSystem();
     private SolarSystem centralAmerica = new SolarSystem();
     private SolarSystem westEurope = new SolarSystem();
     private SolarSystem eastEurope = new SolarSystem();
@@ -23,8 +21,8 @@ public class Universe {
         return africa;
     }
 
-    public SolarSystem getCarribean() {
-        return carribean;
+    public SolarSystem getCaribbean() {
+        return caribbean;
     }
 
     public SolarSystem getCentralAmerica() {
