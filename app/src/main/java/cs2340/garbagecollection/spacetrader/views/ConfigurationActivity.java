@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -55,36 +56,40 @@ public class ConfigurationActivity extends AppCompatActivity {
         fighterDisplay = findViewById(R.id.fighterPointsDisplay);
         remPointsDisplay = findViewById(R.id.remainingPointsDisplay);
         createPlayerButton = findViewById(R.id.createPlayerButton);
-
-        createPlayerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());
-                playerName = nameField.getText().toString();
-                // prints directions to user if invalid data is entered
-                if (configVM.invalidName(playerName)) {
-                    Toast.makeText(ConfigurationActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
-                }
-                if(configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
-                    Toast.makeText(ConfigurationActivity.this, "Please use all points", Toast.LENGTH_SHORT).show();
-                }
-                if(configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
-                    Toast.makeText(ConfigurationActivity.this, "You used too many points", Toast.LENGTH_SHORT).show();
-                }
-                // resets screen if any invalid data is entered
-                if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
-                        || configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)
-                        || configVM.invalidName(playerName)) {
-                    resetScreen();
-                } else {
-                    // Create player and Game
-                    player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
-                    Difficulty gameDifficulty = (Difficulty) difficultySpinner.getSelectedItem();
-                    configVM.createGame(gameDifficulty, player);
-                }
-            }
-        });
     }
+
+
+    public void createPlayer(View view) {
+        ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());
+        playerName = nameField.getText().toString();
+        // prints directions to user if invalid data is entered
+        if (configVM.invalidName(playerName)) {
+            Toast.makeText(ConfigurationActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
+        }
+        if(configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
+            Toast.makeText(ConfigurationActivity.this, "Please use all points", Toast.LENGTH_SHORT).show();
+        }
+        if(configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
+            Toast.makeText(ConfigurationActivity.this, "You used too many points", Toast.LENGTH_SHORT).show();
+        }
+        // resets screen if any invalid data is entered
+        if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+                || configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+                || configVM.invalidName(playerName)) {
+            resetScreen();
+        } else {
+            // Create player and Game
+            player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
+            Difficulty gameDifficulty = (Difficulty) difficultySpinner.getSelectedItem();
+            configVM.createGame(gameDifficulty, player);
+            Intent intent = new Intent(this, gameScreenActivity.class);
+            this.finish();
+            startActivity(intent);
+        }
+    }
+
+
+
 
     private void resetScreen() {
         remPoints = MAX_POINTS;
@@ -108,10 +113,7 @@ public class ConfigurationActivity extends AppCompatActivity {
         engineerDisplay.setText(engineerPoints+"");
         traderDisplay.setText(traderPoints+"");
         fighterDisplay.setText(fighterPoints+"");
-
         remPointsDisplay.setText(remPoints+"");
-
-        nameField.setText(playerName);
     }
 
     public void decFighter(View view) {

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SpaceTrader</string>
+    <string name="name_label">名字:</string>
+    <string name="skill_points_label">能力分:</string>
+    <string name="pilot_points_label">飞行员:</string>
+    <string name="fighter_points_label">战斗机:</string>
+    <string name="trader_points_label">商人:</string>
+    <string name="engineer_points_label">工程师:</string>
+    <string name="create_player_label">行</string>
+    <string name="difficulty_label">难度极</string>
+    <string-array name="difficulties">
+        <item>初学者</item>
+        <item>简单</item>
+        <item>中间</item>
+        <item>难</item>
+        <item>不可做</item>
+    </string-array>
+</resources>
