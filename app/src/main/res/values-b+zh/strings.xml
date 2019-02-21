@@ -15,4 +15,5 @@
         <item>难</item>
         <item>不可做</item>
     </string-array>
+    <string name="creating_universe_label">正在创造宇宙</string>
 </resources>

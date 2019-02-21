@@ -15,4 +15,5 @@
         <item>Difficile</item>
         <item>Impossible</item>
     </string-array>
+    <string name="creating_universe_label">En Traine de Créer l"'"Universe</string>
 </resources>

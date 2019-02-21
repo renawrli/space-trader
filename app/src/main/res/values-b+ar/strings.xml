@@ -15,4 +15,5 @@
         <item>صعب</item>
         <item>مستحيل</item>
     </string-array>
+    <string name="creating_universe_label">صناعة الكون</string>
 </resources>

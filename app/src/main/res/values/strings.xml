@@ -15,4 +15,5 @@
         <item>Hard</item>
         <item>Impossible</item>
     </string-array>
+    <string name="creating_universe_label">Creating the Universe</string>
 </resources>
