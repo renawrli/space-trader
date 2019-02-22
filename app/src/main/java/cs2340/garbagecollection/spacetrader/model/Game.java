@@ -16,6 +16,28 @@ public class Game {
     public Game(Difficulty difficulty, Player player) {
         this.difficulty = difficulty;
         this.player = player;
+
+        List<Planet> africanNations = new ArrayList<>();
+        africanNations.add(new Planet("Nigeria"));
+        List<Planet> carribeanNations = new ArrayList<>();
+        carribeanNations.add(new Planet("The Bahamas"));
+        List<Planet> caNations = new ArrayList<>();
+        caNations.add(new Planet("Nicaragua"));
+        List<Planet> weNations = new ArrayList<>();
+        weNations.add(new Planet("France"));
+        List<Planet> eeNations = new ArrayList<>();
+        eeNations.add(new Planet("Hungary"));
+        List<Planet> naNations = new ArrayList<>();
+        naNations.add(new Planet("United States"));
+        List<Planet> saNations = new ArrayList<>();
+        saNations.add(new Planet("Argentina"));
+        List<Planet> cAsiaNations = new ArrayList<>();
+        cAsiaNations.add(new Planet("Kazakhstan"));
+        List<Planet> seAsiaNations = new ArrayList<>();
+        seAsiaNations.add(new Planet("Indonesia"));
+        List<Planet> meNations = new ArrayList<>();
+        meNations.add(new Planet("Lebanon"));
+
         SolarSystem africa = new SolarSystem();
         SolarSystem caribbean = new SolarSystem();
         SolarSystem centralAmerica = new SolarSystem();
@@ -38,6 +60,5 @@ public class Game {
         theUniverse.add(southEastAsia);
         theUniverse.add(middleEast);
     }
-
 
 }
