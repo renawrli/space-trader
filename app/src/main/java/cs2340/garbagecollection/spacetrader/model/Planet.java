@@ -57,8 +57,8 @@ public class Planet {
     public Planet(String name, GovernmentType government, int x,
                   int y, int policeLevel, int piracyLevel) {
         this(name, x, y, TechLevel.getRandomTech(), government,
-                Resources.getRandomResources(), policeLevel,
-                piracyLevel);
+                Resources.getRandomResources(),
+                policeLevel, piracyLevel);
     }
 
     /** Getters and Setters */
