@@ -1,4 +1,7 @@
 package cs2340.garbagecollection.spacetrader.model;
+
+import java.util.Random;
+
 /**
  * enum for the Tech Level
  */
@@ -21,5 +24,10 @@ public enum TechLevel {
 
     public String getTechLevel() {
         return TechLevel;
+    }
+
+    public static TechLevel getRandomTech() {
+        Random rand = new Random();
+        return values()[rand.nextInt(values().length)];
     }
 }
