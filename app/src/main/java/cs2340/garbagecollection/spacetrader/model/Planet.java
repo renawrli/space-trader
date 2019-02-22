@@ -23,6 +23,10 @@ public class Planet {
     /** planet's piracy level */
     private int piracyLevel;
 
+    /** Checks equality of planet based on name
+     * @param o object that is checked for equality
+     * @return true if equal, otherwise false
+     */
     @Override
     public boolean equals(Object o) {
         if (o == null) return false;
@@ -48,6 +52,13 @@ public class Planet {
         this.resources = resources;
         this.policeLevel = policeLevel;
         this.piracyLevel = piracyLevel;
+    }
+
+    public Planet(String name, GovernmentType government, int x,
+                  int y, int policeLevel, int piracyLevel) {
+        this(name, x, y, TechLevel.getRandomTech(), government,
+                Resources.getRandomResources(), policeLevel,
+                piracyLevel);
     }
 
     /** Getters and Setters */
