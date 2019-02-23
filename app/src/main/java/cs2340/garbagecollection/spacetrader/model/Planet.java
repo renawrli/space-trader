@@ -4,8 +4,10 @@ public class Planet {
     /** planet's name */
     private String name;
 
+    /** x coordinate of planet **/
     private final int x;
 
+    /** y coordinate of planet **/
     private final int y;
 
     /** planet's tech level */
