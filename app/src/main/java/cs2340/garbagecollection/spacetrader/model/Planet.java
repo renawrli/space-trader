@@ -120,5 +120,8 @@ public class Planet {
         this.piracyLevel = piracyLevel;
     }
 
-
+    @Override
+    public String toString() {
+        return String.format("Planet[name:%s, x-coordinate:%d, y-coordinate:%d]", name, x, y);
+    }
 }

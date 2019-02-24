@@ -29,4 +29,13 @@ public class Universe {
     public int getNumSolarSystems() {
         return numSolarSystems;
     }
+
+    @Override
+    public String toString() {
+        String s = "Universe: ";
+        for (SolarSystem solSystem: listOfSolarSystems) {
+            s += solSystem.toString() + "\n";
+        }
+        return s;
+    }
 }

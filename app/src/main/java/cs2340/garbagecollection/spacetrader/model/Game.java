@@ -62,16 +62,16 @@ public class Game {
                 rand.nextInt(150), rand.nextInt(150),
                 rand.nextInt(11), rand.nextInt(11)));
 
-        SolarSystem africa = new SolarSystem(africanNations);
-        SolarSystem caribbean = new SolarSystem(carribeanNations);
-        SolarSystem centralAmerica = new SolarSystem(caNations);
-        SolarSystem westEurope = new SolarSystem(weNations);
-        SolarSystem eastEurope = new SolarSystem(eeNations);
-        SolarSystem northAmerica = new SolarSystem(naNations);
-        SolarSystem southAmerica = new SolarSystem(saNations);
-        SolarSystem centralAsia = new SolarSystem(cAsiaNations);
-        SolarSystem southEastAsia = new SolarSystem(seAsiaNations);
-        SolarSystem middleEast = new SolarSystem(meNations);
+        SolarSystem africa = new SolarSystem("Africa", africanNations);
+        SolarSystem caribbean = new SolarSystem("Carribbean", carribeanNations);
+        SolarSystem centralAmerica = new SolarSystem("Central America", caNations);
+        SolarSystem westEurope = new SolarSystem("West Europe", weNations);
+        SolarSystem eastEurope = new SolarSystem("East Europe", eeNations);
+        SolarSystem northAmerica = new SolarSystem("North America", naNations);
+        SolarSystem southAmerica = new SolarSystem("South America", saNations);
+        SolarSystem centralAsia = new SolarSystem("Central Asia", cAsiaNations);
+        SolarSystem southEastAsia = new SolarSystem("Southeast Asia", seAsiaNations);
+        SolarSystem middleEast = new SolarSystem("Middle East", meNations);
 
         List<SolarSystem> theUniverse = new ArrayList<>();
         theUniverse.add(africa);
