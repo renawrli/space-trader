@@ -7,6 +7,7 @@ import java.util.Random;
 public class Game {
     private Difficulty difficulty;
     private Player player;
+    private Universe universe;
 
     /** Randomizer to pick coordinates x, y and piracy and police level */
     private Random rand = new Random();
@@ -61,16 +62,17 @@ public class Game {
                 rand.nextInt(150), rand.nextInt(150),
                 rand.nextInt(11), rand.nextInt(11)));
 
-        SolarSystem africa = new SolarSystem();
-        SolarSystem caribbean = new SolarSystem();
-        SolarSystem centralAmerica = new SolarSystem();
-        SolarSystem westEurope = new SolarSystem();
-        SolarSystem eastEurope = new SolarSystem();
-        SolarSystem northAmerica = new SolarSystem();
-        SolarSystem southAmerica = new SolarSystem();
-        SolarSystem centralAsia = new SolarSystem();
-        SolarSystem southEastAsia = new SolarSystem();
-        SolarSystem middleEast = new SolarSystem();
+        SolarSystem africa = new SolarSystem(africanNations);
+        SolarSystem caribbean = new SolarSystem(carribeanNations);
+        SolarSystem centralAmerica = new SolarSystem(caNations);
+        SolarSystem westEurope = new SolarSystem(weNations);
+        SolarSystem eastEurope = new SolarSystem(eeNations);
+        SolarSystem northAmerica = new SolarSystem(naNations);
+        SolarSystem southAmerica = new SolarSystem(saNations);
+        SolarSystem centralAsia = new SolarSystem(cAsiaNations);
+        SolarSystem southEastAsia = new SolarSystem(seAsiaNations);
+        SolarSystem middleEast = new SolarSystem(meNations);
+
         List<SolarSystem> theUniverse = new ArrayList<>();
         theUniverse.add(africa);
         theUniverse.add(caribbean);
@@ -82,6 +84,21 @@ public class Game {
         theUniverse.add(centralAsia);
         theUniverse.add(southEastAsia);
         theUniverse.add(middleEast);
+
+        universe = new Universe(theUniverse);
+    }
+
+    /** getters **/
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Universe getUniverse() {
+        return universe;
     }
 
 }
