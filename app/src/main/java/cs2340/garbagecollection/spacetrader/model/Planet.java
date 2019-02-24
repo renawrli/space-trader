@@ -122,6 +122,7 @@ public class Planet {
 
     @Override
     public String toString() {
-        return String.format("Planet[name:%s, x-coordinate:%d, y-coordinate:%d]", name, x, y);
+        return String.format("Planet[name:%s, x-coordinate:%d, y-coordinate:%d, resource:%s, tech level:%s]",
+                name, x, y, resources.toString(), technology.toString());
     }
 }
