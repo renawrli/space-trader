@@ -7,6 +7,9 @@ public class Market {
     /** location of market, y coordinate */
     private final int y;
 
+    /** price of goods */
+    private double price;
+
     public Market(int x, int y) {
         this.x = x;
         this.y = y;
