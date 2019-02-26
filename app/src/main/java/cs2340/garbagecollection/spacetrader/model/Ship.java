@@ -5,7 +5,12 @@ class Ship {
 
     private ShipType shipType;
 
+    /** represents actual cargo **/
+    int[] cargoArr;
+
     Ship(ShipType shipType) {
         this.shipType = shipType;
+        cargoArr = new int[shipType.getCapacity()];
     }
+
 }
