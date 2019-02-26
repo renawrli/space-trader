@@ -25,6 +25,12 @@ public class Planet {
     /** planet's piracy level */
     private int piracyLevel;
 
+    /** planet's catastrophic event */
+    private IE badEvent;
+    private enum IE {
+        DROUGHT, COLD, CROPFAIL, WAR, BOREDOM, PLAGUE, LACKOFWORKERS
+    }
+
     /** Checks equality of planet based on name
      * @param o object that is checked for equality
      * @return true if equal, otherwise false
@@ -54,6 +60,7 @@ public class Planet {
         this.resources = resources;
         this.policeLevel = policeLevel;
         this.piracyLevel = piracyLevel;
+        badEvent = null;
     }
 
     public Planet(String name, GovernmentType government, int x,
@@ -61,6 +68,7 @@ public class Planet {
         this(name, x, y, TechLevel.getRandomTech(), government,
                 Resources.getRandomResources(),
                 policeLevel, piracyLevel);
+        badEvent = null;
     }
 
     /** Getters and Setters */
@@ -118,6 +126,13 @@ public class Planet {
 
     public void setPiracyLevel(int piracyLevel) {
         this.piracyLevel = piracyLevel;
+    }
+
+    public void setBadEvent(IE badEvent) {
+        this.badEvent = badEvent;
+    }
+    public IE getBadEvent () {
+        return badEvent;
     }
 
     @Override
