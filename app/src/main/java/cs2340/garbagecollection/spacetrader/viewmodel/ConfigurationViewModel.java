@@ -37,7 +37,10 @@ public class ConfigurationViewModel extends AndroidViewModel {
 
     /** Creates a Game **/
     public Game createGame(Difficulty difficulty, Player player) {
-        return new Game(difficulty, player);
+        //Log.d("Printing difficulty: ", difficulty.toString());
+        Game game = new Game(difficulty, player);
+        Log.d("Printing Universe: ", game.getUniverse().toString());
+        return game;
     }
     /** Creates a Player **/
     public Player createPlayer(String name, int pilotPts, int fighterPts, int traderPts, int engineerPts) {

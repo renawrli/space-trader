@@ -7,6 +7,7 @@ import java.util.Random;
 public class Game {
     private Difficulty difficulty;
     private Player player;
+    private Universe universe;
 
     /** Randomizer to pick coordinates x, y and piracy and police level */
     private Random rand = new Random();
@@ -61,16 +62,17 @@ public class Game {
                 rand.nextInt(150), rand.nextInt(150),
                 rand.nextInt(11), rand.nextInt(11)));
 
-        SolarSystem africa = new SolarSystem();
-        SolarSystem caribbean = new SolarSystem();
-        SolarSystem centralAmerica = new SolarSystem();
-        SolarSystem westEurope = new SolarSystem();
-        SolarSystem eastEurope = new SolarSystem();
-        SolarSystem northAmerica = new SolarSystem();
-        SolarSystem southAmerica = new SolarSystem();
-        SolarSystem centralAsia = new SolarSystem();
-        SolarSystem southEastAsia = new SolarSystem();
-        SolarSystem middleEast = new SolarSystem();
+        SolarSystem africa = new SolarSystem("Africa", africanNations);
+        SolarSystem caribbean = new SolarSystem("Carribbean", carribeanNations);
+        SolarSystem centralAmerica = new SolarSystem("Central America", caNations);
+        SolarSystem westEurope = new SolarSystem("West Europe", weNations);
+        SolarSystem eastEurope = new SolarSystem("East Europe", eeNations);
+        SolarSystem northAmerica = new SolarSystem("North America", naNations);
+        SolarSystem southAmerica = new SolarSystem("South America", saNations);
+        SolarSystem centralAsia = new SolarSystem("Central Asia", cAsiaNations);
+        SolarSystem southEastAsia = new SolarSystem("Southeast Asia", seAsiaNations);
+        SolarSystem middleEast = new SolarSystem("Middle East", meNations);
+
         List<SolarSystem> theUniverse = new ArrayList<>();
         theUniverse.add(africa);
         theUniverse.add(caribbean);
@@ -82,6 +84,21 @@ public class Game {
         theUniverse.add(centralAsia);
         theUniverse.add(southEastAsia);
         theUniverse.add(middleEast);
+
+        universe = new Universe(theUniverse);
+    }
+
+    /** getters **/
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Universe getUniverse() {
+        return universe;
     }
 
 }

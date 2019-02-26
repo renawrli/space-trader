@@ -1,64 +1,41 @@
 package cs2340.garbagecollection.spacetrader.model;
-
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Generates the universe
  */
 public class Universe {
-    private SolarSystem africa = new SolarSystem();
-    private SolarSystem caribbean = new SolarSystem();
-    private SolarSystem centralAmerica = new SolarSystem();
-    private SolarSystem westEurope = new SolarSystem();
-    private SolarSystem eastEurope = new SolarSystem();
-    private SolarSystem northAmerica = new SolarSystem();
-    private SolarSystem southAmerica = new SolarSystem();
-    private SolarSystem centralAsia = new SolarSystem();
-    private SolarSystem northAsia = new SolarSystem();
-    private SolarSystem southEastAsia = new SolarSystem();
-    private SolarSystem middleEast = new SolarSystem();
+    private int numSolarSystems;
+    private List<SolarSystem> listOfSolarSystems;
 
-    /** Getters of the Solar Systems */
-    public SolarSystem getAfrica() {
-        return africa;
+    public Universe() {
+        listOfSolarSystems = new ArrayList<>();
     }
 
-    public SolarSystem getCaribbean() {
-        return caribbean;
+    public Universe(List<SolarSystem> initList) {
+        listOfSolarSystems = initList;
+        numSolarSystems = listOfSolarSystems.size();
     }
 
-    public SolarSystem getCentralAmerica() {
-        return centralAmerica;
+    public List<SolarSystem> getAllSolarSystems() {
+        return listOfSolarSystems;
     }
 
-    public SolarSystem getWestEurope() {
-        return westEurope;
+    public void addSolarSystem(SolarSystem s) {
+        listOfSolarSystems.add(s);
+        numSolarSystems++;
     }
 
-    public SolarSystem getEastEurope() {
-        return eastEurope;
+    public int getNumSolarSystems() {
+        return numSolarSystems;
     }
 
-    public SolarSystem getNorthAmerica() {
-        return northAmerica;
+    @Override
+    public String toString() {
+        String s = "Universe: ";
+        for (SolarSystem solSystem: listOfSolarSystems) {
+            s += solSystem.toString() + "\n";
+        }
+        return s;
     }
-
-    public SolarSystem getSouthAmerica() {
-        return southAmerica;
-    }
-
-    public SolarSystem getCentralAsia() {
-        return centralAsia;
-    }
-
-    public SolarSystem getNorthAsia() {
-        return northAsia;
-    }
-
-    public SolarSystem getSouthEastAsia() {
-        return southEastAsia;
-    }
-
-    public SolarSystem getMiddleEast() {
-        return middleEast;
-    }
-
 }

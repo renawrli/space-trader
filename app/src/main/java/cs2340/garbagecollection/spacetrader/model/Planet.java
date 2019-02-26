@@ -4,8 +4,10 @@ public class Planet {
     /** planet's name */
     private String name;
 
+    /** x coordinate of planet **/
     private final int x;
 
+    /** y coordinate of planet **/
     private final int y;
 
     /** planet's tech level */
@@ -22,6 +24,9 @@ public class Planet {
 
     /** planet's piracy level */
     private int piracyLevel;
+
+    /** planet's catastrophic event */
+    private IE badEvent;
 
     /** Checks equality of planet based on name
      * @param o object that is checked for equality
@@ -52,6 +57,7 @@ public class Planet {
         this.resources = resources;
         this.policeLevel = policeLevel;
         this.piracyLevel = piracyLevel;
+        badEvent = null;
     }
 
     public Planet(String name, GovernmentType government, int x,
@@ -59,6 +65,7 @@ public class Planet {
         this(name, x, y, TechLevel.getRandomTech(), government,
                 Resources.getRandomResources(),
                 policeLevel, piracyLevel);
+        badEvent = null;
     }
 
     /** Getters and Setters */
@@ -118,5 +125,16 @@ public class Planet {
         this.piracyLevel = piracyLevel;
     }
 
+    public void setBadEvent(IE badEvent) {
+        this.badEvent = badEvent;
+    }
+    public IE getBadEvent () {
+        return badEvent;
+    }
 
+    @Override
+    public String toString() {
+        return String.format("Planet[name:%s, x-coordinate:%d, y-coordinate:%d, resource:%s, tech level:%s]",
+                name, x, y, resources.toString(), technology.toString());
+    }
 }

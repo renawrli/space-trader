@@ -45,7 +45,7 @@ public class ConfigurationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuration);
 
-        /** Sets difficulty spinner values, uses Enum values instead of Strings **/
+        /** Sets difficulty spinner values, uses String values **/
         difficultySpinner = findViewById(R.id.difficultySpinner);
         //difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this, android.R.layout.simple_spinner_item, Difficulty.values()));
         ArrayAdapter<CharSequence> difficultyArrayAdapter = ArrayAdapter.createFromResource(this, R.array.difficulties, android.R.layout.simple_spinner_item);
