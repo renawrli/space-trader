@@ -27,9 +27,6 @@ public class Planet {
 
     /** planet's catastrophic event */
     private IE badEvent;
-    private enum IE {
-        DROUGHT, COLD, CROPFAIL, WAR, BOREDOM, PLAGUE, LACKOFWORKERS
-    }
 
     /** Checks equality of planet based on name
      * @param o object that is checked for equality
