@@ -20,9 +20,6 @@ class Ship {
         size++;
     }
 
-    public int getSize() {
-        return size;
-    }
     /**
      * Removes object sold from ship
      * @param index that object is located in
@@ -33,6 +30,10 @@ class Ship {
         size--;
         cargoArr[index] = null;
         return sold;
+    }
+
+    public int getSize() {
+        return size;
     }
 
 }
