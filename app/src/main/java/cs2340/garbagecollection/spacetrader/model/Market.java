@@ -10,6 +10,15 @@ public class Market {
     /** price of goods */
     private double price;
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+
     public Market(int x, int y) {
         this.x = x;
         this.y = y;
