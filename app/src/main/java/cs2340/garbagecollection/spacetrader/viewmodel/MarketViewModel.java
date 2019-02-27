@@ -35,22 +35,28 @@ public class MarketViewModel extends AndroidViewModel {
     }
 
     /** checks to see if player has enough cargo space to buy the good **/
-    public boolean enoughSpaceToBuy(Player p, TradeGood good) {
+    public boolean enoughSpaceToBuy(Player p) {
+        // check size of cargoArr
         return false;
     }
 
     /** returns true if the Player has goods to sell, false if not **/
-    public boolean hasGoodsToSell(Player p, TradeGood good) {
+    public boolean hasGoodsToSell(Player p) {
+        // check size of Player's cargo arr
         return false;
     }
 
+    /**
+     * The following two methods should only be used after checking buying/selling is allowed
+     */
+
     /** buys good and adds to Player's cargo bay **/
     public void buy(Player p, TradeGood good) {
-
+        // decrement money and add to cargoArr
     }
 
     /** sells good, removes from Player's cargo bay **/
     public void sell(Player p, TradeGood good) {
-
+        // increment money and remove from cargoArr
     }
 }

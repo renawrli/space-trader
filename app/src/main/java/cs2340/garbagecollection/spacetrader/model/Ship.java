@@ -36,6 +36,7 @@ class Ship {
         return size;
     }
 
+
     /** returns a List of all Objects in the cargo bay on the ship **/
     public Object[] getCargoArr() {
         return cargoArr;
