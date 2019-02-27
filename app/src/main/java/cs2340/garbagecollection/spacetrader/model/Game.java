@@ -8,6 +8,7 @@ public class Game {
     private Difficulty difficulty;
     private Player player;
     private Universe universe;
+    private Planet currLocation;
 
     /** Randomizer to pick coordinates x, y and piracy and police level */
     private Random rand = new Random();
@@ -86,9 +87,10 @@ public class Game {
         theUniverse.add(middleEast);
 
         universe = new Universe(theUniverse);
+        currLocation = africa.getAllPlanets().get(0);
     }
 
-    /** getters **/
+    /** getters and setters **/
     public Difficulty getDifficulty() {
         return difficulty;
     }
@@ -101,4 +103,11 @@ public class Game {
         return universe;
     }
 
+    public Planet getCurrLocation() {
+        return currLocation;
+    }
+
+    public void setCurrLocation(Planet currLocation) {
+        this.currLocation = currLocation;
+    }
 }
