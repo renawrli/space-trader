@@ -16,7 +16,9 @@ public class Market {
         this.y = y;
     }
 
-    /** returns a List of all goods you can buy on a planet **/
+    /** returns a List of all goods you can buy on a planet
+     * @param planetTLevel - TechLevel of the planet the Player is on
+     * **/
     public List<TradeGood> getAllBuyableGoods(TechLevel planetTLevel) {
         int planetTechLevel = planetTLevel.ordinal();
         List<TradeGood> goodsList = new ArrayList<>();
@@ -29,7 +31,9 @@ public class Market {
         return goodsList;
     }
 
-    /** returns a List of all goods you can buy on a planet **/
+    /**returns a List of all goods you can buy on a planet
+     * @param planetTLevel - TechLevel of the planet the Player is onS
+     * **/
     public List<TradeGood> getAllSellableGoods(TechLevel planetTLevel) {
         int planetTechLevel = planetTLevel.ordinal();
         List<TradeGood> goodsList = new ArrayList<>();
