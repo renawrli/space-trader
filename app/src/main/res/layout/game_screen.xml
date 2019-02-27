@@ -15,8 +15,12 @@
         android:id="@+id/marketPlaceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="670dp"
-        android:layout_marginLeft="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="251dp"
+        android:layout_marginBottom="23dp"
         android:text="Market Place" />
 
 
