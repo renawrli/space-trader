@@ -46,4 +46,49 @@ public enum TradeGood {
         this.MTL = MTL;
         this.MTH = MTH;
     }
+
+    /** getters **/
+    public int getMTLP() {
+        return MTLP;
+    }
+
+    public int getMTLU() {
+        return MTLU;
+    }
+
+    public int getTTP() {
+        return TTP;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
+    }
+
+    public int getIPL() {
+        return IPL;
+    }
+
+    public int getVar() {
+        return var;
+    }
+
+    public IE getBadEvent() {
+        return badEvent;
+    }
+
+    public Resources getCR() {
+        return CR;
+    }
+
+    public Resources getER() {
+        return ER;
+    }
+
+    public int getMTL() {
+        return MTL;
+    }
+
+    public int getMTH() {
+        return MTH;
+    }
 }
