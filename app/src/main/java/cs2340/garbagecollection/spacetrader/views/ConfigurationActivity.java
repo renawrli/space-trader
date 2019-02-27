@@ -25,7 +25,7 @@ public class ConfigurationActivity extends AppCompatActivity {
     private int remPoints = MAX_POINTS;
 
     private Player player;
-    private Game game;
+    public Game game;
 
     private String playerName;
     private int fighterPoints;
