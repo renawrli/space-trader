@@ -1,7 +1,7 @@
 package cs2340.garbagecollection.spacetrader.model;
 
 /** Represents a Ship owned by the Player **/
-class Ship {
+public class Ship {
 
     private ShipType shipType;
 
@@ -32,6 +32,21 @@ class Ship {
         return sold;
     }
 
+    public void sellCargo(TradeGood good, int numToSell) {
+        int cleared = 0;
+        for(int i = 0; i < cargoArr.length; i++) {
+            if(cargoArr[i] == good && cleared < numToSell) {
+                cargoArr[i] = null;
+                size--;
+            }
+        }
+        for(int i = 0; i < cargoArr.length - 1; i++) {
+            if(cargoArr[i] == null) {
+                cargoArr[i] = cargoArr[i+1];
+            }
+        }
+    }
+
     public int getSize() {
         return size;
     }
@@ -41,4 +56,9 @@ class Ship {
     public Object[] getCargoArr() {
         return cargoArr;
     }
+
+    public int numOpenSlots() {
+        return cargoArr.length - size;
+    }
+
 }

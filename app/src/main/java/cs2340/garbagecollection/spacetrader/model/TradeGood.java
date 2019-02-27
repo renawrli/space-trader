@@ -22,7 +22,7 @@ public enum TradeGood {
     private int MTLP;
     private int MTLU;
     private int TTP;
-    private double basePrice;
+    private int basePrice;
     private int IPL;
     private int var;
     private IE badEvent;
@@ -32,7 +32,7 @@ public enum TradeGood {
     private int MTH;
 
 
-    TradeGood(int MTLP, int MTLU, int TTP, double basePrice, int IPL, int var,
+    TradeGood(int MTLP, int MTLU, int TTP, int basePrice, int IPL, int var,
               IE badEvent, Resources CR, Resources ER, int MTL, int MTH) {
         this.MTLP = MTLP;
         this.MTLU = MTLU;
@@ -60,7 +60,7 @@ public enum TradeGood {
         return TTP;
     }
 
-    public double getBasePrice() {
+    public int getBasePrice() {
         return basePrice;
     }
 
