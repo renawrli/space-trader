@@ -40,11 +40,13 @@ public class Ship {
                 size--;
             }
         }
-        for(int i = 0; i < cargoArr.length - 1; i++) {
-            if(cargoArr[i] == null) {
-                cargoArr[i] = cargoArr[i+1];
+        Object[] newCargoArr = new Object[cargoArr.length];
+        for(int i = 0; i < cargoArr.length; i++) {
+            if(cargoArr[i] != null) {
+                newCargoArr[i] = cargoArr[i];
             }
         }
+        cargoArr = newCargoArr;
     }
 
     public int getSize() {
