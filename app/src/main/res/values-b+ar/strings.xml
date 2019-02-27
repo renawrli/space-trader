@@ -16,4 +16,5 @@
         <item>مستحيل</item>
     </string-array>
     <string name="creating_universe_label">صناعة الكون</string>
+    <string name="market_place_button">سوق</string>
 </resources>

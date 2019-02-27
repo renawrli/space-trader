@@ -16,4 +16,5 @@
         <item>Impossible</item>
     </string-array>
     <string name="creating_universe_label">En Traine de Créer l"'"Universe</string>
+    <string name="market_place_button">Centre de Commerce</string>
 </resources>
