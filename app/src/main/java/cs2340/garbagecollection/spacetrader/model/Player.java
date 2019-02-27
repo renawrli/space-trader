@@ -80,6 +80,22 @@ public class Player {
         this.engineerPoints = engineerPoints;
     }
 
+    public int getCredits() {
+        return credits;
+    }
+
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    public Ship getShip() {
+        return ship;
+    }
+
+    public void setShip(Ship ship) {
+        this.ship = ship;
+    }
+
     @Override
     public String toString() {
         return String.format("Player[name:%s, pilotPoints:%d, fighterPoints:%d, traderPoints:%d, engineerPoints:%d]", name, pilotPoints, fighterPoints, traderPoints, engineerPoints);

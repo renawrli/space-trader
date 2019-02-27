@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
@@ -10,13 +11,13 @@ public class SolarSystem {
     private String name;
 
     SolarSystem() {
-        planets = new HashSet<Planet>(10);
+        planets = new HashSet<>(10);
         name = "Default Solar System";
     }
 
     /** constructs solar system from List of Planet objects **/
     SolarSystem(String name, List<Planet> planetList) {
-        planets = new HashSet<Planet>(planetList);
+        planets = new HashSet<>(planetList);
         this.name = name;
     }
 
@@ -28,6 +29,11 @@ public class SolarSystem {
     /** returns number of planets in this solar system **/
     public int getNumberOfPlanets() {
         return planets.size();
+    }
+
+    /** returns a list of all Planets in the solar system **/
+    public List<Planet> getAllPlanets() {
+        return new ArrayList<>(planets);
     }
 
     @Override
