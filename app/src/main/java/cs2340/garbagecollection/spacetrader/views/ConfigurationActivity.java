@@ -17,6 +17,7 @@ import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.viewmodel.ConfigurationViewModel;
 import cs2340.garbagecollection.spacetrader.R;
+import cs2340.garbagecollection.spacetrader.model.Game;
 
 
 public class ConfigurationActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class ConfigurationActivity extends AppCompatActivity {
     private int remPoints = MAX_POINTS;
 
     private Player player;
+    private Game game;
 
     private String playerName;
     private int fighterPoints;
@@ -88,7 +90,7 @@ public class ConfigurationActivity extends AppCompatActivity {
                     difficulty = dif;
             }
             Difficulty gameDifficulty = difficulty;
-            configVM.createGame(gameDifficulty, player);
+            game = configVM.createGame(gameDifficulty, player);
             Intent intent = new Intent(this, gameScreenActivity.class);
             this.finish();
             startActivity(intent);

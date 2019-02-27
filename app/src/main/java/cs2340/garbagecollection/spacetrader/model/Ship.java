@@ -25,7 +25,7 @@ class Ship {
      * @param index that object is located in
      * @return Object sold on ship
      */
-    public Object remove(int index) {
+    public Object sellCargo(int index) {
         Object sold = cargoArr[index];
         size--;
         cargoArr[index] = null;
