@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="How Many?"
+        android:textColor="#ff000000"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="649dp"
+        android:background="@android:drawable/ic_delete"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="649dp"
+        android:background="@android:drawable/ic_input_add"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffffff" />
+
+
+    <TextView
+        android:id="@+id/quantityDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="151dp"
+        android:paddingLeft="100dp"
+        android:paddingTop="50dp"
+        android:text="0"
+        android:textAlignment="textEnd" />
+
+
+    <Button
+        android:id="@+id/confirmTransactionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="-37dp"
+        android:layout_marginEnd="107dp"
+        android:text="Confirm Transaction" />
+
+
+</RelativeLayout>
