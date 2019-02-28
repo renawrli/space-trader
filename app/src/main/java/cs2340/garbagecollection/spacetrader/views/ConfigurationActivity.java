@@ -91,7 +91,7 @@ public class ConfigurationActivity extends AppCompatActivity {
             }
             Difficulty gameDifficulty = difficulty;
             game = configVM.createGame(gameDifficulty, player);
-            Intent intent = new Intent(this, gameScreenActivity.class);
+            Intent intent = new Intent(this, GameScreenActivity.class);
             this.finish();
             startActivity(intent);
         }

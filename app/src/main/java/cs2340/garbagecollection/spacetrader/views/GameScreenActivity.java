@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import cs2340.garbagecollection.spacetrader.R;
 
-public class gameScreenActivity extends AppCompatActivity {
+public class GameScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
