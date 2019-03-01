@@ -4,40 +4,40 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr">
 
-    <TextView
-        android:id="@+id/buyGoods_header"
+    <Button
+        android:id="@+id/buyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="88dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginBottom="649dp"
         android:text="Buy Goods" />
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buyGoods_header"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp"
-        android:id="@+id/buyableGoods_spinner" />
 
-    <TextView
-        android:id="@+id/sellGoods_header"
+    <Button
+        android:id="@+id/sellButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="239dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="238dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="649dp"
         android:text="Sell Goods" />
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sellGoods_header"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp"
-        android:id="@+id/sellableGoods_spinner" />
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Goods"
+        android:layout_width="335dp"
+        android:layout_height="581dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="46dp" />
 
 
 </RelativeLayout>
