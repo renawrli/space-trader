@@ -8,6 +8,7 @@ import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
+import java.util.ArrayList
 
 
 /**
@@ -57,8 +58,16 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
         // decrement money and add to cargoArr
         p.credits =p.credits - numGoods*calcPrice(good, planet)
         for(i in 1..numGoods) {
-        p.ship.addCargo(good)
+            p.ship.addCargo(good)
+        }
     }
+
+    fun calcPriceList(allGoods: List<TradeGood>, planet: Planet): List<Int> {
+        val priceList = ArrayList<Int>()
+        for (i in allGoods.indices) {
+            priceList.add(calcPrice(allGoods[i], planet))
+        }
+        return priceList
     }
 
     /** sells good, removes from Player's cargo bay **/
@@ -66,7 +75,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
         // increment money and remove from cargoArr
         p.credits = p.credits + numGoods*calcPrice(good, planet);
         for(i in 1..numGoods) {
-        p.ship.sellCargo(good, numGoods)
-    }
+            p.ship.sellCargo(good, numGoods)
+        }
     }
 }
