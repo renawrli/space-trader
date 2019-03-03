@@ -9,6 +9,8 @@ import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This ViewModel supports activities associated with buying/selling goods in the Marketplace
@@ -25,6 +27,20 @@ public class MarketViewModel extends AndroidViewModel {
      */
     public int calcPrice(TradeGood good, Planet planet) {
         return good.getBasePrice() + good.getIPL() * (planet.getTechnology().ordinal() - good.getMTLP()) + good.getVar();
+    }
+
+    /**
+     * Returns a List of prices
+     * @param allGoods - TradeGoods you want to know the prices of
+     * @param planet - planet you are selling on
+     * @return a List with corresponding prices to each TradeGood in allGoods
+     */
+    public List<Integer> calcPriceList(List<TradeGood> allGoods, Planet planet) {
+        List<Integer> priceList = new ArrayList<>();
+        for (int i = 0; i < allGoods.size(); i++) {
+            priceList.add(calcPrice(allGoods.get(i), planet));
+        }
+        return priceList;
     }
 
     // TODO: Finish these 5 methods after calcPrice() is finished
