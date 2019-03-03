@@ -6,16 +6,16 @@ public class Ship {
     private ShipType shipType;
 
     /** represents actual cargo **/
-    private Object[] cargoArr;
+    private TradeGood[] cargoArr;
     private int size = 0;
 
     Ship(ShipType shipType) {
         this.shipType = shipType;
-        cargoArr = new Object[shipType.getCapacity()];
+        cargoArr = new TradeGood[shipType.getCapacity()];
     }
 
     /** add's cargo to the end of backing array **/
-    public void addCargo(Object cargo) {
+    public void addCargo(TradeGood cargo) {
         cargoArr[size] = cargo;
         size++;
     }
@@ -40,7 +40,7 @@ public class Ship {
                 size--;
             }
         }
-        Object[] newCargoArr = new Object[cargoArr.length];
+        TradeGood[] newCargoArr = new TradeGood[cargoArr.length];
         for(int i = 0; i < cargoArr.length; i++) {
             if(cargoArr[i] != null) {
                 newCargoArr[i] = cargoArr[i];
@@ -55,7 +55,7 @@ public class Ship {
 
 
     /** returns a List of all Objects in the cargo bay on the ship **/
-    public Object[] getCargoArr() {
+    public TradeGood[] getCargoArr() {
         return cargoArr;
     }
 

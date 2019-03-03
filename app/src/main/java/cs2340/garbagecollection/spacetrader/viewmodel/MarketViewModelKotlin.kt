@@ -37,9 +37,15 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
     }
 
     /** returns true if the Player has goods to sell, false if not **/
-    fun hasGoodsToSell(p : Player) : Boolean{
+    fun hasGoodsToSell(p : Player, good: TradeGood, numGoods: Int) : Boolean{
         // check size of Player's cargo arr
-        return p.ship.size >= 1
+        var goodCount : Int = 0
+        for (element : TradeGood in p.ship.cargoArr) {
+            if(element == good) {
+                goodCount++
+            }
+        }
+        return goodCount >= numGoods
     }
 
     /**

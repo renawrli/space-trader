@@ -41,9 +41,15 @@ public class MarketViewModel extends AndroidViewModel {
     }
 
     /** returns true if the Player has goods to sell, false if not **/
-    public boolean hasGoodsToSell(Player p) {
+    public boolean hasGoodsToSell(Player p, TradeGood good, int numGoods) {
         // check size of Player's cargo arr
-        return p.getShip().getSize() >= 1;
+        int goodCount = 0;
+        for (TradeGood element : p.getShip().getCargoArr()) {
+            if(element == good) {
+                goodCount++;
+            }
+        }
+        return goodCount >= numGoods;
     }
 
     /**
