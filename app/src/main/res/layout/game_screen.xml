@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/creating_universe_label" />
+        android:text="Welcome to Planet Nigeria" />
 
     <Button
         android:id="@+id/marketPlaceButton"
