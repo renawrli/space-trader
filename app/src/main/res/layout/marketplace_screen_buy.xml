@@ -41,7 +41,7 @@
         android:layout_marginBottom="456dp"
         android:text="0" />
 
-    <EditText
+    <TextView
         android:id="@+id/openCargoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:layout_marginBottom="396dp"
         android:text="0" />
 
-    <EditText
+    <TextView
         android:id="@+id/remainingMoneyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
