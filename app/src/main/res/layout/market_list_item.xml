@@ -7,12 +7,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/itemName"
+        android:textSize="24dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="25dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/itemPrice"
+        android:textSize="24dp"
+        android:textColor="#515151"
         android:layout_alignParentRight="true"
         android:layout_marginRight="25dp"/>
 </RelativeLayout>

@@ -16,9 +16,18 @@
         <item>مستحيل</item>
     </string-array>
     <string name="creating_universe_label">صناعة الكون</string>
+    <string name="welcome_to_planet_label">اهلا بك الى </string>
     <string name="market_place_button">سوق</string>
     <string name="sell_button">باع</string>
     <string name="buy_button">اشترى</string>
+    <string name="confirm_transaction_button">تؤكد</string>
+    <string name="cancel_button">إلغاء</string>
+    <string name="not_enough_money_toast">مال غير كاف</string>
+    <string name="not_enough_space_toast">مسالحة غير كافية</string>
+    <string name="not_enough_goods_toast">عدد غير كاف من العناصر</string>
+    <string name="successful_purchase_toast">تم البيع</string>
+    <string name="successful_sale_toast">تم البيع</string>
+    <string name="how_many">كم عدد العناصر؟</string>
     <string-array name="goodNames">
         <item>ماء</item>
         <item>فرو</item>

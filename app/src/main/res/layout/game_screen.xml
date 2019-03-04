@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Welcome to Planet Nigeria" />
+        android:text="@string/welcome_to_planet_label" />
 
     <Button
         android:id="@+id/marketPlaceButton"
@@ -22,7 +22,7 @@
         android:layout_marginEnd="251dp"
         android:layout_marginBottom="23dp"
         android:onClick="toMarket"
-        android:text="Market Place" />
+        android:text="@string/market_place_button" />
 
 
 </RelativeLayout>

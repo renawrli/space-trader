@@ -16,9 +16,18 @@
         <item>不可做</item>
     </string-array>
     <string name="creating_universe_label">正在创造宇宙</string>
+    <string name="welcome_to_planet_label">欢迎来 </string>
     <string name="market_place_button">市场</string>
     <string name="sell_button">卖</string>
     <string name="buy_button">买</string>
+    <string name="confirm_transaction_button">证实</string>
+    <string name="cancel_button">取消</string>
+    <string name="not_enough_money_toast">钱不够</string>
+    <string name="not_enough_space_toast">空间不够</string>
+    <string name="not_enough_goods_toast">商品数量不够</string>
+    <string name="successful_purchase_toast">购买成功</string>
+    <string name="successful_sale_toast">拍卖成功</string>
+    <string name="how_many">几个物品？</string>
     <string-array name="goodNames">
         <item>水</item>
         <item>皮草</item>

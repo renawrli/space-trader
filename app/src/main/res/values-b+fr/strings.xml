@@ -16,9 +16,18 @@
         <item>Impossible</item>
     </string-array>
     <string name="creating_universe_label">En Traine de Créer l"'"Universe</string>
+    <string name="welcome_to_planet_label">Bienvenue au Planète de </string>
     <string name="market_place_button">Centre de Commerce</string>
     <string name="sell_button">Vendre</string>
     <string name="buy_button">Acheter</string>
+    <string name="confirm_transaction_button">Confirmer la Transaction</string>
+    <string name="cancel_button">Annuler</string>
+    <string name="not_enough_money_toast">Argent Insuffisant</string>
+    <string name="not_enough_space_toast">Espace de chargement Insufissant</string>
+    <string name="not_enough_goods_toast">Quantité de Marchandises pas Assez</string>
+    <string name="successful_purchase_toast">Achat Réussie</string>
+    <string name="successful_sale_toast">Vente Réussie</string>
+    <string name="how_many">Combien de Marchandises?</string>
     <string-array name="goodNames">
         <item>L"'"Eau</item>
         <item>Pelages</item>

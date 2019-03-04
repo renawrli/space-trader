@@ -15,7 +15,7 @@
         android:layout_marginRight="4dp"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-        android:text="How Many?"
+        android:text="@string/how_many"
         android:textColor="#ff000000"
         android:textSize="18sp" />
 
@@ -71,21 +71,20 @@
         android:id="@+id/confirmTransactionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@id/cancelButton"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="-37dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="55dp"
         android:onClick="confirmTransactionPressed"
+        android:layout_below="@+id/quantityDisplay"
         android:text="@string/confirm_transaction_button" />
 
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-37dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="246dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/quantityDisplay"
         android:onClick="cancelPressed"
         android:text="@string/cancel_button" />
 
