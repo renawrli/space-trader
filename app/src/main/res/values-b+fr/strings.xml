@@ -20,7 +20,7 @@
     <string name="sell_button">Vendre</string>
     <string name="buy_button">Acheter</string>
     <string-array name="goodNames">
-        <item>L'Eau</item>
+        <item>L"'"Eau</item>
         <item>Pelages</item>
         <item>Cuisine</item>
         <item>Minerai</item>
