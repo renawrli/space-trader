@@ -12,7 +12,7 @@ public enum TradeGood {
     FOOD(1,0, 1, 100, 5, 5, IE.CROPFAIL,	Resources.RICHSOIL,	Resources.POORSOIL, 90, 16),
     ORE(2, 2, 3, 350, 20, 10, IE.WAR, Resources.MINERALRICH, Resources.MINERALPOOR,350, 420),
     GAMES(3, 1, 6, 250, -10, 5, IE.BOREDOM, Resources.ARTISTIC, null, 160, 270),
-    FIREARMS(3, 1, 5, 125, -75, 100, IE.WAR, Resources.WARLIKE, null, 600, 1100),
+    FIREARMS(3, 1, 5, 1250, -75, 100, IE.WAR, Resources.WARLIKE, null, 600, 1100),
     MEDICINE(4, 1, 6, 650, -20, 10, IE.PLAGUE, Resources.LOTSOFHERBS, null, 400, 700),
     MACHINES(4, 3, 5, 900, -30, 5, IE.LACKOFWORKERS,	null, null,600, 800),
     NARCOTICS(5, 0, 5, 3500, -125, 150, IE.BOREDOM, Resources.WEIRDMUSHROOMS, null, 2000, 3000),
