@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="166dp"
-        android:layout_marginBottom="303dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="0dp"
         android:onClick="buyPressed"
         android:text="@string/buy_button" />
 
@@ -30,18 +30,26 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="SELL ITEMS" />
+        android:text="@string/sell_button" />
 
-    <Button
-        android:id="@+id/displayCargoButton"
+
+    <TextView
+        android:id="@+id/cargoDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="233dp"
-        android:onClick="buyPressed"
-        android:text="@string/displayCargoButton" />
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="410dp"
+        android:ems="10"
+        android:text="@string/cargoDisplay" />
 
+    <ListView
+        android:layout_width="301dp"
+        android:layout_height="357dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="37dp" />
 
 </RelativeLayout>
