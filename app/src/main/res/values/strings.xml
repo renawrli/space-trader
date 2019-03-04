@@ -39,5 +39,6 @@
         <item>Robots</item>
     </string-array>
     <string name="openCargoText">"Remaining Cargo Spots":</string>
-    <string name="remainingMoneyText">"Money Left":</string>
+    <string name="remainingMoneyText">"Credits":</string>
+    <string name="displayCargoButton">"Current Cargo"</string>
 </resources>

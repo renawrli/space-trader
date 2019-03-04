@@ -12,7 +12,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="413dp"
+        android:layout_marginBottom="303dp"
         android:onClick="buyPressed"
         android:text="@string/buy_button" />
 
@@ -24,13 +24,24 @@
         android:layout_below="@+id/sellItemDisplay"
         android:layout_marginBottom="-109dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/sellItemDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="SELL ITEMS" />
+
+    <Button
+        android:id="@+id/displayCargoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="233dp"
+        android:onClick="buyPressed"
+        android:text="@string/displayCargoButton" />
 
 
 </RelativeLayout>
