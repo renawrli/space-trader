@@ -91,15 +91,15 @@ public class Game {
     }
 
     /** getters and setters **/
-    public Difficulty getDifficulty() {
+    public static Difficulty getDifficulty() {
         return difficulty;
     }
 
-    public Player getPlayer() {
+    public static Player getPlayer() {
         return player;
     }
 
-    public Universe getUniverse() {
+    public static Universe getUniverse() {
         return universe;
     }
 

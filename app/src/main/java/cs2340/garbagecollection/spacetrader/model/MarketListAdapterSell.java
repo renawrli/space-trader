@@ -1,6 +1,7 @@
 package cs2340.garbagecollection.spacetrader.model;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,14 +14,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import cs2340.garbagecollection.spacetrader.R;
+import cs2340.garbagecollection.spacetrader.views.QuantityTransactionActivity;
 
-public class MarketListAdapter extends RecyclerView.Adapter<MarketListAdapter.ViewHolder> {
+public class MarketListAdapterSell extends RecyclerView.Adapter<MarketListAdapterSell.ViewHolder> {
 
     private ArrayList<String> mItemNames = new ArrayList<>();
     private ArrayList<Integer> mItemPrices = new ArrayList<>();
     private Context mContext;
 
-    public MarketListAdapter(ArrayList<String> itemNames, ArrayList<Integer> itemPrices, Context context) {
+    public MarketListAdapterSell(ArrayList<String> itemNames, ArrayList<Integer> itemPrices, Context context) {
         mItemNames = itemNames;
         mItemPrices = itemPrices;
         mContext = context;
@@ -33,6 +35,8 @@ public class MarketListAdapter extends RecyclerView.Adapter<MarketListAdapter.Vi
         return holder;
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.itemName.setText(mItemNames.get(i));
@@ -44,7 +48,8 @@ public class MarketListAdapter extends RecyclerView.Adapter<MarketListAdapter.Vi
         return mItemNames.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView itemName;
         TextView itemPrice;
         RelativeLayout parentLayout;
@@ -56,11 +61,19 @@ public class MarketListAdapter extends RecyclerView.Adapter<MarketListAdapter.Vi
 
             itemView.setOnClickListener(this);
         }
+
         @Override
         public void onClick(View view) {
-            System.out.println("Clicking at posit" +
+            System.out.println("adapter sell: Clicking at posit" +
                     "ion " + getAdapterPosition());
-           //dialogue box
+            Intent dialogue = new Intent(view.getContext(), QuantityTransactionActivity.class);
+            dialogue.putExtra("goodName", itemName.getText());
+            dialogue.putExtra("buy_sell", false);
+            view.getContext().startActivity(dialogue);
+
+
+//            System.out.println(itemName.getText() + " " + itemPrice.getText());
+
         }
     }
 }

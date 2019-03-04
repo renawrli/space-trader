@@ -15,7 +15,7 @@ import java.util.List;
 import cs2340.garbagecollection.spacetrader.R;
 import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Market;
-import cs2340.garbagecollection.spacetrader.model.MarketListAdapter;
+import cs2340.garbagecollection.spacetrader.model.MarketListAdapterBuy;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
@@ -24,7 +24,7 @@ public class MarketBuyActivity extends AppCompatActivity {
     private Button sellButton;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private MarketListAdapter adapter;
+    private MarketListAdapterBuy adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +35,11 @@ public class MarketBuyActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.Goods);
         layoutManager = new LinearLayoutManager(this);
 
-//        ArrayList<String> goodNamesList = new ArrayList<>();
         ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;
 
         List<TradeGood> goodsList = Market.getAllBuyableGoods(Game.getCurrLocation().getTechnology());
-//        Log.d("size", goodsList.size()+"");
+        Log.d("size", goodsList.size()+"");
 
         for (int i = 0; i < goodsList.size() ; i++) {
             for (int j = 0; j < TradeGood.values().length; j++) {
@@ -55,12 +54,14 @@ public class MarketBuyActivity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new MarketListAdapter(goodNamesListTranslated, goodPriceList, this));
+        recyclerView.setAdapter(new MarketListAdapterBuy(goodNamesListTranslated, goodPriceList, this));
     }
 
     public void sellPressed(View view) {
         Intent marketSellIntent = new Intent(this, MarketSellActivity.class);
         startActivity(marketSellIntent);
+        Log.d("intent", "sellPressed: navigating to sell");
+
     }
 
 }

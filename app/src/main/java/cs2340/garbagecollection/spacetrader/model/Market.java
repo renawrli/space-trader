@@ -36,7 +36,7 @@ public class Market {
     /**returns a List of all goods you can buy on a planet
      * @param planetTLevel - TechLevel of the planet the Player is onS
      * **/
-    public List<TradeGood> getAllSellableGoods(TechLevel planetTLevel) {
+    public static List<TradeGood> getAllSellableGoods(TechLevel planetTLevel) {
         int planetTechLevel = planetTLevel.ordinal();
         List<TradeGood> goodsList = new ArrayList<>();
 
