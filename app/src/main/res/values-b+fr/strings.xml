@@ -17,5 +17,18 @@
     </string-array>
     <string name="creating_universe_label">En Traine de Créer l"'"Universe</string>
     <string name="market_place_button">Centre de Commerce</string>
-    <string name="sell_button">Sell</string>
+    <string name="sell_button">Vendre</string>
+    <string name="buy_button">Acheter</string>
+    <string-array name="goodNames">
+        <item>L'Eau</item>
+        <item>Pelages</item>
+        <item>Cuisine</item>
+        <item>Minerai</item>
+        <item>Jeux</item>
+        <item>Armes</item>
+        <item>Médicaments</item>
+        <item>Machinens</item>
+        <item>Stupefiants</item>
+        <item>Robots</item>
+    </string-array>
 </resources>

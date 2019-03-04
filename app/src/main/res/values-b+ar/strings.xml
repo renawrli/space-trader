@@ -17,5 +17,18 @@
     </string-array>
     <string name="creating_universe_label">صناعة الكون</string>
     <string name="market_place_button">سوق</string>
-    <string name="sell_button">Sell</string>
+    <string name="sell_button">باع</string>
+    <string name="buy_button">اشترى</string>
+    <string-array name="goodNames">
+        <item>ماء</item>
+        <item>فرو</item>
+        <item>طعام</item>
+        <item>خامة</item>
+        <item>ألعب</item>
+        <item>مسادسات</item>
+        <item>دواء</item>
+        <item>ماكينات</item>
+        <item>المخادرات</item>
+        <item>الروبوتات</item>
+    </string-array>
 </resources>

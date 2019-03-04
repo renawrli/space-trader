@@ -17,5 +17,18 @@
     </string-array>
     <string name="creating_universe_label">正在创造宇宙</string>
     <string name="market_place_button">市场</string>
-    <string name="sell_button">Sell</string>
+    <string name="sell_button">卖</string>
+    <string name="buy_button">买</string>
+    <string-array name="goodNames">
+        <item>水</item>
+        <item>皮草</item>
+        <item>食物</item>
+        <item>矿石</item>
+        <item>游戏</item>
+        <item>枪支</item>
+        <item>药物</item>
+        <item>电机</item>
+        <item>毒品</item>
+        <item>机器人</item>
+    </string-array>
 </resources>
