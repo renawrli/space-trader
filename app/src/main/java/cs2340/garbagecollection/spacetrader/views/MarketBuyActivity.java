@@ -64,4 +64,9 @@ public class MarketBuyActivity extends AppCompatActivity {
 
     }
 
+    public void exitPressed(View view) {
+        Intent buyPressed = new Intent(this, GameScreenActivity.class);
+        finish();
+        startActivity(buyPressed);
+    }
 }

@@ -28,6 +28,10 @@
     <string name="successful_purchase_toast">Achat Réussie</string>
     <string name="successful_sale_toast">Vente Réussie</string>
     <string name="how_many">Combien de Marchandises?</string>
+    <string name="buy_goods_text">Que Va Tu Acheter?</string>
+    <string name="open_cargo_text">Espace de Chargement</string>
+    <string name="remaining_money_text">Argent</string>
+    <string name="exit_button">Sortir</string>
     <string-array name="goodNames">
         <item>L"'"Eau</item>
         <item>Pelages</item>

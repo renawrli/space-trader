@@ -12,9 +12,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="20dp"
         android:onClick="buyPressed"
         android:text="@string/buy_button" />
+    <Button
+        android:id="@+id/leaveMarketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/buyButton"
+        android:onClick="exitPressed"
+        android:text="@string/exit_button" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/sell_goods"
@@ -40,9 +47,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="241dp"
-        android:layout_marginBottom="410dp"
+        android:layout_marginBottom="150dp"
         android:ems="10"
-        android:text="@string/cargoDisplay" />
+        android:text="@string/open_cargo_text" />
 
     <ListView
         android:layout_width="301dp"

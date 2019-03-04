@@ -28,6 +28,10 @@
     <string name="successful_purchase_toast">تم البيع</string>
     <string name="successful_sale_toast">تم البيع</string>
     <string name="how_many">كم عدد العناصر؟</string>
+    <string name="buy_goods_text">ما ستشتري</string>
+    <string name="open_cargo_text">مسالحة</string>
+    <string name="remaining_money_text">مال</string>
+    <string name="exit_button">ىخرج</string>
     <string-array name="goodNames">
         <item>ماء</item>
         <item>فرو</item>

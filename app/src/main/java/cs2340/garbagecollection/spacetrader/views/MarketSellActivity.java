@@ -67,4 +67,10 @@ public class MarketSellActivity extends AppCompatActivity {
         Log.d("intent", "buyPressed: navigate to MarketBuyActivity");
 
     }
+
+    public void exitPressed(View view) {
+        Intent buyPressed = new Intent(this, GameScreenActivity.class);
+        finish();
+        startActivity(buyPressed);
+    }
 }

@@ -28,6 +28,10 @@
     <string name="successful_purchase_toast">购买成功</string>
     <string name="successful_sale_toast">拍卖成功</string>
     <string name="how_many">几个物品？</string>
+    <string name="buy_goods_text">你想买什么?</string>
+    <string name="open_cargo_text">空间</string>
+    <string name="remaining_money_text">钱</string>
+    <string name="exit_button">出门</string>
     <string-array name="goodNames">
         <item>水</item>
         <item>皮草</item>

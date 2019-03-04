@@ -14,6 +14,13 @@
         android:layout_marginBottom="36dp"
         android:onClick="sellPressed"
         android:text="@string/sell_button" />
+    <Button
+        android:id="@+id/leaveMarketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/sellButton"
+        android:onClick="exitPressed"
+        android:text="@string/exit_button" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
@@ -29,7 +36,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/buyGoodsText" />
+        android:text="@string/buy_goods_text" />
 
     <TextView
         android:id="@+id/openCargoSpots"
@@ -38,20 +45,19 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="141dp"
-        android:layout_marginBottom="456dp"
+        android:layout_marginBottom="150dp"
         android:text="0" />
 
     <TextView
         android:id="@+id/openCargoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="194dp"
-        android:layout_marginBottom="441dp"
+
+        android:layout_marginBottom="150dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/openCargoText" />
+        android:text="@string/open_cargo_text" />
 
     <TextView
         android:id="@+id/moneyLeft"
@@ -60,7 +66,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="141dp"
-        android:layout_marginBottom="396dp"
+        android:layout_marginBottom="200dp"
         android:text="0" />
 
     <TextView
@@ -70,10 +76,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="194dp"
-        android:layout_marginBottom="385dp"
+        android:layout_marginBottom="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/remainingMoneyText" />
+        android:text="@string/remaining_money_text" />
 
 
 

@@ -28,6 +28,10 @@
     <string name="successful_purchase_toast">Purchase successful</string>
     <string name="successful_sale_toast">Sale successful</string>
     <string name="how_many">How Many Items?</string>
+    <string name="buy_goods_text">What do you want to buy?</string>
+    <string name="open_cargo_text">Open Cargo</string>
+    <string name="remaining_money_text">Money</string>
+    <string name="exit_button">Exit</string>
     <string-array name="goodNames">
         <item>Water</item>
         <item>Furs</item>
