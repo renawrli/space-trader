@@ -22,14 +22,17 @@ public class Ship {
 
     /**
      * Removes object sold from ship
-     * @param index that object is located in
-     * @return Object sold on ship
+     * @param good the TradeGood to remove from Ship
      */
-    public Object sellCargo(int index) {
-        Object sold = cargoArr[index];
-        size--;
-        cargoArr[index] = null;
-        return sold;
+    public void sellCargo(TradeGood good) {
+//        for (int i = 0; i < size; i++) {
+//            if(cargoArr[i] == good) {
+//                cargoArr[i] = null;
+//            }
+//        }
+//        Object sold = cargoArr[index];
+//        size--;
+//        cargoArr[index] = null;
     }
 
     public void sellCargo(TradeGood good, int numToSell) {
@@ -37,6 +40,7 @@ public class Ship {
         for(int i = 0; i < cargoArr.length; i++) {
             if(cargoArr[i] == good && cleared < numToSell) {
                 cargoArr[i] = null;
+                cleared++;
                 size--;
             }
         }
