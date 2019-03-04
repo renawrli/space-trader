@@ -21,20 +21,10 @@ public class Ship {
     }
 
     /**
-     * Removes object sold from ship
-     * @param good the TradeGood to remove from Ship
+     * Sells a specified amount of goods from the cargoArr.
+     * @param good - TradeGood to sell
+     * @param numToSell - number of goods to sell
      */
-    public void sellCargo(TradeGood good) {
-//        for (int i = 0; i < size; i++) {
-//            if(cargoArr[i] == good) {
-//                cargoArr[i] = null;
-//            }
-//        }
-//        Object sold = cargoArr[index];
-//        size--;
-//        cargoArr[index] = null;
-    }
-
     public void sellCargo(TradeGood good, int numToSell) {
         int cleared = 0;
         for(int i = 0; i < cargoArr.length; i++) {

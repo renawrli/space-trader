@@ -85,8 +85,9 @@ public class MarketViewModel extends AndroidViewModel {
     public void sell(Player p, TradeGood good, Planet planet, int numGoods) {
         // increment money and remove from cargoArr
         p.setCredits(p.getCredits() + numGoods*calcPrice(good, planet));
-        for(int i = 0; i < numGoods; i++) {
-            p.getShip().sellCargo(good, numGoods);
-        }
+//        for(int i = 0; i < numGoods; i++) {
+//            p.getShip().sellCargo(good, numGoods);
+//        }
+        p.getShip().sellCargo(good, numGoods);
     }
 }
