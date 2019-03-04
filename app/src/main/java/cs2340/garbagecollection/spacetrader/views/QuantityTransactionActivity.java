@@ -70,6 +70,7 @@ public class QuantityTransactionActivity extends AppCompatActivity {
 
             if (valid) {
                 marketViewModel.buy(Game.getPlayer(), good, Game.getCurrLocation(), quantity);
+                Toast.makeText(this, getResources().getString(R.string.successful_purchase_toast) , Toast.LENGTH_SHORT).show();
                 this.finish();
             }
 
@@ -80,6 +81,7 @@ public class QuantityTransactionActivity extends AppCompatActivity {
             }
             if (valid) {
                 marketViewModel.sell(Game.getPlayer(), good, Game.getCurrLocation(), quantity);
+                Toast.makeText(this, getResources().getString(R.string.successful_sale_toast) , Toast.LENGTH_SHORT).show();
                 this.finish();
             }
         }
@@ -96,5 +98,9 @@ public class QuantityTransactionActivity extends AppCompatActivity {
             quantity--;
             quantityDisplay.setText(quantity+"");
         }
+    }
+
+    public void cancelPressed(View view) {
+        this.finish();
     }
 }

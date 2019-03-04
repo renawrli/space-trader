@@ -24,6 +24,8 @@
     <string name="not_enough_money_toast">"Insufficient funds"</string>
     <string name="not_enough_space_toast">"Insufficient cargo space"</string>
     <string name="not_enough_goods_toast">"Insufficient goods to sell"</string>
+    <string name="successful_purchase_toast">"Purchase successful"</string>
+    <string name="successful_sale_toast">"Sale successful</string>
     <string-array name="goodNames">
         <item>Water</item>
         <item>Furs</item>
