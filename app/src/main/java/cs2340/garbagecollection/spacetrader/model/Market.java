@@ -1,5 +1,7 @@
 package cs2340.garbagecollection.spacetrader.model;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 

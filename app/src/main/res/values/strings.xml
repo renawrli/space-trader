@@ -18,4 +18,16 @@
     <string name="creating_universe_label">Creating the Universe</string>
     <string name="market_place_button">Marketplace</string>
     <string name="sell_button">Sell</string>
+    <string-array name="goodNames">
+        <item>Water</item>
+        <item>Furs</item>
+        <item>Food</item>
+        <item>Ore</item>
+        <item>Games</item>
+        <item>Firearms</item>
+        <item>Medicine</item>
+        <item>Machines</item>
+        <item>Narcotics</item>
+        <item>Robots</item>
+    </string-array>
 </resources>

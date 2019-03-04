@@ -20,17 +20,11 @@ import cs2340.garbagecollection.spacetrader.model.TradeGood;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 
-public class MarketBuyActivity extends AppCompatActivity implements MarketListAdapter.ItemClickListener {
+public class MarketBuyActivity extends AppCompatActivity {
     private Button sellButton;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private MarketListAdapter adapter;
-    private MarketListAdapter.ItemClickListener itemClickListener;
-    @Override
-    public void onItemClick(int position) {
-//        Log.d("Click", "onItemClick: "  + position);
-//        Intent transactionDialogue = new Intent(this, QuantityTransactionActivity.class);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,20 +35,27 @@ public class MarketBuyActivity extends AppCompatActivity implements MarketListAd
         recyclerView = findViewById(R.id.Goods);
         layoutManager = new LinearLayoutManager(this);
 
-        ArrayList<String> goodNamesList = new ArrayList<>();
+//        ArrayList<String> goodNamesList = new ArrayList<>();
+        ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;
 
         List<TradeGood> goodsList = Market.getAllBuyableGoods(Game.getCurrLocation().getTechnology());
 //        Log.d("size", goodsList.size()+"");
-        for (TradeGood tg : goodsList) {
-            goodNamesList.add(tg.name());
+
+        for (int i = 0; i < goodsList.size() ; i++) {
+            for (int j = 0; j < TradeGood.values().length; j++) {
+                if (goodsList.get(i)==(TradeGood.values()[j])) {
+                    goodNamesListTranslated.add(getResources().getStringArray(R.array.goodNames)[j]);
+                }
+            }
+
         }
         MarketViewModelKotlin marketViewModelKotlin = new MarketViewModelKotlin(this.getApplication());
         goodPriceList = (ArrayList<Integer>) marketViewModelKotlin.calcPriceList(goodsList, Game.getCurrLocation());
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new MarketListAdapter(goodNamesList, goodPriceList, this));
+        recyclerView.setAdapter(new MarketListAdapter(goodNamesListTranslated, goodPriceList, this));
     }
 
     public void sellPressed(View view) {
