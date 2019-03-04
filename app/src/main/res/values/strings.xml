@@ -17,8 +17,8 @@
     </string-array>
     <string name="creating_universe_label">Creating the Universe</string>
     <string name="market_place_button">Marketplace</string>
-    <string name="sell_button">Sell</string>
-    <string name="buy_button">Buy</string>
+    <string name="sell_button">Sell Goods</string>
+    <string name="buy_button">Buy Goods</string>
     <string name="confirm_transaction_button">Confirm Transaction</string>
     <string name="cancel_button">Cancel</string>
     <string name="not_enough_money_toast">"Insufficient funds"</string>
@@ -38,4 +38,6 @@
         <item>Narcotics</item>
         <item>Robots</item>
     </string-array>
+    <string name="openCargoText">"Remaining Cargo Spots":</string>
+    <string name="remainingMoneyText">"Money Left":</string>
 </resources>

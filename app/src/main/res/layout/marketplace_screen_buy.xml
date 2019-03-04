@@ -5,18 +5,76 @@
     android:layoutDirection="ltr">
 
     <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
         android:id="@+id/sellButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="36dp"
         android:onClick="sellPressed"
-        android:text="@string/sell_button"
-    />
+        android:text="@string/sell_button" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@+id/sellButton"
+        android:layout_above="@+id/openCargoText"
+        android:layout_below="@+id/buyGoodsText"
        />
+
+    <EditText
+        android:id="@+id/buyGoodsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="BUY GOODS" />
+
+    <TextView
+        android:id="@+id/openCargoSpots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="456dp"
+        android:text="0" />
+
+    <EditText
+        android:id="@+id/openCargoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="441dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/openCargoText" />
+
+    <TextView
+        android:id="@+id/moneyLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="396dp"
+        android:text="0" />
+
+    <EditText
+        android:id="@+id/remainingMoneyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="385dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/remainingMoneyText" />
+
 
 
 </RelativeLayout>
