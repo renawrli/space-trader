@@ -19,6 +19,11 @@
     <string name="market_place_button">Marketplace</string>
     <string name="sell_button">Sell</string>
     <string name="buy_button">Buy</string>
+    <string name="confirm_transaction_button">Confirm Transaction</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="not_enough_money_toast">"Insufficient funds"</string>
+    <string name="not_enough_space_toast">"Insufficient cargo space"</string>
+    <string name="not_enough_goods_toast">"Insufficient goods to sell"</string>
     <string-array name="goodNames">
         <item>Water</item>
         <item>Furs</item>

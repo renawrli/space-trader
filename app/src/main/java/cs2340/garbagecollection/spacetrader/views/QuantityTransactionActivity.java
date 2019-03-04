@@ -60,11 +60,11 @@ public class QuantityTransactionActivity extends AppCompatActivity {
         boolean valid = true;
         if (buy) {
             if (!marketViewModel.enoughMoney(Game.getPlayer(), good, Game.getCurrLocation(), quantity)) {
-                Toast.makeText(this, "Insufficient funds", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getResources().getString(R.string.not_enough_money_toast), Toast.LENGTH_LONG).show();
                 valid = false;
             }
             if (!marketViewModel.enoughSpaceToBuy(Game.getPlayer(), quantity)) {
-                Toast.makeText(this, "Not enough cargo space", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getResources().getString(R.string.not_enough_space_toast), Toast.LENGTH_LONG).show();
                 valid = false;
             }
 
@@ -75,7 +75,7 @@ public class QuantityTransactionActivity extends AppCompatActivity {
 
         } else {
             if (!marketViewModel.hasGoodsToSell(Game.getPlayer(), good, quantity)) {
-                Toast.makeText(this, "Not enough goods to sell", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getResources().getString(R.string.not_enough_goods_toast), Toast.LENGTH_LONG).show();
                 valid = false;
             }
             if (valid) {

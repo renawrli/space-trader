@@ -71,9 +71,6 @@ public class MarketListAdapterSell extends RecyclerView.Adapter<MarketListAdapte
             dialogue.putExtra("buy_sell", false);
             view.getContext().startActivity(dialogue);
 
-
-//            System.out.println(itemName.getText() + " " + itemPrice.getText());
-
         }
     }
 }
