@@ -80,8 +80,9 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
     fun sell(p : Player, good : TradeGood, planet : Planet, numGoods : Int) {
         // increment money and remove from cargoArr
         p.credits = p.credits + numGoods*calcPrice(good, planet);
-        for(i in 1..numGoods) {
-            p.ship.sellCargo(good, numGoods)
-        }
+//        for(i in 1..numGoods) {
+//            p.ship.sellCargo(good, numGoods)
+//        }
+        p.ship.sellCargo(good, numGoods)
     }
 }

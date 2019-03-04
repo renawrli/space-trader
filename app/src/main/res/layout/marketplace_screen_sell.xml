@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr">
 
 
     <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
         android:id="@+id/buyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="0dp"
         android:onClick="buyPressed"
-        android:text="@string/buy_button"
-        />
+        android:text="@string/buy_button" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/sell_goods"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@+id/buyButton"
-        />
+        android:layout_above="@+id/buyButton"
+        android:layout_below="@+id/sellItemDisplay"
+        android:layout_marginBottom="-109dp" />
+
+    <TextView
+        android:id="@+id/sellItemDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/sell_button" />
 
 
+    <TextView
+        android:id="@+id/cargoDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="410dp"
+        android:ems="10"
+        android:text="@string/cargoDisplay" />
+
+    <ListView
+        android:layout_width="301dp"
+        android:layout_height="357dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="37dp" />
 
 </RelativeLayout>

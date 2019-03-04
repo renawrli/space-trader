@@ -21,22 +21,16 @@ public class Ship {
     }
 
     /**
-     * Removes object sold from ship
-     * @param index that object is located in
-     * @return Object sold on ship
+     * Sells a specified amount of goods from the cargoArr.
+     * @param good - TradeGood to sell
+     * @param numToSell - number of goods to sell
      */
-    public Object sellCargo(int index) {
-        Object sold = cargoArr[index];
-        size--;
-        cargoArr[index] = null;
-        return sold;
-    }
-
     public void sellCargo(TradeGood good, int numToSell) {
         int cleared = 0;
         for(int i = 0; i < cargoArr.length; i++) {
             if(cargoArr[i] == good && cleared < numToSell) {
                 cargoArr[i] = null;
+                cleared++;
                 size--;
             }
         }
@@ -52,7 +46,6 @@ public class Ship {
     public int getSize() {
         return size;
     }
-
 
     /** returns a List of all Objects in the cargo bay on the ship **/
     public TradeGood[] getCargoArr() {
