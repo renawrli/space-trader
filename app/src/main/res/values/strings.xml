@@ -40,4 +40,5 @@
     </string-array>
     <string name="openCargoText">"Remaining Cargo Spots":</string>
     <string name="remainingMoneyText">"Money Left":</string>
+    <string name="displayCargoButton">"Current Cargo"</string>
 </resources>
