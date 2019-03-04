@@ -25,7 +25,7 @@ public class MarketViewModel extends AndroidViewModel {
     /** calculates price of a TradeGood at a planet
      *  planet should be the currLocation in Game class since that's the Planet we're selling on
      */
-    public int calcPrice(TradeGood good, Planet planet) {
+    public static int calcPrice(TradeGood good, Planet planet) {
         return good.getBasePrice() + good.getIPL() * (planet.getTechnology().ordinal() - good.getMTLP()) + good.getVar();
     }
 
@@ -35,7 +35,7 @@ public class MarketViewModel extends AndroidViewModel {
      * @param planet - planet you are selling on
      * @return a List with corresponding prices to each TradeGood in allGoods
      */
-    public List<Integer> calcPriceList(List<TradeGood> allGoods, Planet planet) {
+    public static List<Integer> calcPriceList(List<TradeGood> allGoods, Planet planet) {
         List<Integer> priceList = new ArrayList<>();
         for (int i = 0; i < allGoods.size(); i++) {
             priceList.add(calcPrice(allGoods.get(i), planet));

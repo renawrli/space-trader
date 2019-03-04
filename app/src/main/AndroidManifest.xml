@@ -11,6 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".views.GameScreenActivity"></activity>
         <activity android:name=".views.MainActivity"></activity>
+        <activity android:name=".views.MarketBuyActivity"></activity>
+        <activity android:name=".views.MarketSellActivity"></activity>
         <activity android:name=".views.ConfigurationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

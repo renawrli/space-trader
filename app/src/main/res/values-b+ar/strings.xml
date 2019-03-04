@@ -17,4 +17,5 @@
     </string-array>
     <string name="creating_universe_label">صناعة الكون</string>
     <string name="market_place_button">سوق</string>
+    <string name="sell_button">Sell</string>
 </resources>

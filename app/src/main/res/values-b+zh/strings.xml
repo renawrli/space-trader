@@ -17,4 +17,5 @@
     </string-array>
     <string name="creating_universe_label">正在创造宇宙</string>
     <string name="market_place_button">市场</string>
+    <string name="sell_button">Sell</string>
 </resources>

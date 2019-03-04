@@ -15,7 +15,13 @@ import java.util.ArrayList
  * This ViewModel supports activities associated with buying/selling goods in the Marketplace
  */
 class MarketViewModelKotlin(application: Application) : AndroidViewModel(application) {
-
+    fun calcPriceList(allGoods: List<TradeGood>, planet: Planet): List<Int> {
+        val priceList = ArrayList<Int>()
+        for (i in allGoods.indices) {
+            priceList.add(calcPrice(allGoods[i], planet))
+        }
+        return priceList
+    }
     // TODO: Fuad must finish this method for class to work
     /** calculates price of a TradeGood at a planet
      *  planet should be the currLocation in Game class since that's the Planet we're selling on
@@ -62,13 +68,13 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
         }
     }
 
-    fun calcPriceList(allGoods: List<TradeGood>, planet: Planet): List<Int> {
+    /*fun calcPriceList(allGoods: List<TradeGood>, planet: Planet): List<Int> {
         val priceList = ArrayList<Int>()
         for (i in allGoods.indices) {
             priceList.add(calcPrice(allGoods[i], planet))
         }
         return priceList
-    }
+    }*/
 
     /** sells good, removes from Player's cargo bay **/
     fun sell(p : Player, good : TradeGood, planet : Planet, numGoods : Int) {
