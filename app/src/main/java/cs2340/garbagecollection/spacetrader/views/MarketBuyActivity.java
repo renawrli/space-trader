@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,8 @@ public class MarketBuyActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private MarketListAdapterBuy adapter;
+    private TextView cargoDisplay;
+    private TextView currentCreditsDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class MarketBuyActivity extends AppCompatActivity {
         sellButton = findViewById(R.id.sellButton);
         recyclerView = findViewById(R.id.Goods);
         layoutManager = new LinearLayoutManager(this);
+        cargoDisplay = findViewById(R.id.openCargoSpots);
+        currentCreditsDisplay = findViewById(R.id.moneyLeft);
 
         ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;
@@ -55,18 +60,31 @@ public class MarketBuyActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(new MarketListAdapterBuy(goodNamesListTranslated, goodPriceList, this));
+        updateTextViews();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateTextViews();
     }
 
     public void sellPressed(View view) {
+        updateTextViews();
         Intent marketSellIntent = new Intent(this, MarketSellActivity.class);
         startActivity(marketSellIntent);
         Log.d("intent", "sellPressed: navigating to sell");
-
+        updateTextViews();
     }
 
     public void exitPressed(View view) {
         Intent buyPressed = new Intent(this, GameScreenActivity.class);
         finish();
         startActivity(buyPressed);
+    }
+
+    private void updateTextViews() {
+        currentCreditsDisplay.setText(Game.getPlayer().getCredits()+"");
+        cargoDisplay.setText(Game.getPlayer().getShip().numOpenSlots()+"");
     }
 }

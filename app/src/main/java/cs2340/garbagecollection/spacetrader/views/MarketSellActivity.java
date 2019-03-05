@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,10 @@ public class MarketSellActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private MarketListAdapterSell adapter;
-    private MarketListAdapterSell.ViewHolder viewHolder;
+    private TextView creditsDisplay;
+    private TextView cargoDisplay;
+    private ListView cargoList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +39,8 @@ public class MarketSellActivity extends AppCompatActivity {
         buyButton = findViewById(R.id.buyButton);
         recyclerView = findViewById(R.id.sell_goods);
         layoutManager = new LinearLayoutManager(this);
-
+        creditsDisplay = findViewById(R.id.currentMoneyText);
+        cargoDisplay = findViewById(R.id.cargoDisplay);
 
         ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;
@@ -58,13 +64,22 @@ public class MarketSellActivity extends AppCompatActivity {
         adapter = new MarketListAdapterSell(goodNamesListTranslated, goodPriceList, this);
         recyclerView.setAdapter(adapter);
 
+        updateTextViews();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateTextViews();
     }
 
-
     public void buyPressed(View view) {
+        updateTextViews();
         Intent buyPressed = new Intent(this, MarketBuyActivity.class);
         startActivity(buyPressed);
         Log.d("intent", "buyPressed: navigate to MarketBuyActivity");
+        updateTextViews();
+
 
     }
 
@@ -72,5 +87,9 @@ public class MarketSellActivity extends AppCompatActivity {
         Intent buyPressed = new Intent(this, GameScreenActivity.class);
         finish();
         startActivity(buyPressed);
+    }
+    private void updateTextViews() {
+        creditsDisplay.setText(Game.getPlayer().getCredits()+"");
+        cargoDisplay.setText(Game.getPlayer().getShip().numOpenSlots()+"");
     }
 }
