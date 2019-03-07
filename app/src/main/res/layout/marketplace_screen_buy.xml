@@ -8,33 +8,31 @@
         android:id="@+id/sellButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="36dp"
         android:onClick="sellPressed"
-        android:text="@string/sell_button" />
+        android:text="@string/sell_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
     <Button
         android:id="@+id/leaveMarketButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/sellButton"
         android:onClick="exitPressed"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/sellButton"
         android:text="@string/exit_button" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/openCargoText"
+        android:layout_height="500dp"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/buyGoodsText"
-       />
+        />
 
     <TextView
         android:id="@+id/buyGoodsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/buy_goods_text" />
 
@@ -42,45 +40,37 @@
         android:id="@+id/openCargoSpots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="141dp"
-        android:layout_marginBottom="150dp"
+        android:layout_toRightOf="@+id/openCargoText"
+        android:layout_marginLeft="50dp"
+        android:layout_alignTop="@id/openCargoText"
         android:text="0" />
 
     <TextView
         android:id="@+id/openCargoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginBottom="150dp"
-        android:ems="10"
+        android:layout_below="@+id/Goods"
         android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
         android:text="@string/open_cargo_text" />
 
     <TextView
         android:id="@+id/moneyLeft"
+        android:layout_alignTop="@+id/remainingMoneyText"
+        android:layout_toRightOf="@id/remainingMoneyText"
+        android:layout_alignStart="@id/openCargoSpots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="141dp"
-        android:layout_marginBottom="200dp"
         android:text="0" />
 
     <TextView
         android:id="@+id/remainingMoneyText"
+        android:layout_below="@id/openCargoText"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="194dp"
-        android:layout_marginBottom="200dp"
-        android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/remaining_money_text" />
-
 
 
 </RelativeLayout>
