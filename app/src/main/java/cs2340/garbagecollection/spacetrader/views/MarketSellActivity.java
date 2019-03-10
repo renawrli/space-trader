@@ -62,7 +62,12 @@ public class MarketSellActivity extends AppCompatActivity {
         }
 
         MarketViewModelKotlin marketViewModelKotlin = new MarketViewModelKotlin(this.getApplication());
+        TradeGood[] cargoArray = Game.getPlayer().getShip().getCargoArr();
+        List<TradeGood> uniqueList = marketViewModelKotlin.uniqueList(cargoArray);
+        List<Integer> numGoods = marketViewModelKotlin.numDuplicatesList(uniqueList, cargoArray);
+        List<String> translatedCargoList = marketViewModelKotlin.translateGoodsList(uniqueList);
         goodPriceList = (ArrayList<Integer>) marketViewModelKotlin.calcPriceList(goodsList, Game.getCurrLocation());
+
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
@@ -70,7 +75,7 @@ public class MarketSellActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         cargoRecyclerView.setHasFixedSize(true);
         cargoRecyclerView.setLayoutManager(layoutManager2);
-        cargoRecyclerView.setAdapter(new CargoListAdapterKotlin(goodNamesListTranslated, goodPriceList));
+        cargoRecyclerView.setAdapter(new CargoListAdapterKotlin(translatedCargoList, numGoods));
 
         updateTextViews();
 

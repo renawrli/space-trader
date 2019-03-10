@@ -11,15 +11,15 @@ import java.util.ArrayList
 
 
 
-class CargoListAdapterKotlin(itemNames: ArrayList<String>, itemCounts: ArrayList<Int>) : RecyclerView.Adapter<CargoListAdapterKotlin.ViewHolder>() {
+class CargoListAdapterKotlin(itemNames: List<String>, itemCounts: List<Int>) : RecyclerView.Adapter<CargoListAdapterKotlin.ViewHolder>() {
 
 
     private var mItemNames = ArrayList<String>()
     private var mItemCounts = ArrayList<Int>()
 
     init {
-        mItemNames = itemNames
-        mItemCounts = itemCounts
+        mItemNames = itemNames as ArrayList<String>
+        mItemCounts = itemCounts as ArrayList<Int>
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {

@@ -3,6 +3,7 @@ package cs2340.garbagecollection.spacetrader.viewmodel
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
+import cs2340.garbagecollection.spacetrader.R
 
 import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Planet;
@@ -85,4 +86,56 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
 //        }
         p.ship.sellCargo(good, numGoods)
     }
+
+    //The following 3 methods are used to display cargo hold in UI
+    /** returns a list of unique TradeGoods in the cargo arr  */
+    fun uniqueList(cargoArr: Array<TradeGood>): List<TradeGood> {
+        val uniqueGoods = ArrayList<TradeGood>()
+
+        for (i in cargoArr.indices) {
+            var inUniqueList = false
+            if (cargoArr[i] != null) {
+                for (j in uniqueGoods.indices) {
+                    if (cargoArr[i] == uniqueGoods[j]) {
+                        inUniqueList = true
+                    }
+                }
+                if (!inUniqueList) {
+                    uniqueGoods.add(cargoArr[i])
+                }
+            }
+        }
+        return uniqueGoods
+    }
+    /** translates a List of TradeGoods into a List of the translated String equivalents **/
+    fun numDuplicatesList(uniqueGoods : List<TradeGood>, cargoArr: Array<TradeGood>) : List<Int> {
+        val countList = ArrayList<Int>()
+        for(i in uniqueGoods.indices) {
+            var counter = 0
+            for (j in cargoArr.indices) {
+                if (uniqueGoods[i] == cargoArr[j]) {
+                    counter++
+                }
+            }
+            countList.add(counter)
+        }
+        return countList
+    }
+
+    /** translates a List of TradeGoods into a List of the translated String equivalents  */
+     fun translateGoodsList(goodList: List<TradeGood>): ArrayList<String> {
+        val cargoNames = ArrayList<String>()
+        for (i in goodList.indices) {
+            for (j in 0 until TradeGood.values().size) {
+                if (goodList[i] != null && goodList[i] == TradeGood.values()[j]) {
+                    cargoNames.add(this.getApplication<Application>().resources.getStringArray(R.array.goodNames)[j])
+                }
+            }
+
+        }
+        return cargoNames
+    }
+
+
+
 }
