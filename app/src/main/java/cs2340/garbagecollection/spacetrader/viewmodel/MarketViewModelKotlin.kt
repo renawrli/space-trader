@@ -105,6 +105,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
                 }
             }
         }
+        System.out.println("uniqueGoods " + uniqueGoods)
         return uniqueGoods
     }
     /** translates a List of TradeGoods into a List of the translated String equivalents **/
@@ -119,6 +120,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
             }
             countList.add(counter)
         }
+        System.out.println("num " + countList)
         return countList
     }
 
@@ -133,6 +135,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
             }
 
         }
+        System.out.println("translated " + cargoNames)
         return cargoNames
     }
 
