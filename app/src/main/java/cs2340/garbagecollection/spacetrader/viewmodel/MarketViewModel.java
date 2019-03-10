@@ -4,6 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
 
+import cs2340.garbagecollection.spacetrader.R;
 import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Player;
@@ -48,6 +49,25 @@ public class MarketViewModel extends AndroidViewModel {
     public boolean enoughMoney(Player p, TradeGood good, Planet planet, int numGoods) {
         // will compare Player's credits to the result of calcPrice(good, currLocation)
         return p.getCredits() >= numGoods*calcPrice(good, planet);
+    }
+
+    /**
+     * Displays list of cargo from an array to ArrayList,
+     * if null it is not added
+     * @param cargo all the cargo on the ship including null
+     * @return cargoNames not null
+     */
+    private ArrayList<String> cargoDisplayList(TradeGood[] cargo) {
+        ArrayList<String> cargoNames = new ArrayList<>();
+        for (int i = 0; i < cargo.length ; i++) {
+            for (int j = 0; j < TradeGood.values().length; j++) {
+                if (cargo[i] != null && cargo[i]==(TradeGood.values()[j])) {
+                    cargoNames.add(this.getApplication().getResources().getStringArray(R.array.goodNames)[j]);
+                }
+            }
+
+        }
+        return cargoNames;
     }
 
     /** checks to see if player has enough cargo space to buy the good **/
