@@ -32,6 +32,7 @@
     <string name="open_cargo_text">空间</string>
     <string name="remaining_money_text">钱</string>
     <string name="exit_button">出门</string>
+    <string name="your_cargo_text">你的物品</string>
     <string-array name="goodNames">
         <item>水</item>
         <item>皮草</item>

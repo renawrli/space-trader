@@ -32,6 +32,7 @@
     <string name="open_cargo_text">Espace de Chargement</string>
     <string name="remaining_money_text">Argent</string>
     <string name="exit_button">Sortir</string>
+    <string name="your_cargo_text">Ta Chargement</string>
     <string-array name="goodNames">
         <item>L"'"Eau</item>
         <item>Pelages</item>

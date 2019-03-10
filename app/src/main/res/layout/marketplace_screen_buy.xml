@@ -24,10 +24,23 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="220dp"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/buyGoodsText"
-        />
+        android:layout_below="@+id/buyGoodsText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_cargo_text"
+        android:id="@+id/yourCargoText"
+        android:layout_below="@+id/Goods"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cargoGoods"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/yourCargoText" />
 
     <TextView
         android:id="@+id/buyGoodsText"
@@ -41,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/openCargoText"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_alignTop="@id/openCargoText"
         android:text="0" />
 
@@ -49,9 +62,9 @@
         android:id="@+id/openCargoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Goods"
+        android:layout_below="@+id/cargoGoods"
         android:inputType="textPersonName"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/open_cargo_text" />
 
     <TextView

@@ -31,7 +31,7 @@
     <string name="buy_goods_text">What do you want to buy?</string>
     <string name="open_cargo_text">Open Cargo</string>
     <string name="remaining_money_text">Money</string>
-    <string name="current_money_text">Credits</string>
+    <string name="your_cargo_text">Your Cargo</string>
     <string name="exit_button">Exit</string>
     <string-array name="goodNames">
         <item>Water</item>

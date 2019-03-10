@@ -25,8 +25,8 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/sell_goods"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/sellItemDisplay" />
 
     <TextView
@@ -36,14 +36,26 @@
         android:inputType="textPersonName"
         android:text="@string/sell_button" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_cargo_text"
+        android:id="@+id/yourCargoText"
+        android:layout_below="@+id/sell_goods"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cargoGoods"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/yourCargoText" />
     <TextView
         android:id="@+id/cargoDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sell_goods"
+        android:layout_below="@+id/cargoGoods"
         android:inputType="textPersonName"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/open_cargo_text" />
 
     <TextView
@@ -62,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/current_money_text" />
+        android:text="@string/remaining_money_text" />
     <TextView
         android:id="@+id/moneyLeftDisplay"
         android:layout_alignTop="@+id/currentMoneyText"

@@ -32,6 +32,7 @@
     <string name="open_cargo_text">مسالحة</string>
     <string name="remaining_money_text">مال</string>
     <string name="exit_button">ىخرج</string>
+    <string name="your_cargo_text">مسالحتاك</string>
     <string-array name="goodNames">
         <item>ماء</item>
         <item>فرو</item>
