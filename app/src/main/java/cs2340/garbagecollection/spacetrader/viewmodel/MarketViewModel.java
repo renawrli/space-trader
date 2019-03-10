@@ -17,14 +17,64 @@ import java.util.List;
  * This ViewModel supports activities associated with buying/selling goods in the Marketplace
  */
 public class MarketViewModel extends AndroidViewModel {
-    List<TradeGood> uniqueGoods = new ArrayList<>();
-    List<Integer> goodCounts = new ArrayList<>();
-    List<String> translatedGoods = new ArrayList<>();
+    //these 3 variables should be in the View
+//    List<TradeGood> uniqueGoods = new ArrayList<>();
+//    List<Integer> goodCounts = new ArrayList<>();
+//    List<String> translatedGoods = new ArrayList<>();
 
     public MarketViewModel (@NonNull Application application) {
         super(application);
     }
 
+    //The following 3 methods are used to display cargo hold in UI
+    /** returns a list of unique TradeGoods in the cargo arr **/
+    public List<TradeGood> uniqueList(TradeGood[] cargoArr) {
+        List<TradeGood> uniqueGoods = new ArrayList<>();
+
+        for (int i = 0; i < cargoArr.length; i++) {
+            boolean inUniqueList = false;
+            if(cargoArr[i] != null) {
+                for (int j = 0; j < uniqueGoods.size(); j++) {
+                    if(cargoArr[i].equals(uniqueGoods.get(j))) {
+                        inUniqueList = true;
+                    }
+                }
+                if(!inUniqueList) {
+                    uniqueGoods.add(cargoArr[i]);
+                }
+            }
+        }
+        return uniqueGoods;
+    }
+
+    /** returns a list of the number of duplicates of each TradeGood **/
+    public List<Integer> numDuplicatesList(List<TradeGood> uniqueGoods, TradeGood[] cargoArr) {
+        List<Integer> countList = new ArrayList<>();
+        for (int i = 0; i < uniqueGoods.size(); i++) {
+            int counter = 0;
+            for (int j = 0; j < cargoArr.length; j++) {
+                if (uniqueGoods.get(i).equals(cargoArr[j])) {
+                    counter++;
+                }
+            }
+            countList.add(counter);
+        }
+        return countList;
+    }
+
+    /** translates a List of TradeGoods into a List of the translated String equivalents **/
+    private ArrayList<String> translateGoodsList(List<TradeGood> goodList) {
+        ArrayList<String> cargoNames = new ArrayList<>();
+        for (int i = 0; i < goodList.size(); i++) {
+            for (int j = 0; j < TradeGood.values().length; j++) {
+                if (goodList.get(i) != null && goodList.get(i) == (TradeGood.values()[j])) {
+                    cargoNames.add(this.getApplication().getResources().getStringArray(R.array.goodNames)[j]);
+                }
+            }
+
+        }
+        return cargoNames;
+    }
 
     // TODO: Fuad must finish this method for class to work
     /** calculates price of a TradeGood at a planet
