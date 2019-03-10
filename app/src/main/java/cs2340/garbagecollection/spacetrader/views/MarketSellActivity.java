@@ -39,8 +39,8 @@ public class MarketSellActivity extends AppCompatActivity {
         buyButton = findViewById(R.id.buyButton);
         recyclerView = findViewById(R.id.sell_goods);
         layoutManager = new LinearLayoutManager(this);
-        creditsDisplay = findViewById(R.id.currentMoneyText);
-        cargoDisplay = findViewById(R.id.cargoDisplay);
+        creditsDisplay = findViewById(R.id.moneyLeftDisplay);
+        cargoDisplay = findViewById(R.id.openCargoSpots);
 
         ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;

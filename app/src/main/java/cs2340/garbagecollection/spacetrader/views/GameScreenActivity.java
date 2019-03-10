@@ -13,7 +13,7 @@ import cs2340.garbagecollection.spacetrader.model.Planet;
 
 public class GameScreenActivity extends AppCompatActivity {
     TextView welcomeText;
-    Planet currentPlanet = Game.getUniverse().getAllSolarSystems().get(0).getAllPlanets().get(0);
+    Planet currentPlanet = Game.getCurrLocation();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
