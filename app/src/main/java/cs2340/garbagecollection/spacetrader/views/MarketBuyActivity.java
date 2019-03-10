@@ -14,17 +14,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cs2340.garbagecollection.spacetrader.R;
+import cs2340.garbagecollection.spacetrader.model.CargoListAdapterKotlin;
 import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Market;
 import cs2340.garbagecollection.spacetrader.model.MarketListAdapterBuy;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
-import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 
 public class MarketBuyActivity extends AppCompatActivity {
     private Button sellButton;
     private RecyclerView recyclerView;
+    private RecyclerView cargoRecyclerView;
     private RecyclerView.LayoutManager layoutManager;
+    private RecyclerView.LayoutManager layoutManager2;
     private MarketListAdapterBuy adapter;
     private TextView cargoDisplay;
     private TextView currentCreditsDisplay;
@@ -37,8 +39,10 @@ public class MarketBuyActivity extends AppCompatActivity {
         sellButton = findViewById(R.id.sellButton);
         recyclerView = findViewById(R.id.Goods);
         layoutManager = new LinearLayoutManager(this);
+        layoutManager2 = new LinearLayoutManager(this);
         cargoDisplay = findViewById(R.id.openCargoSpots);
         currentCreditsDisplay = findViewById(R.id.moneyLeft);
+        cargoRecyclerView = findViewById(R.id.cargoGoods);
 
         ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;
@@ -60,6 +64,9 @@ public class MarketBuyActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(new MarketListAdapterBuy(goodNamesListTranslated, goodPriceList, this));
+        cargoRecyclerView.setHasFixedSize(true);
+        cargoRecyclerView.setLayoutManager(layoutManager2);
+        cargoRecyclerView.setAdapter(new CargoListAdapterKotlin(goodNamesListTranslated, goodPriceList));
         updateTextViews();
     }
 
