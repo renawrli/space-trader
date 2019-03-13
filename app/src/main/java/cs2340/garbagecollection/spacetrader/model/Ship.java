@@ -9,9 +9,13 @@ public class Ship {
     private TradeGood[] cargoArr;
     private int size = 0;
 
+    /** current fuel in ship */
+    private int fuel;
+
     Ship(ShipType shipType) {
         this.shipType = shipType;
         cargoArr = new TradeGood[shipType.getCapacity()];
+        fuel = shipType.getFuelCapacity();
     }
 
     /** add's cargo to the end of backing array **/
@@ -43,9 +47,17 @@ public class Ship {
         cargoArr = newCargoArr;
     }
 
+    public void addFuel() {
+
+    }
+
+    public void deductFuel() {
+    }
     public int getSize() {
         return size;
     }
+
+    public int getFuel() {return fuel; }
 
     /** returns a List of all Objects in the cargo bay on the ship **/
     public TradeGood[] getCargoArr() {
