@@ -12,6 +12,10 @@ public class Ship {
     /** current fuel in ship */
     private int fuel;
 
+    /**
+     * Ship is created with correct cargo capacity and fuel capacity
+     * @param shipType shipType that player is using
+     */
     Ship(ShipType shipType) {
         this.shipType = shipType;
         cargoArr = new TradeGood[shipType.getCapacity()];
@@ -47,11 +51,12 @@ public class Ship {
         cargoArr = newCargoArr;
     }
 
-    public void addFuel() {
-
+    public void addFuel(int addedFuel) {
+        fuel += addedFuel;
     }
 
-    public void deductFuel() {
+    public void deductFuel(int deductedFuel) {
+        fuel -= deductedFuel;
     }
     public int getSize() {
         return size;
