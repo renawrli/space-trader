@@ -38,6 +38,7 @@
     <string name="remaining_money_text">Money</string>
     <string name="market_text">Market</string>
     <string name="item_text">Item</string>
+    <string name="travel_text">Travel</string>
     <string name="price_text">Price</string>
     <string name="your_cargo_text">Your Cargo</string>
     <string name="exit_button">Exit</string>
