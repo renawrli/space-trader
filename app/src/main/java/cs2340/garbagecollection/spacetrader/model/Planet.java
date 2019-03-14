@@ -68,6 +68,18 @@ public class Planet {
         badEvent = null;
     }
 
+    /** calculates distance from this planet to another one **/
+    public int calcDistance(Planet p) {
+        double distance = 0;
+        int xDist = Math.abs(x - p.getX());
+        int yDist = Math.abs(y - p.getY());
+        double xDistSquared = Math.pow(xDist, 2);
+        double yDistSquared = Math.pow(yDist, 2);
+        distance += Math.pow((xDistSquared + yDistSquared), 0.5);
+
+        return (int) distance;
+    }
+
     /** Getters and Setters */
     public String getName() {
         return name;
