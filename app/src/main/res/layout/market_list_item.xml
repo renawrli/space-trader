@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/itemName"
         android:textSize="24dp"
+        android:fontFamily="@font/montserrat"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="25dp"/>
     <TextView
@@ -16,6 +17,7 @@
         android:id="@+id/itemPrice"
         android:textSize="24dp"
         android:textColor="#515151"
+        android:fontFamily="@font/montserrat"
         android:layout_alignParentRight="true"
         android:layout_marginRight="25dp"/>
 </RelativeLayout>
