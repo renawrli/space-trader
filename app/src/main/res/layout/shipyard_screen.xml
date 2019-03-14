@@ -11,60 +11,76 @@
         android:background="@color/colorPurple" />
 
     <TextView
-        android:id="@+id/travelText"
+        android:id="@+id/shipyardText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
         android:paddingTop="12dp"
-        android:text="@string/travel_text"
+        android:text="@string/shipyard_text"
         android:textColor="@android:color/white"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/locationLabel"
+        android:id="@+id/fuelDialogue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
         android:layout_below="@id/toolbar"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="50dp"
-        android:paddingTop="25dp"
-        android:text="@string/location_label"
+        android:paddingTop="30dp"
+        android:text="@string/fuel_dialogue_text"
         android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/fuelLevelLabel"
+        android:id="@+id/fullTankDialogue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/locationLabel"
-        android:fontFamily="@font/montserrat"
         android:paddingLeft="50dp"
-        android:paddingTop="25dp"
-        android:text="@string/fuel_level_label"
+        android:paddingBottom="30dp"
+        android:layout_below="@id/fuelDialogue"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="12dp"
+        android:text="@string/full_tank_text"
         android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/refuelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/fullTankDialogue"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPurple"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/refuel_label"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/choosePlanetLabel"
+        android:id="@+id/moneyLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fuelLevelLabel"
+        android:layout_alignBottom="@+id/remainingMoneyText"
+        android:layout_toRightOf="@id/remainingMoneyText"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="50dp"
-        android:paddingTop="25dp"
-        android:text="@string/choose_planet_label"
-        android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:text="0"
+        android:paddingLeft="20dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/reachablePlanets"
+    <TextView
+        android:id="@+id/remainingMoneyText"
         android:layout_width="wrap_content"
-        android:layout_height="220dp"
-        android:layout_below="@+id/choosePlanetLabel"
-        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refuelButton"
+        android:layout_marginTop="10dp"
         android:paddingLeft="50dp"
-        android:fontFamily="@font/montserrat" />
+        android:paddingTop="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/remaining_money_text"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/leaveMarketButton"

@@ -26,9 +26,9 @@
         android:id="@+id/leaveMarketButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/sellButton"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="1dp"
-        android:layout_toLeftOf="@+id/sellButton"
         android:background="@color/colorPurple"
         android:fontFamily="@font/montserrat"
         android:onClick="exitPressed"
@@ -42,7 +42,8 @@
         android:layout_below="@id/toolbar"
         android:fontFamily="@font/montserrat"
         android:text="@string/market_text"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
@@ -59,7 +60,8 @@
         android:layout_below="@+id/Goods"
         android:fontFamily="@font/montserrat"
         android:text="@string/your_cargo_text"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cargoGoods"
@@ -90,7 +92,8 @@
         android:layout_toRightOf="@+id/openCargoText"
         android:fontFamily="@font/montserrat"
         android:text="0"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/openCargoText"
@@ -101,7 +104,8 @@
         android:fontFamily="@font/montserrat"
         android:inputType="textPersonName"
         android:text="@string/open_cargo_text"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/moneyLeft"
@@ -112,7 +116,8 @@
         android:layout_toRightOf="@id/remainingMoneyText"
         android:fontFamily="@font/montserrat"
         android:text="0"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/remainingMoneyText"
@@ -123,7 +128,8 @@
         android:fontFamily="@font/montserrat"
         android:inputType="textPersonName"
         android:text="@string/remaining_money_text"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
 
 
 </RelativeLayout>

@@ -63,4 +63,19 @@
     <string name="buyGoodsText">"Buy Goods"</string>
     <string name="cargoDisplay">"CURRENT CARGO"</string>
     <string name="confirmTransactionButton">"Confirm Transaction"</string>
+    <string name="location_label">Current Location: </string>
+    <string name="fuel_level_label">Fuel Level: </string>
+    <string name="choose_planet_label">Planets In Range </string>
+    <string name="shipyard_text">Shipyard </string>
+    <string name="fuel_dialogue_text">You have fuel to fly </string>
+    <string name="full_tank_text">A full tank costs </string>
+    <string name="refuel_label">REFUEL </string>
+    <string name="target_planet_text">Target Planet </string>
+    <string name="name_text">Name: </string>
+    <string name="tech_level_text">Tech Level: </string>
+    <string name="government_text">Government: </string>
+    <string name="resources_text">Resources: </string>
+    <string name="police_level_text">Police Level: </string>
+    <string name="piracy_level_text">Piracy Level: </string>
+    <string name="warp_text">WARP</string>
 </resources>

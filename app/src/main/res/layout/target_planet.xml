@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPurple" />
+
+    <TextView
+        android:id="@+id/targetPlanetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="12dp"
+        android:text="@string/target_planet_text"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_below="@id/toolbar"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:text="@string/name_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/techLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_below="@id/nameLabel"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:text="@string/tech_level_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/governmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_below="@id/techLevelLabel"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:text="@string/government_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/resourcesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_below="@id/governmentLabel"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:text="@string/resources_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/policeLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_below="@id/resourcesLabel"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:text="@string/police_level_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/piracyLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_below="@id/policeLevelLabel"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:paddingBottom="40dp"
+        android:text="@string/piracy_level_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/warpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:backgroundTint="@color/colorPurple"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/warp_text"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/leaveTargetPlanetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/warpButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="1dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:backgroundTint="@color/colorPurple"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/exit_button"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"  />
+
+
+
+</RelativeLayout>

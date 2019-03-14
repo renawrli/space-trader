@@ -28,4 +28,5 @@ public class GameScreenActivity extends AppCompatActivity {
 //        Log.d("onClick", "toMarket: called");
         startActivity(intent);
     }
+
 }
