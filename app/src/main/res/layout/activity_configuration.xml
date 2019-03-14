@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="	#E0E0E0"
     android:layoutDirection="ltr">
 
     <android.support.v7.widget.Toolbar
@@ -22,8 +21,7 @@
         android:paddingTop="25dp"
         android:text="@string/name_label"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/nameInput"
@@ -48,8 +46,7 @@
         android:paddingTop="15dp"
         android:text="@string/difficulty_label"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/difficultySpinner"
@@ -57,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/nameLabel"
         android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat"
         android:paddingTop="40dp" />
 
     <TextView
@@ -69,15 +67,14 @@
         android:paddingTop="25dp"
         android:text="@string/skill_points_label"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/remainingPointsDisplay"
         android:layout_width="wrap_content"
         android:layout_height="93dp"
-        android:layout_marginLeft="0dp"
         android:layout_below="@id/difficultySpinner"
+        android:layout_marginLeft="0dp"
         android:layout_toRightOf="@+id/skillPointsLabel"
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
@@ -190,8 +187,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/fighterPointsDisplay"
-        android:layout_marginTop="17dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
         android:background="@android:drawable/ic_delete"
         android:onClick="decTrader"
         android:paddingLeft="25dp" />
@@ -204,7 +201,7 @@
         android:layout_toEndOf="@+id/traderPointsMinus"
         android:paddingTop="31dp"
         android:text="0"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/traderPointsPlus"
@@ -237,7 +234,7 @@
         android:background="@android:drawable/ic_delete"
         android:onClick="decEngineer"
         android:paddingLeft="25dp"
-        android:paddingBottom="60dp"/>
+        android:paddingBottom="60dp" />
 
     <TextView
         android:id="@+id/engineerPointsDisplay"
@@ -253,12 +250,12 @@
         android:id="@+id/engineerPointsPlus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:paddingTop="30dp"
         android:layout_below="@id/traderPointsPlus"
         android:layout_toRightOf="@+id/engineerPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:onClick="incEngineerr"
-        android:paddingLeft="25dp" />
+        android:paddingLeft="25dp"
+        android:paddingTop="30dp" />
 
 
     <Button
@@ -266,12 +263,12 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@id/engineerPointsPlus"
+        android:layout_centerHorizontal="true"
         android:background="@color/colorPurple"
+        android:fontFamily="@font/montserrat"
         android:onClick="createPlayer"
         android:text="@string/create_player_label"
         android:textColor="@android:color/white"
-        android:fontFamily="@font/montserrat"
-        android:layout_centerHorizontal="true"
         android:textSize="16sp" />
 
     <TextView
@@ -279,11 +276,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:paddingTop="12dp"
         android:fontFamily="@font/montserrat"
+        android:paddingTop="12dp"
         android:text="@string/create_player_screen_label"
         android:textColor="@android:color/white"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:textSize="26sp" />
 
 </RelativeLayout>

@@ -2,58 +2,84 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="	#E0E0E0"
     android:layoutDirection="ltr">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPurple" />
 
     <Button
         android:id="@+id/sellButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPurple"
         android:fontFamily="@font/montserrat"
         android:onClick="sellPressed"
-        android:text="@string/sell_button" />
+        android:text="@string/sell_button"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/leaveMarketButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="1dp"
         android:layout_toLeftOf="@+id/sellButton"
+        android:background="@color/colorPurple"
         android:fontFamily="@font/montserrat"
         android:onClick="exitPressed"
-        android:text="@string/exit_button" />
+        android:text="@string/exit_button"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/marketText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/market_text"
+        android:textSize="16sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
         android:layout_width="wrap_content"
         android:layout_height="220dp"
-        android:layout_below="@+id/buyGoodsText"
-        android:layout_marginTop="50dp" />
+        android:layout_below="@+id/marketText"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat" />
 
     <TextView
         android:id="@+id/yourCargoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Goods"
-        android:text="@string/your_cargo_text" />
+        android:fontFamily="@font/montserrat"
+        android:text="@string/your_cargo_text"
+        android:textSize="16sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cargoGoods"
         android:layout_width="wrap_content"
         android:layout_height="220dp"
         android:layout_below="@+id/yourCargoText"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat" />
 
     <TextView
         android:id="@+id/buyGoodsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
         android:inputType="textPersonName"
+        android:paddingTop="12dp"
         android:text="@string/buy_goods_text"
-        android:textSize="16sp" />
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/openCargoSpots"
@@ -62,7 +88,9 @@
         android:layout_alignTop="@id/openCargoText"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/openCargoText"
-        android:text="0" />
+        android:fontFamily="@font/montserrat"
+        android:text="0"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/openCargoText"
@@ -70,8 +98,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/cargoGoods"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
         android:inputType="textPersonName"
-        android:text="@string/open_cargo_text" />
+        android:text="@string/open_cargo_text"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/moneyLeft"
@@ -80,7 +110,9 @@
         android:layout_alignStart="@id/openCargoSpots"
         android:layout_alignTop="@+id/remainingMoneyText"
         android:layout_toRightOf="@id/remainingMoneyText"
-        android:text="0" />
+        android:fontFamily="@font/montserrat"
+        android:text="0"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/remainingMoneyText"
@@ -88,8 +120,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/openCargoText"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
         android:inputType="textPersonName"
-        android:text="@string/remaining_money_text" />
+        android:text="@string/remaining_money_text"
+        android:textSize="14sp" />
 
 
 </RelativeLayout>

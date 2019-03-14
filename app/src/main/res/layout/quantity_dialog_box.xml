@@ -19,7 +19,7 @@
         android:gravity="center_horizontal"
         android:text="@string/how_many"
         android:textColor="#ff000000"
-        android:textSize="20sp" />
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/minus_button"
@@ -29,13 +29,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="99dp"
         android:layout_marginEnd="269dp"
         android:layout_marginBottom="649dp"
-        android:paddingBottom="25dp"
         android:background="@android:drawable/ic_delete"
         android:gravity="center_vertical|center_horizontal"
         android:onClick="minusPressed"
+        android:paddingBottom="25dp"
         android:textColor="#ffffffff" />
 
     <Button
@@ -46,7 +46,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="269dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="98dp"
         android:layout_marginEnd="104dp"
         android:layout_marginBottom="649dp"
         android:background="@android:drawable/ic_input_add"
@@ -64,10 +64,10 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="152dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="151dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="150dp"
         android:paddingLeft="50dp"
-        android:paddingTop="50dp"
+        android:paddingTop="20dp"
         android:text="0" />
 
 

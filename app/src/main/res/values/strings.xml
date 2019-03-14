@@ -32,9 +32,13 @@
     <string name="successful_purchase_toast">Purchase successful</string>
     <string name="successful_sale_toast">Sale successful</string>
     <string name="how_many">How Many Items?</string>
-    <string name="buy_goods_text">What do you want to buy?</string>
+    <string name="buy_goods_text">BUY GOODS</string>
+    <string name="sell_goods_text">SELL GOODS</string>
     <string name="open_cargo_text">Open Cargo</string>
     <string name="remaining_money_text">Money</string>
+    <string name="market_text">Market</string>
+    <string name="item_text">Item</string>
+    <string name="price_text">Price</string>
     <string name="your_cargo_text">Your Cargo</string>
     <string name="exit_button">Exit</string>
     <string-array name="goodNames">
