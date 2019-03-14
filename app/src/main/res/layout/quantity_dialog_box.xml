@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffffffff"
+    android:backgroundTint="	#E0E0E0"
     android:orientation="vertical">
 
 
@@ -14,14 +15,14 @@
         android:layout_marginTop="40dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="20dp"
+        android:fontFamily="@font/montserrat"
         android:gravity="center_horizontal"
         android:text="@string/how_many"
         android:textColor="#ff000000"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/minus_button"
-        android:onClick="minusPressed"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
@@ -31,13 +32,14 @@
         android:layout_marginTop="88dp"
         android:layout_marginEnd="269dp"
         android:layout_marginBottom="649dp"
+        android:paddingBottom="25dp"
         android:background="@android:drawable/ic_delete"
         android:gravity="center_vertical|center_horizontal"
+        android:onClick="minusPressed"
         android:textColor="#ffffffff" />
 
     <Button
         android:id="@+id/add_button"
-        android:onClick="plusPressed"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
@@ -49,6 +51,7 @@
         android:layout_marginBottom="649dp"
         android:background="@android:drawable/ic_input_add"
         android:gravity="center_vertical|center_horizontal"
+        android:onClick="plusPressed"
         android:textColor="#ffffffff" />
 
 
@@ -56,35 +59,47 @@
         android:id="@+id/quantityDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="152dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="151dp"
         android:paddingLeft="100dp"
         android:paddingTop="50dp"
-        android:text="0"
-        android:textAlignment="textEnd" />
+        android:text="0" />
 
 
     <Button
         android:id="@+id/confirmTransactionButton"
-        android:layout_width="wrap_content"
+        android:layout_width="213dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="50dp"
-        android:layout_toRightOf="@id/cancelButton"
-        android:layout_alignParentEnd="true"
-        android:onClick="confirmTransactionPressed"
         android:layout_below="@+id/quantityDisplay"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="50dp"
+        android:layout_toEndOf="@+id/cancelButton"
+        android:layout_toRightOf="@id/cancelButton"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:onClick="confirmTransactionPressed"
         android:text="@string/confirm_transaction_button" />
 
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="50dp"
         android:layout_below="@+id/quantityDisplay"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="38dp"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
         android:onClick="cancelPressed"
         android:text="@string/cancel_button" />
 

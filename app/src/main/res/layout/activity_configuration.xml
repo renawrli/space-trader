@@ -1,240 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="	#E0E0E0"
     android:layoutDirection="ltr">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPurple" />
 
     <TextView
         android:id="@+id/nameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="50dp"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/montserrat"
         android:paddingLeft="50dp"
-        android:text="@string/name_label" />
+        android:paddingTop="50dp"
+        android:text="@string/name_label"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/nameInput"
-        android:layout_width="wrap_content"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
-        android:paddingTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="51dp"
+        android:layout_toRightOf="@+id/nameLabel"
         android:paddingLeft="50dp"
-        android:hint="@string/name_label"
-        android:layout_toRightOf="@+id/nameLabel" />
+        android:paddingTop="50dp"
+        android:paddingRight="50dp" />
+
     <TextView
         android:id="@+id/difficultyLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nameLabel"
         android:layout_alignTop="@+id/difficultySpinner"
+        android:fontFamily="@font/montserrat"
         android:paddingLeft="50dp"
-        android:text="@string/difficulty_label" />
+        android:paddingTop="15dp"
+        android:text="@string/difficulty_label"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <Spinner
         android:id="@+id/difficultySpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/nameInput"
         android:layout_centerInParent="true"
-        android:layout_marginTop="75dp" />
+        android:paddingTop="40dp" />
+
     <TextView
         android:id="@+id/skillPointsLabel"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
         android:layout_below="@id/difficultySpinner"
-        android:paddingTop="50dp"
-        android:paddingLeft="25dp"
-        android:text="@string/skill_points_label" />
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/skill_points_label"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/remainingPointsDisplay"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="93dp"
+        android:layout_below="@id/difficultySpinner"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-23dp"
+        android:layout_toRightOf="@+id/skillPointsLabel"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
         android:text="16"
         android:textAlignment="center"
-        android:layout_toRightOf="@+id/skillPointsLabel"
-        android:paddingTop="50dp"
-        android:paddingLeft="100dp"
-        android:layout_below="@id/difficultySpinner" />
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/pilotPointsLabel"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/skillPointsLabel"
-        android:paddingTop="50dp"
-        android:paddingLeft="25dp"
-        android:text="@string/pilot_points_label" />
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/pilot_points_label"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/pilotPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/remainingPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="36dp"
+        android:layout_alignTop="@+id/pilotPointsPlus"
+        android:layout_marginLeft="63dp"
         android:layout_toRightOf="@+id/pilotPointsLabel"
         android:background="@android:drawable/ic_delete"
         android:onClick="decPilot"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/pilotPointsDisplay"
         android:layout_width="wrap_content"
-        android:text="0"
-        android:textAlignment="center"
         android:layout_height="wrap_content"
+        android:layout_below="@id/remainingPointsDisplay"
+        android:layout_alignTop="@+id/pilotPointsLabel"
         android:layout_toRightOf="@+id/pilotPointsMinus"
-        android:paddingTop="50dp"
-        android:layout_marginLeft="25dp"
-        android:paddingLeft="100dp"
-        android:layout_below="@id/remainingPointsDisplay" />
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="0"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/pilotPointsPlus"
         android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/remainingPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="34dp"
+        android:layout_alignTop="@+id/pilotPointsLabel"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="18dp"
         android:layout_toRightOf="@+id/pilotPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:onClick="incPilot"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/fighterPointsLabel"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/pilotPointsLabel"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
         android:paddingTop="50dp"
-        android:paddingLeft="25dp"
-        android:text="@string/fighter_points_label" />
+        android:text="@string/fighter_points_label"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/fighterPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_below="@id/pilotPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="32dp"
+        android:layout_alignTop="@+id/pilotPointsMinus"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="36dp"
         android:layout_toRightOf="@+id/fighterPointsLabel"
         android:background="@android:drawable/ic_delete"
         android:onClick="decFighter"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/fighterPointsDisplay"
         android:layout_width="wrap_content"
-        android:text="0"
-        android:textAlignment="center"
         android:layout_height="wrap_content"
+        android:layout_below="@id/pilotPointsDisplay"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="7dp"
         android:layout_toRightOf="@+id/fighterPointsMinus"
+        android:paddingLeft="50dp"
         android:paddingTop="50dp"
-        android:layout_marginLeft="25dp"
-        android:paddingLeft="100dp"
-        android:layout_below="@id/pilotPointsDisplay" />
+        android:text="0"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/fighterPointsPlus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/pilotPointsDisplay"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/fighterPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:onClick="incFighter"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/traderPointsLabel"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/fighterPointsLabel"
-        android:paddingTop="50dp"
-        android:paddingLeft="25dp"
-        android:text="@string/trader_points_label" />
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/trader_points_label"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/traderPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/fighterPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="22dp"
         android:layout_toRightOf="@+id/traderPointsLabel"
         android:background="@android:drawable/ic_delete"
         android:onClick="decTrader"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/traderPointsDisplay"
-        android:text="0"
-        android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/fighterPointsDisplay"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="4dp"
         android:layout_toRightOf="@+id/traderPointsMinus"
-        android:paddingTop="50dp"
-        android:layout_marginLeft="25dp"
-        android:paddingLeft="100dp"
-        android:layout_below="@id/fighterPointsDisplay" />
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="0"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/traderPointsPlus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/fighterPointsDisplay"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="22dp"
         android:layout_toRightOf="@+id/traderPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:onClick="incTrader"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/engineerPointsLabel"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/traderPointsLabel"
-        android:paddingTop="50dp"
-        android:paddingLeft="25dp"
-        android:text="@string/engineer_points_label" />
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/engineer_points_label"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/engineerPointsMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_below="@id/traderPointsDisplay"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="35dp"
+        android:layout_alignTop="@+id/traderPointsMinus"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="72dp"
         android:layout_toRightOf="@+id/engineerPointsLabel"
         android:background="@android:drawable/ic_delete"
         android:onClick="decEngineer"
         android:paddingLeft="25dp" />
+
     <TextView
         android:id="@+id/engineerPointsDisplay"
         android:layout_width="wrap_content"
-        android:text="0"
-        android:textAlignment="center"
         android:layout_height="wrap_content"
+        android:layout_below="@id/traderPointsDisplay"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="13dp"
         android:layout_toRightOf="@+id/engineerPointsMinus"
-        android:paddingTop="50dp"
-        android:layout_marginLeft="25dp"
-        android:paddingLeft="100dp"
-        android:layout_below="@id/traderPointsDisplay" />
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="0"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/engineerPointsPlus"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/traderPointsDisplay"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="22dp"
         android:layout_toRightOf="@+id/engineerPointsDisplay"
         android:background="@android:drawable/ic_input_add"
         android:onClick="incEngineer"
-        android:paddingLeft="25dp" />
+        android:paddingLeft="50dp" />
 
     <Button
         android:id="@+id/createPlayerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="createPlayer"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/engineerPointsDisplay"
-        android:layout_marginTop="50dp"
-        android:text="@string/create_player_label" />
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorPurple"
+        android:onClick="createPlayer"
+        android:text="@string/create_player_label"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/create_player_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="74dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/create_player_screen_label"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

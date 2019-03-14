@@ -2,11 +2,12 @@
     <string name="app_name">SpaceTrader</string>
     <string name="name_label">Name:</string>
     <string name="skill_points_label">Remaining Skill Points:</string>
+    <string name="create_player_screen_label">CREATE A PLAYER</string>
     <string name="pilot_points_label">Pilot:</string>
     <string name="fighter_points_label">Fighter:</string>
     <string name="trader_points_label">Trader:</string>
     <string name="engineer_points_label">Engineer:</string>
-    <string name="create_player_label">Ok</string>
+    <string name="create_player_label">CREATE</string>
     <string name="difficulty_label">Difficulty</string>
     <string-array name="difficulties">
         <item>Beginner</item>
@@ -18,6 +19,9 @@
     <string name="creating_universe_label">Creating the Universe</string>
     <string name="market_place_button">Marketplace</string>
     <string name="welcome_to_planet_label">Welcome to Planet </string>
+    <string name="travel_button">Travel</string>
+    <string name="shipyard_button">Ship Yard</string>
+    <string name="planetinfo_button">Planet Info</string>
     <string name="sell_button">Sell</string>
     <string name="buy_button">Buy</string>
     <string name="confirm_transaction_button">Confirm Transaction</string>
@@ -45,4 +49,13 @@
         <item>Narcotics</item>
         <item>Robots</item>
     </string-array>
+    <string name="openCargoText">"Remaining Cargo Spots":</string>
+    <string name="remainingMoneyText">"Credits":</string>
+    <string name="displayCargoButton">"Current Cargo"</string>
+    <string name="universeCreationLabel">"You are at Planet Nigeria"</string>
+    <string name="marketPlaceButton">"Marketplace"</string>
+    <string name="sellButton">"Sell Goods"</string>
+    <string name="buyGoodsText">"Buy Goods"</string>
+    <string name="cargoDisplay">"CURRENT CARGO"</string>
+    <string name="confirmTransactionButton">"Confirm Transaction"</string>
 </resources>

@@ -1,28 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="	#E0E0E0"
     android:layoutDirection="ltr">
 
     <TextView
         android:id="@+id/universeCreationLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/welcome_to_planet_label" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="83dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/welcome_to_planet_label"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/marketPlaceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/universeCreationLabel"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="251dp"
-        android:layout_marginBottom="23dp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50dp"
+        android:backgroundTint="#F5F5F5"
+        android:fontFamily="@font/montserrat"
         android:onClick="toMarket"
-        android:text="@string/market_place_button" />
+        android:text="@string/market_place_button"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/travelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/travel_button"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/marketPlaceButton"/>
+    <!--android:layout_alignTop="@+id/marketPlaceButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="161dp"
+    -->
+
+    <Button
+        android:id="@+id/shipyardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/travelButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="162dp"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/shipyard_button"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/planetinfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/travelButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="155dp"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/planetinfo_button"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
