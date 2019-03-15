@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Ship;
+import cs2340.garbagecollection.spacetrader.model.Player;
 
 public class TravelViewModel extends AndroidViewModel {
 
@@ -28,14 +29,12 @@ public class TravelViewModel extends AndroidViewModel {
         // list of distances to each planet
         List<Integer> distances = new ArrayList<>();
         List<Planet> validPlanets = new ArrayList<>();
-
         // max distance the ship can travel on current fuel tank
         int travelableDist = currShip.getFuel() * DIST_PER_FUEL;
 
         for (Planet planet: list) {
             distances.add(currPlanet.calcDistance(planet));
         }
-
         for (int i = 0; i < list.size(); i++) {
             if (travelableDist >= distances.get(i)) {
                 validPlanets.add(list.get(i));
@@ -43,4 +42,10 @@ public class TravelViewModel extends AndroidViewModel {
         }
         return validPlanets;
     }
+
+    /** Returns if the player has enough money to add the requested amount of fuel **/
+    public boolean enoughMoney(int fuelToAdd, Player p) {
+        return false;
+    }
+
 }
