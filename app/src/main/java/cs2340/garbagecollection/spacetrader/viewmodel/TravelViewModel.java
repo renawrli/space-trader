@@ -43,9 +43,5 @@ public class TravelViewModel extends AndroidViewModel {
         return validPlanets;
     }
 
-    /** Returns if the player has enough money to add the requested amount of fuel **/
-    public boolean enoughMoney(int fuelToAdd, Player p) {
-        return p.getCredits() >= (fuelToAdd * ShipYardViewModel.getPricePerFuel());
-    }
 
 }
