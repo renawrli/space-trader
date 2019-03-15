@@ -34,5 +34,9 @@ public class ShipYardViewModel extends AndroidViewModel {
     }
 
     /**To be called after passing the checks, update the model */
-
+    public void buyFuel(Player p, Ship ship, int amountAdd, int fuelNeeded) {
+        int newCreditAmount = p.getCredits() - (fuelNeeded * PRICE_PER_FUEL);
+        p.setCredits(newCreditAmount);
+        ship.addFuel(amountAdd);
+    }
 }
