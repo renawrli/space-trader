@@ -20,7 +20,7 @@ public class ShipYardViewModel extends AndroidViewModel {
 
     /** Returns true if player enters valid amount of fuel to tank */
     public boolean checkFuelAdd(Player p, Ship ship, int amountAdd) {
-        return (amountAdd + ship.getFuel() <= ship.getShipType().getFuelCapacity();
+        return (amountAdd + ship.getFuel() <= ship.getShipType().getFuelCapacity());
     }
 
     /** Returns true if the player has enough money to buy the fuel*/
