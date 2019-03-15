@@ -12,7 +12,7 @@ import cs2340.garbagecollection.spacetrader.model.Ship;
  */
 public class ShipYardViewModel extends AndroidViewModel {
 
-    private final int PRICE_PER_FUEL = 5;
+    private static final int PRICE_PER_FUEL = 5;
 
     public ShipYardViewModel (@NonNull Application application) {
         super(application);
@@ -41,7 +41,7 @@ public class ShipYardViewModel extends AndroidViewModel {
     }
 
     /** getter **/
-    public int getPricePerFuel() {
+    public static int getPricePerFuel() {
         return PRICE_PER_FUEL;
     }
 }
