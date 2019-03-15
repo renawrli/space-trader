@@ -15,12 +15,12 @@ public class Game {
 
     /**
      * Constructs the single Game object
-     * @param difficulty - difficulty of the game
-     * @param player - Player that plays the game
+     * @param diff - difficulty of the game
+     * @param p - Player that plays the game
      */
-    public Game(Difficulty difficulty, Player player) {
-        this.difficulty = difficulty;
-        this.player = player;
+    public Game(Difficulty diff, Player p) {
+        difficulty = diff;
+        player = p;
 
         List<Planet> africanNations = new ArrayList<>();
         africanNations.add(new Planet("Nigeria", GovernmentType.ANARCHY,
@@ -107,7 +107,7 @@ public class Game {
         return currLocation;
     }
 
-    public void setCurrLocation(Planet currLocation) {
-        this.currLocation = currLocation;
+    public static void setCurrLocation(Planet newLocation) {
+        currLocation = newLocation;
     }
 }

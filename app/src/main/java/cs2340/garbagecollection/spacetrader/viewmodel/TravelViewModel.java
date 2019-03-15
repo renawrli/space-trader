@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Ship;
 import cs2340.garbagecollection.spacetrader.model.Player;
@@ -43,5 +45,12 @@ public class TravelViewModel extends AndroidViewModel {
         return validPlanets;
     }
 
+    /** travels to a Planet. Assumes it's within range **/
+    public void travel(Planet destination, Ship ship) {
+        int dist = Game.getCurrLocation().calcDistance(destination);
+        int fuelConsumed = dist / DIST_PER_FUEL;
+        ship.deductFuel(fuelConsumed);
 
+        Game.setCurrLocation(destination);
+    }
 }
