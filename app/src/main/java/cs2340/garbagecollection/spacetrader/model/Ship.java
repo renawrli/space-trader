@@ -64,6 +64,8 @@ public class Ship {
 
     public int getFuel() {return fuel; }
 
+    public ShipType getShipType() { return shipType; }
+
     /** returns a List of all Objects in the cargo bay on the ship **/
     public TradeGood[] getCargoArr() {
         return cargoArr;
