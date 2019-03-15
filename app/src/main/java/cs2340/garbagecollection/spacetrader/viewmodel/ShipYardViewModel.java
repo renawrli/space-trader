@@ -39,4 +39,9 @@ public class ShipYardViewModel extends AndroidViewModel {
         p.setCredits(newCreditAmount);
         ship.addFuel(amountAdd);
     }
+
+    /** getter **/
+    public int getPricePerFuel() {
+        return PRICE_PER_FUEL;
+    }
 }
