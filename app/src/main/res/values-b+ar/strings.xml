@@ -45,4 +45,13 @@
         <item>المخادرات</item>
         <item>الروبوتات</item>
     </string-array>
+    <string name="travel_button">سفر</string>
+    <string name="create_player_screen_label">إنشاء لاعب</string>
+    <string name="shipyard_button">الرصيف</string>
+    <string name="planetinfo_button">معلومات الكوكب</string>
+    <string name="sell_goods_text">بيع السلع</string>
+    <string name="market_text">السوق</string>
+    <string name="item_text">بند</string>
+    <string name="travel_text">سفر</string>
+    <string name="price_text">السعر</string>
 </resources>

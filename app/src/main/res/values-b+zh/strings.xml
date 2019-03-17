@@ -45,4 +45,13 @@
         <item>毒品</item>
         <item>机器人</item>
     </string-array>
+    <string name="travel_button">旅游</string>
+    <string name="create_player_screen_label">创造角色</string>
+    <string name="shipyard_button">船厂</string>
+    <string name="planetinfo_button">行星信息</string>
+    <string name="sell_goods_text">卖物品</string>
+    <string name="market_text">市场</string>
+    <string name="item_text">物品</string>
+    <string name="travel_text">旅游</string>
+    <string name="price_text">物品价</string>
 </resources>

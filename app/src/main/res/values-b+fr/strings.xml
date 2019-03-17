@@ -45,4 +45,13 @@
         <item>Stupefiants</item>
         <item>Robots</item>
     </string-array>
+    <string name="travel_button">Voyager</string>
+    <string name="create_player_screen_label">Faire un Jouer</string>
+    <string name="shipyard_button">Chantier</string>
+    <string name="planetinfo_button">Informatations sur la Planète</string>
+    <string name="sell_goods_text">Vendre des Articles</string>
+    <string name="market_text">Marché</string>
+    <string name="item_text">Article</string>
+    <string name="travel_text">Voyager</string>
+    <string name="price_text">Prix de l"'"Article</string>
 </resources>

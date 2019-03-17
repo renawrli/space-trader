@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:id="@+id/marketItemLayout">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/planetName"
+        android:textSize="24dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distanceToPlanet"
+        android:textSize="24dp"
+        android:textColor="#515151"
+        android:fontFamily="@font/montserrat"
+        android:layout_toLeftOf="@+id/fuelToPlanet"
+        android:layout_marginRight="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuelToPlanet"
+        android:textSize="24dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#515151"
+        android:fontFamily="@font/montserrat"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"/>
+</RelativeLayout>
