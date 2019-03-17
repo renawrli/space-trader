@@ -54,4 +54,29 @@
     <string name="item_text">Article</string>
     <string name="travel_text">Voyager</string>
     <string name="price_text">Prix de l"'"Article</string>
+
+    <string name="openCargoText">Espace Restant</string>
+    <string name="remainingMoneyText">Argent:</string>
+    <string name="displayCargoButton">Chargement</string>
+    <string name="universeCreationLabel">Tu es au Planète de</string>
+    <string name="marketPlaceButton">Marché</string>
+    <string name="sellButton">Vendre des Articles</string>
+    <string name="buyGoodsText">Acheter des Articles</string>
+    <string name="cargoDisplay">Chargement</string>
+    <string name="confirmTransactionButton">Confirmer</string>
+    <string name="location_label">Localisation</string>
+    <string name="fuel_level_label">Niveau de Carburant</string>
+    <string name="choose_planet_label">Planètes dans la Gamme</string>
+    <string name="shipyard_text">Chantier</string>
+    <string name="fuel_dialogue_text">Tu peut Voler</string>
+    <string name="full_tank_text">La Prix de Carburant</string>
+    <string name="refuel_label">Adjouter de Carburant</string>
+    <string name="target_planet_text">Planète Cible</string>
+    <string name="name_text">Nom":"</string>
+    <string name="tech_level_text">Niveau de Technologie":"</string>
+    <string name="government_text">Gouvernemnt":"</string>
+    <string name="resources_text">Ressources":" </string>
+    <string name="police_level_text">Niveau de Police":" </string>
+    <string name="piracy_level_text">Nivaeu de Piratage":" </string>
+    <string name="warp_text">Voyager</string>
 </resources>

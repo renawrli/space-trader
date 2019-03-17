@@ -54,4 +54,29 @@
     <string name="item_text">بند</string>
     <string name="travel_text">سفر</string>
     <string name="price_text">السعر</string>
+
+    <string name="openCargoText">مسالحة مفتحة</string>
+    <string name="remainingMoneyText">مال</string>
+    <string name="displayCargoButton">مسالحة</string>
+    <string name="universeCreationLabel">"You are at Planet"</string>
+    <string name="marketPlaceButton">سوق</string>
+    <string name="sellButton">بيع السلع</string>
+    <string name="buyGoodsText">اشترى</string>
+    <string name="cargoDisplay">مسالحة</string>
+    <string name="confirmTransactionButton">تؤكد</string>
+    <string name="location_label">موقعك:</string>
+    <string name="fuel_level_label">مستوى الوقود:</string>
+    <string name="choose_planet_label">الكواكب في النطاق</string>
+    <string name="shipyard_text">الرصيف</string>
+    <string name="fuel_dialogue_text">تسطيع السفر</string>
+    <string name="full_tank_text">سعر</string>
+    <string name="refuel_label">تزود بالوقود</string>
+    <string name="target_planet_text">الكوكب المستهدف</string>
+    <string name="name_text">اسم</string>
+    <string name="tech_level_text">مستوى التكنولوجيا":"</string>
+    <string name="government_text">حكومة":"</string>
+    <string name="resources_text">مصادر":"</string>
+    <string name="police_level_text">مستوى الشرطة":"</string>
+    <string name="piracy_level_text">مستوى القرصنة":"</string>
+    <string name="warp_text">سفر</string>
 </resources>

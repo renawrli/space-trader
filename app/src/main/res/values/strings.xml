@@ -57,7 +57,7 @@
     <string name="openCargoText">"Remaining Cargo Spots":</string>
     <string name="remainingMoneyText">"Credits":</string>
     <string name="displayCargoButton">"Current Cargo"</string>
-    <string name="universeCreationLabel">"You are at Planet Nigeria"</string>
+    <string name="universeCreationLabel">You are at Planet Nigeria</string>
     <string name="marketPlaceButton">"Marketplace"</string>
     <string name="sellButton">"Sell Goods"</string>
     <string name="buyGoodsText">"Buy Goods"</string>

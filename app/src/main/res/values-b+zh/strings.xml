@@ -54,4 +54,31 @@
     <string name="item_text">物品</string>
     <string name="travel_text">旅游</string>
     <string name="price_text">物品价</string>
+
+
+
+    <string name="openCargoText">空间</string>
+    <string name="remainingMoneyText">钱</string>
+    <string name="displayCargoButton">你的物品间</string>
+    <string name="universeCreationLabel">你在</string>
+    <string name="marketPlaceButton">市场</string>
+    <string name="sellButton">卖物品</string>
+    <string name="buyGoodsText">买物品</string>
+    <string name="cargoDisplay">你的物品</string>
+    <string name="confirmTransactionButton">证实</string>
+    <string name="location_label">地点</string>
+    <string name="fuel_level_label">燃料水平</string>
+    <string name="choose_planet_label">行星在范围内</string>
+    <string name="shipyard_text">船厂</string>
+    <string name="fuel_dialogue_text">你会飞</string>
+    <string name="full_tank_text">燃料的价</string>
+    <string name="refuel_label">增加燃料</string>
+    <string name="target_planet_text">目标行星</string>
+    <string name="name_text">名字</string>
+    <string name="tech_level_text">技术水平</string>
+    <string name="government_text">政府</string>
+    <string name="resources_text">资源</string>
+    <string name="police_level_text">警察水平</string>
+    <string name="piracy_level_text">海钓行为水平</string>
+    <string name="warp_text">旅游</string>
 </resources>
