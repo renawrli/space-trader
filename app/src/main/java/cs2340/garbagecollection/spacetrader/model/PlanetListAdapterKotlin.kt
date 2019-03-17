@@ -11,16 +11,16 @@ import cs2340.garbagecollection.spacetrader.R
 import java.util.ArrayList
 
 
-class PlanetListAdapterKotlin(planetNames: ArrayList<String>, distances: ArrayList<Int>, fuelUnitsCost: ArrayList<Int>, private val mContext: Context) : RecyclerView.Adapter<PlanetListAdapterKotlin.ViewHolder>() {
+class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, fuelUnitsCost: List<Int>, private val mContext: Context) : RecyclerView.Adapter<PlanetListAdapterKotlin.ViewHolder>() {
 
     private var mPlanetNames = ArrayList<String>()
     private var mDistances = ArrayList<Int>()
     private var mFuelUnitsCost = ArrayList<Int>()
 
     init {
-        mPlanetNames = planetNames
-        mDistances = distances
-        mFuelUnitsCost = fuelUnitsCost
+        mPlanetNames = planetNames as ArrayList<String>
+        mDistances = distances as ArrayList<Int>
+        mFuelUnitsCost = fuelUnitsCost as ArrayList<Int>
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {

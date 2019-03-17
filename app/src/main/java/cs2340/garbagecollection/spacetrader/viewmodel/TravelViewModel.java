@@ -19,15 +19,23 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** how many units in the universe you travel per unit of fuel **/
-    private final int DIST_PER_FUEL = 8;
+    private static final int DIST_PER_FUEL = 8;
 
     /**
      * Returns a list of Planets that you have enough fuel to travel to
-     * @param currPlanet - current planet you are on
-     * @param planetList - list of all planets
      * @return list of Planets that are within range
      */
-    public List<Planet> planetsInRange(Planet currPlanet, List<Planet> planetList, Ship currShip) {
+    public static List<Planet> planetsInRange() {
+        Planet currPlanet = Game.getCurrLocation();
+        List<Planet> planetList = new ArrayList<>();
+        Ship currShip = Game.getPlayer().getShip();
+        //adds all planets in game to planetList
+        for (int i = 0; i < Game.getUniverse().getNumSolarSystems(); i++) {
+            List<Planet> solarSystemPlanets =  Game.getUniverse().getAllSolarSystems().get(i).getAllPlanets();
+            for (int j = 0; j < solarSystemPlanets.size(); j++) {
+                planetList.add(solarSystemPlanets.get(j));
+            }
+        }
         // max distance the ship can travel on current fuel tank
         int travelableDist = currShip.getFuel() * DIST_PER_FUEL;
         // list of distances to each planet
@@ -45,7 +53,7 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** Returns a list of distances from currPlanet to each planet in planetList **/
-    public List<Integer> listDistances(Planet currPlanet, List<Planet> planetList) {
+    public static List<Integer> listDistances(Planet currPlanet, List<Planet> planetList) {
         List<Integer> distances = new ArrayList<>();
         for (Planet planet: planetList) {
             distances.add(currPlanet.calcDistance(planet));
@@ -58,7 +66,7 @@ public class TravelViewModel extends AndroidViewModel {
      * @param distances - list of distances to each planet
      * @return a list of fuel units it will cost to fly to each destination
      */
-    public List<Integer> listFuel(List<Integer> distances) {
+    public static List<Integer> listFuel(List<Integer> distances) {
         List<Integer> fuelList = new ArrayList<>();
         for(Integer i: distances) {
             fuelList.add(i / DIST_PER_FUEL);
@@ -67,7 +75,7 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** takes in a list of valid planets and returns them in string format **/
-    public List<String> validPlanetsString(List<Planet> validPlanets) {
+    public static List<String> validPlanetsString(List<Planet> validPlanets) {
         ArrayList<String> planetNames = new ArrayList<>();
         for (int i = 0; i < validPlanets.size(); i++) {
             planetNames.add(validPlanets.get(i).getName());
@@ -76,7 +84,7 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** travels to a Planet. Assumes it's within range **/
-    public void travel(Planet destination, Ship ship) {
+    public static void travel(Planet destination, Ship ship) {
         int dist = Game.getCurrLocation().calcDistance(destination);
         int fuelConsumed = dist / DIST_PER_FUEL;
         ship.deductFuel(fuelConsumed);
