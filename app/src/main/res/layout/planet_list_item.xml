@@ -1,33 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_width="match_parent" android:layout_height="60dp"
     android:layoutDirection="ltr"
     android:id="@+id/planetItemLayout">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/planetName"
-        android:textSize="24dp"
+        android:textColor="#000000"
+        android:textSize="16dp"
         android:fontFamily="@font/montserrat"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="25dp"/>
+        android:layout_toLeftOf="@+id/distanceToPlanetLabel"/>
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/distanceToPlanetLabel"
+        android:layout_toLeftOf="@+id/distanceToPlanet"
+        android:text="@string/distance_to_planet_label"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuelToPlanetLabel"
+        android:layout_toLeftOf="@+id/fuelToPlanet"
+        android:text="@string/fuel_cost_label"
+        android:layout_marginLeft="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/distanceToPlanet"
-        android:textSize="24dp"
+        android:textSize="16dp"
         android:textColor="#515151"
         android:fontFamily="@font/montserrat"
-        android:layout_toLeftOf="@+id/fuelToPlanet"
-        android:layout_marginRight="25dp"/>
+        android:layout_toLeftOf="@+id/fuelToPlanetLabel"
+        android:layout_marginRight="15dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fuelToPlanet"
-        android:textSize="24dp"
+        android:textSize="16dp"
         android:layout_marginLeft="15dp"
         android:textColor="#515151"
         android:fontFamily="@font/montserrat"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="25dp"/>
+        android:layout_marginRight="15dp"/>
 </RelativeLayout>

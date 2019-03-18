@@ -79,4 +79,6 @@
     <string name="police_level_text">Niveau de Police":" </string>
     <string name="piracy_level_text">Nivaeu de Piratage":" </string>
     <string name="warp_text">Voyager</string>
+    <string name="distance_to_planet_label">Distance</string>
+    <string name="fuel_cost_label">Carburuant Requisée</string>
 </resources>

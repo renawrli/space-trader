@@ -81,4 +81,6 @@
     <string name="police_level_text">警察水平</string>
     <string name="piracy_level_text">海钓行为水平</string>
     <string name="warp_text">旅游</string>
+    <string name="distance_to_planet_label">路程</string>
+    <string name="fuel_cost_label">燃料要求</string>
 </resources>

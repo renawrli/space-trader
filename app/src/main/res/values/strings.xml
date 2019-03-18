@@ -78,4 +78,6 @@
     <string name="police_level_text">Police Level: </string>
     <string name="piracy_level_text">Piracy Level: </string>
     <string name="warp_text">WARP</string>
+    <string name="distance_to_planet_label">Distance</string>
+    <string name="fuel_cost_label">Fuel Required</string>
 </resources>
