@@ -73,6 +73,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@color/colorPurple"
+        android:onClick="leaveTravel"
         android:fontFamily="@font/montserrat"
         android:text="@string/exit_button"
         android:textColor="@android:color/white" />

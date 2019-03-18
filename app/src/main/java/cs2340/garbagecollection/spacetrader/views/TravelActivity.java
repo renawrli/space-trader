@@ -1,10 +1,12 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -55,5 +57,17 @@ public class TravelActivity extends AppCompatActivity {
         reachablePlanets.setLayoutManager(layoutManager);
         reachablePlanets.setAdapter(adapter);
 
+    }
+
+
+    public void leaveTravel(View view) {
+        Intent buyPressed = new Intent(this, GameScreenActivity.class);
+        finishAffinity();
+        startActivity(buyPressed);
+    }
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        startActivity(new Intent(this,GameScreenActivity.class));
     }
 }
