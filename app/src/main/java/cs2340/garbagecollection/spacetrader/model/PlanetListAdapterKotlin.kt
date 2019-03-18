@@ -1,6 +1,8 @@
 package cs2340.garbagecollection.spacetrader.model
 
 import android.content.Context
+import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import cs2340.garbagecollection.spacetrader.R
+import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel
+import cs2340.garbagecollection.spacetrader.views.GameScreenActivity
 import java.util.ArrayList
 
 
@@ -51,7 +55,12 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
         }
 
         override fun onClick(view: View) {
+            TravelViewModel.travel(TravelViewModel.planetsInRange()[adapterPosition], Game.getPlayer().ship)
+            System.out.println("curr planet is " + Game.getCurrLocation().name);
+            val intent = Intent(view.context, GameScreenActivity::class.java)
+            view.context.startActivity(intent)
             //this is where we should start the process of traveling to the selected planet
         }
+
     }
 }

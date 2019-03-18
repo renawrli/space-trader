@@ -24,9 +24,12 @@ public class GameScreenActivity extends AppCompatActivity {
 
     public void toMarket(View view) {
         Intent intent = new Intent(this, MarketBuyActivity.class);
-        this.finish();
 //        Log.d("onClick", "toMarket: called");
         startActivity(intent);
     }
 
+    public void viewTravelOptions(View view) {
+        Intent intent = new Intent(this, TravelActivity.class);
+        startActivity(intent);
+    }
 }

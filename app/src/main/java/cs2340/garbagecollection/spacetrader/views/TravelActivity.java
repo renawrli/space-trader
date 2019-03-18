@@ -2,11 +2,14 @@ package cs2340.garbagecollection.spacetrader.views;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import java.util.List;
 
 import cs2340.garbagecollection.spacetrader.R;
+import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.PlanetListAdapterKotlin;
 import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel;
 
@@ -17,18 +20,34 @@ public class TravelActivity extends AppCompatActivity {
     private List<String> planetNames;
     private List<Integer> planetDistances;
     private List<Integer> planetFuelCosts;
+    private TextView currLocationText;
+    private TextView fuelLevelText;
+    private RecyclerView.LayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.travel_screen);
         reachablePlanets = findViewById(R.id.reachablePlanets);
-        planetNames = TravelViewModel.validPlanetsString(TravelViewModel.planetsInRange());
-        adapter = new PlanetListAdapterKotlin(planetNames, planetDistances, planetFuelCosts, this);
-        reachablePlanets.setAdapter(adapter);
-
+        currLocationText = findViewById(R.id.locationLabel);
+        fuelLevelText = findViewById(R.id.fuelLevelLabel);
     }
     @Override
     protected void onResume() {
         super.onResume();
+        setUpWidgets();
+    }
+
+    private void setUpWidgets() {
+        fuelLevelText.setText(fuelLevelText.getText()+ " " + Game.getPlayer().getShip().getFuel());
+        currLocationText.setText(currLocationText.getText()+ " " + Game.getCurrLocation().getName());
+        planetNames = TravelViewModel.validPlanetsString(TravelViewModel.planetsInRange());
+        planetDistances = TravelViewModel.listDistances();
+        planetFuelCosts = TravelViewModel.listFuel(planetDistances);
+        layoutManager = new LinearLayoutManager(this);
+        adapter = new PlanetListAdapterKotlin(planetNames, planetDistances, planetFuelCosts, this);
+        reachablePlanets.setHasFixedSize(true);
+        reachablePlanets.setLayoutManager(layoutManager);
+        reachablePlanets.setAdapter(adapter);
+
     }
 }

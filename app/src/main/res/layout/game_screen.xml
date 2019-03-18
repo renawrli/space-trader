@@ -48,6 +48,7 @@
         android:backgroundTint="#F5F5F5"
         android:fontFamily="@font/montserrat"
         android:text="@string/travel_button"
+        android:onClick="viewTravelOptions"
         android:textStyle="bold"/>
 
     <Button

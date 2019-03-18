@@ -21,28 +21,36 @@ public class TravelViewModel extends AndroidViewModel {
     /** how many units in the universe you travel per unit of fuel **/
     private static final int DIST_PER_FUEL = 8;
 
-    /**
-     * Returns a list of Planets that you have enough fuel to travel to
-     * @return list of Planets that are within range
-     */
-    public static List<Planet> planetsInRange() {
-        Planet currPlanet = Game.getCurrLocation();
+    //this should get moved to the Game class
+    public static List<Planet> allPlanets() {
         List<Planet> planetList = new ArrayList<>();
-        Ship currShip = Game.getPlayer().getShip();
-        //adds all planets in game to planetList
         for (int i = 0; i < Game.getUniverse().getNumSolarSystems(); i++) {
             List<Planet> solarSystemPlanets =  Game.getUniverse().getAllSolarSystems().get(i).getAllPlanets();
             for (int j = 0; j < solarSystemPlanets.size(); j++) {
                 planetList.add(solarSystemPlanets.get(j));
             }
         }
+        return planetList;
+    }
+
+
+    /**
+     * Returns a list of Planets that you have enough fuel to travel to
+     * @return list of Planets that are within range
+     */
+    public static List<Planet> planetsInRange() {
+        Planet currPlanet = Game.getCurrLocation();
+        List<Planet> planetList = allPlanets();
+        Ship currShip = Game.getPlayer().getShip();
+        //adds all planets in game to planetList
+
         // max distance the ship can travel on current fuel tank
         int travelableDist = currShip.getFuel() * DIST_PER_FUEL;
         // list of distances to each planet
         List<Integer> distances;
         List<Planet> validPlanets = new ArrayList<>();
 
-        distances = listDistances(currPlanet, planetList);
+        distances = listDistances();
 
         for (int i = 0; i < distances.size(); i++) {
             if (travelableDist >= distances.get(i)) {
@@ -53,7 +61,9 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** Returns a list of distances from currPlanet to each planet in planetList **/
-    public static List<Integer> listDistances(Planet currPlanet, List<Planet> planetList) {
+    public static List<Integer> listDistances() {
+        Planet currPlanet = Game.getCurrLocation();
+        List<Planet> planetList = allPlanets();
         List<Integer> distances = new ArrayList<>();
         for (Planet planet: planetList) {
             distances.add(currPlanet.calcDistance(planet));

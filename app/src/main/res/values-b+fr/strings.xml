@@ -46,7 +46,7 @@
         <item>Robots</item>
     </string-array>
     <string name="travel_button">Voyager</string>
-    <string name="create_player_screen_label">Faire un Jouer</string>
+    <string name="create_player_screen_label">Créer un Jouer</string>
     <string name="shipyard_button">Chantier</string>
     <string name="planetinfo_button">Informatations sur la Planète</string>
     <string name="sell_goods_text">Vendre des Articles</string>
@@ -58,7 +58,7 @@
     <string name="openCargoText">Espace Restant</string>
     <string name="remainingMoneyText">Argent:</string>
     <string name="displayCargoButton">Chargement</string>
-    <string name="universeCreationLabel">Tu es au Planète de</string>
+    <string name="universeCreationLabel">Tu es en Planète de</string>
     <string name="marketPlaceButton">Marché</string>
     <string name="sellButton">Vendre des Articles</string>
     <string name="buyGoodsText">Acheter des Articles</string>
