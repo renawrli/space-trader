@@ -19,7 +19,7 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** how many units in the universe you travel per unit of fuel **/
-    private static final int DIST_PER_FUEL = 8;
+    private static final int DIST_PER_FUEL = 20;
 
     //this should get moved to the Game class
     public static List<Planet> allPlanets() {
@@ -50,7 +50,7 @@ public class TravelViewModel extends AndroidViewModel {
         List<Integer> distances;
         List<Planet> validPlanets = new ArrayList<>();
 
-        distances = listDistances();
+        distances = listDistances(allPlanets());
 
         for (int i = 0; i < distances.size(); i++) {
             if (travelableDist >= distances.get(i)) {
@@ -61,11 +61,21 @@ public class TravelViewModel extends AndroidViewModel {
     }
 
     /** Returns a list of distances from currPlanet to each planet in planetList **/
-    public static List<Integer> listDistances() {
+    //Fuad's version
+//    public static List<Integer> listDistances() {
+//        Planet currPlanet = Game.getCurrLocation();
+//        List<Planet> planetList = allPlanets();
+//        List<Integer> distances = new ArrayList<>();
+//        for (Planet planet: planetList) {
+//            distances.add(currPlanet.calcDistance(planet));
+//        }
+//        return distances;
+//    }
+    //Andrew's version
+    public static List<Integer> listDistances(List<Planet> validPlanets) {
         Planet currPlanet = Game.getCurrLocation();
-        List<Planet> planetList = allPlanets();
         List<Integer> distances = new ArrayList<>();
-        for (Planet planet: planetList) {
+        for (Planet planet: validPlanets) {
             distances.add(currPlanet.calcDistance(planet));
         }
         return distances;
