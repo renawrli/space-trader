@@ -60,10 +60,10 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/reachablePlanets"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leaveTravelButton"
         android:layout_below="@+id/choosePlanetLabel"
         android:layout_marginTop="5dp"
-        android:paddingLeft="50dp"
         android:fontFamily="@font/montserrat" />
 
     <Button
