@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.util.List;
@@ -44,6 +45,7 @@ public class TravelActivity extends AppCompatActivity {
         currLocationText.setText(currLocationText.getText()+ " " + Game.getCurrLocation().getName());
         validPlanets = TravelViewModel.planetsInRange();
         planetNames = TravelViewModel.validPlanetsString(validPlanets);
+        Log.d("valid planet strings", planetNames.toString());
         //planetNames = TravelViewModel.validPlanetsString(TravelViewModel.planetsInRange());
         planetDistances = TravelViewModel.listDistances(validPlanets);
         planetFuelCosts = TravelViewModel.listFuel(planetDistances);
