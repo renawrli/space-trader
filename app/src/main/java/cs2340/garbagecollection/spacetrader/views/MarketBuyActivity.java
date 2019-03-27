@@ -105,4 +105,6 @@ public class MarketBuyActivity extends AppCompatActivity {
         List<String> translatedCargoList = marketViewModelKotlin.translateGoodsList(uniqueList);
         cargoRecyclerView.setAdapter(new CargoListAdapterKotlin(translatedCargoList, numGoods));
     }
+
+
 }
