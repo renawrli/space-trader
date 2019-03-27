@@ -56,7 +56,6 @@ public class TravelActivity extends AppCompatActivity {
         reachablePlanets.setHasFixedSize(true);
         reachablePlanets.setLayoutManager(layoutManager);
         reachablePlanets.setAdapter(adapter);
-
     }
 
 
@@ -70,4 +69,6 @@ public class TravelActivity extends AppCompatActivity {
         finishAffinity();
         startActivity(new Intent(this,GameScreenActivity.class));
     }
+
+
 }
