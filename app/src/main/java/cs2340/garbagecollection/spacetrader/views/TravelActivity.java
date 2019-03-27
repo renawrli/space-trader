@@ -17,6 +17,8 @@ import cs2340.garbagecollection.spacetrader.model.PlanetListAdapterKotlin;
 import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 
+import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
+
 
 public class TravelActivity extends AppCompatActivity {
     private RecyclerView reachablePlanets;
@@ -43,8 +45,8 @@ public class TravelActivity extends AppCompatActivity {
     }
 
     private void setUpWidgets() {
-        fuelLevelText.setText(fuelLevelText.getText()+ " " + Game.getPlayer().getShip().getFuel());
-        currLocationText.setText(currLocationText.getText()+ " " + Game.getCurrLocation().getName());
+        fuelLevelText.setText(fuelLevelText.getText()+ " " + game.getPlayer().getShip().getFuel());
+        currLocationText.setText(currLocationText.getText()+ " " + game.getCurrLocation().getName());
         validPlanets = TravelViewModel.planetsInRange();
         planetNames = TravelViewModel.validPlanetsString(validPlanets);
         Log.d("valid planet strings", planetNames.toString());

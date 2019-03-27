@@ -22,6 +22,8 @@ import cs2340.garbagecollection.spacetrader.model.Ship;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 
+import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
+
 public class MarketBuyActivity extends AppCompatActivity {
     private Button sellButton;
     private RecyclerView recyclerView;
@@ -49,7 +51,7 @@ public class MarketBuyActivity extends AppCompatActivity {
         ArrayList<String> goodNamesListTranslated = new ArrayList<>();
         ArrayList<Integer> goodPriceList;
 
-        List<TradeGood> goodsList = Market.getAllBuyableGoods(Game.getCurrLocation().getTechnology());
+        List<TradeGood> goodsList = Market.getAllBuyableGoods(game.getCurrLocation().getTechnology());
         Log.d("size", goodsList.size()+"");
 
         for (int i = 0; i < goodsList.size() ; i++) {
@@ -61,11 +63,11 @@ public class MarketBuyActivity extends AppCompatActivity {
 
         }
         marketViewModelKotlin = new MarketViewModelKotlin(this.getApplication());
-        TradeGood[] cargoArray = Game.getPlayer().getShip().getCargoArr();
+        TradeGood[] cargoArray = game.getPlayer().getShip().getCargoArr();
         List<TradeGood> uniqueList = marketViewModelKotlin.uniqueList(cargoArray);
         List<Integer> numGoods = marketViewModelKotlin.numDuplicatesList(uniqueList, cargoArray);
         List<String> translatedCargoList = marketViewModelKotlin.translateGoodsList(uniqueList);
-        goodPriceList = (ArrayList<Integer>) marketViewModelKotlin.calcPriceList(goodsList, Game.getCurrLocation());
+        goodPriceList = (ArrayList<Integer>) marketViewModelKotlin.calcPriceList(goodsList, game.getCurrLocation());
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
@@ -97,9 +99,9 @@ public class MarketBuyActivity extends AppCompatActivity {
     }
 
     private void updateTextViews() {
-        currentCreditsDisplay.setText(Game.getPlayer().getCredits()+"");
-        cargoDisplay.setText(Game.getPlayer().getShip().numOpenSlots()+"");
-        TradeGood[] cargoArray = Game.getPlayer().getShip().getCargoArr();
+        currentCreditsDisplay.setText(game.getPlayer().getCredits()+"");
+        cargoDisplay.setText(game.getPlayer().getShip().numOpenSlots()+"");
+        TradeGood[] cargoArray = game.getPlayer().getShip().getCargoArr();
         List<TradeGood> uniqueList = marketViewModelKotlin.uniqueList(cargoArray);
         List<Integer> numGoods = marketViewModelKotlin.numDuplicatesList(uniqueList, cargoArray);
         List<String> translatedCargoList = marketViewModelKotlin.translateGoodsList(uniqueList);

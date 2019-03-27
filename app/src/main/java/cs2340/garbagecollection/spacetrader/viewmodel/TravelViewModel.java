@@ -12,6 +12,8 @@ import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Ship;
 import cs2340.garbagecollection.spacetrader.model.Player;
 
+import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
+
 public class TravelViewModel extends AndroidViewModel {
 
     public TravelViewModel (@NonNull Application application) {
@@ -24,8 +26,8 @@ public class TravelViewModel extends AndroidViewModel {
     //this should get moved to the Game class
     public static List<Planet> allPlanets() {
         List<Planet> planetList = new ArrayList<>();
-        for (int i = 0; i < Game.getUniverse().getNumSolarSystems(); i++) {
-            List<Planet> solarSystemPlanets =  Game.getUniverse().getAllSolarSystems().get(i).getAllPlanets();
+        for (int i = 0; i < game.getUniverse().getNumSolarSystems(); i++) {
+            List<Planet> solarSystemPlanets =  game.getUniverse().getAllSolarSystems().get(i).getAllPlanets();
             for (int j = 0; j < solarSystemPlanets.size(); j++) {
                 planetList.add(solarSystemPlanets.get(j));
             }
@@ -39,9 +41,9 @@ public class TravelViewModel extends AndroidViewModel {
      * @return list of Planets that are within range
      */
     public static List<Planet> planetsInRange() {
-        Planet currPlanet = Game.getCurrLocation();
+        Planet currPlanet = game.getCurrLocation();
         List<Planet> planetList = allPlanets();
-        Ship currShip = Game.getPlayer().getShip();
+        Ship currShip = game.getPlayer().getShip();
         //adds all planets in game to planetList
 
         // max distance the ship can travel on current fuel tank
@@ -63,7 +65,7 @@ public class TravelViewModel extends AndroidViewModel {
     /** Returns a list of distances from currPlanet to each planet in planetList **/
     //Fuad's version
 //    public static List<Integer> listDistances() {
-//        Planet currPlanet = Game.getCurrLocation();
+//        Planet currPlanet = game.getCurrLocation();
 //        List<Planet> planetList = allPlanets();
 //        List<Integer> distances = new ArrayList<>();
 //        for (Planet planet: planetList) {
@@ -73,7 +75,7 @@ public class TravelViewModel extends AndroidViewModel {
 //    }
     //Andrew's version
     public static List<Integer> listDistances(List<Planet> validPlanets) {
-        Planet currPlanet = Game.getCurrLocation();
+        Planet currPlanet = game.getCurrLocation();
         List<Integer> distances = new ArrayList<>();
         for (Planet planet: validPlanets) {
             distances.add(currPlanet.calcDistance(planet));
@@ -105,10 +107,10 @@ public class TravelViewModel extends AndroidViewModel {
 
     /** travels to a Planet. Assumes it's within range **/
     public static void travel(Planet destination, Ship ship) {
-        int dist = Game.getCurrLocation().calcDistance(destination);
+        int dist = game.getCurrLocation().calcDistance(destination);
         int fuelConsumed = dist / DIST_PER_FUEL;
         ship.deductFuel(fuelConsumed);
 
-        Game.setCurrLocation(destination);
+        game.setCurrLocation(destination);
     }
 }
