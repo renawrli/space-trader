@@ -17,6 +17,8 @@ import cs2340.garbagecollection.spacetrader.model.TradeGood;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 
+import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
+
 public class QuantityTransactionActivity extends AppCompatActivity {
     private Button transactionConfirmationButton;
     private Button minusButton;
@@ -59,28 +61,28 @@ public class QuantityTransactionActivity extends AppCompatActivity {
     public void confirmTransactionPressed(View view) {
         boolean valid = true;
         if (buy) {
-            if (!marketViewModel.enoughMoney(Game.getPlayer(), good, Game.getCurrLocation(), quantity)) {
+            if (!marketViewModel.enoughMoney(game.getPlayer(), good, game.getCurrLocation(), quantity)) {
                 Toast.makeText(this, getResources().getString(R.string.not_enough_money_toast), Toast.LENGTH_LONG).show();
                 valid = false;
             }
-            if (!marketViewModel.enoughSpaceToBuy(Game.getPlayer(), quantity)) {
+            if (!marketViewModel.enoughSpaceToBuy(game.getPlayer(), quantity)) {
                 Toast.makeText(this, getResources().getString(R.string.not_enough_space_toast), Toast.LENGTH_LONG).show();
                 valid = false;
             }
 
             if (valid) {
-                marketViewModel.buy(Game.getPlayer(), good, Game.getCurrLocation(), quantity);
+                marketViewModel.buy(game.getPlayer(), good, game.getCurrLocation(), quantity);
                 Toast.makeText(this, getResources().getString(R.string.successful_purchase_toast) , Toast.LENGTH_SHORT).show();
                 this.finish();
             }
 
         } else {
-            if (!marketViewModel.hasGoodsToSell(Game.getPlayer(), good, quantity)) {
+            if (!marketViewModel.hasGoodsToSell(game.getPlayer(), good, quantity)) {
                 Toast.makeText(this, getResources().getString(R.string.not_enough_goods_toast), Toast.LENGTH_LONG).show();
                 valid = false;
             }
             if (valid) {
-                marketViewModel.sell(Game.getPlayer(), good, Game.getCurrLocation(), quantity);
+                marketViewModel.sell(game.getPlayer(), good, game.getCurrLocation(), quantity);
                 Toast.makeText(this, getResources().getString(R.string.successful_sale_toast) , Toast.LENGTH_SHORT).show();
                 this.finish();
             }

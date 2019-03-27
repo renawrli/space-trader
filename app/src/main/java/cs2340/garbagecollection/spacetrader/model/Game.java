@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 public class Game {
-    private static Difficulty difficulty;
-    private static Player player;
-    private static Universe universe;
-    private static Planet currLocation;
+    private Difficulty difficulty;
+    private Player player;
+    private Universe universe;
+    private Planet currLocation;
 
     /** Randomizer to pick coordinates x, y and piracy and police level */
     private Random rand = new Random();
@@ -91,23 +91,23 @@ public class Game {
     }
 
     /** getters and setters **/
-    public static Difficulty getDifficulty() {
+    public Difficulty getDifficulty() {
         return difficulty;
     }
 
-    public static Player getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
-    public static Universe getUniverse() {
+    public Universe getUniverse() {
         return universe;
     }
 
-    public static Planet getCurrLocation() {
+    public Planet getCurrLocation() {
         return currLocation;
     }
 
-    public static void setCurrLocation(Planet newLocation) {
+    public void setCurrLocation(Planet newLocation) {
         currLocation = newLocation;
     }
 }
