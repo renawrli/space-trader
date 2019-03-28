@@ -1,6 +1,5 @@
 package cs2340.garbagecollection.spacetrader.views;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -9,12 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 import cs2340.garbagecollection.spacetrader.R;
-import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
-import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 
 import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;

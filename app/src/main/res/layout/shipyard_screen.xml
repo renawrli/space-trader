@@ -22,16 +22,30 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/fuelDialogue"
+        android:id="@+id/fuelLevelDialogue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="50dp"
         android:layout_below="@id/toolbar"
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
-        android:text="@string/fuel_dialogue_text"
+        android:text="@string/shipyard_fuel_level"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
+    <TextView
+        android:id="@+id/currentFuelLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:layout_toRightOf="@id/fuelLevelDialogue"
+        android:layout_alignBottom="@+id/fuelLevelDialogue"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="30dp"
+        android:text="0/0"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+
 
     <TextView
         android:id="@+id/fullTankDialogue"
@@ -39,10 +53,23 @@
         android:layout_height="wrap_content"
         android:paddingLeft="50dp"
         android:paddingBottom="30dp"
-        android:layout_below="@id/fuelDialogue"
+        android:layout_below="@id/fuelLevelDialogue"
         android:fontFamily="@font/montserrat"
         android:paddingTop="12dp"
         android:text="@string/full_tank_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/fullTankCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingBottom="30dp"
+        android:layout_alignBottom="@id/fullTankDialogue"
+        android:layout_toRightOf="@id/fullTankDialogue"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="12dp"
+        android:text="0"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
     <Button
@@ -55,7 +82,8 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/refuel_label"
         android:textColor="@android:color/white"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:onClick="refuelPressed"/>
 
     <TextView
         android:id="@+id/moneyLeft"
@@ -83,7 +111,7 @@
         android:textColor="@android:color/black"/>
 
     <Button
-        android:id="@+id/leaveMarketButton"
+        android:id="@+id/leaveShipyardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -91,6 +119,7 @@
         android:background="@color/colorPurple"
         android:fontFamily="@font/montserrat"
         android:text="@string/exit_button"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:onClick="exitShipyardPressed"/>
 
 </RelativeLayout>

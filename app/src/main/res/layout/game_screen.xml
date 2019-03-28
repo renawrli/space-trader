@@ -64,6 +64,7 @@
         android:backgroundTint="#F5F5F5"
         android:fontFamily="@font/montserrat"
         android:text="@string/shipyard_button"
+        android:onClick="toShipyard"
         android:textStyle="bold" />
 
     <Button
@@ -79,6 +80,7 @@
         android:backgroundTint="#F5F5F5"
         android:fontFamily="@font/montserrat"
         android:text="@string/planetinfo_button"
+        android:onClick="toPlanetInfo"
         android:textStyle="bold" />
 
 

@@ -58,6 +58,10 @@ public class Ship {
     public void deductFuel(int deductedFuel) {
         fuel -= deductedFuel;
     }
+
+    public int getFuelCapacity() {
+        return shipType.getFuelCapacity();
+    }
     public int getSize() {
         return size;
     }

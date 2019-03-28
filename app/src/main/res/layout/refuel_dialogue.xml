@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:backgroundTint="	#E0E0E0"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal"
+        android:text="@string/add_fuel_units"
+        android:textColor="#ff000000"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/refuel_minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="649dp"
+        android:background="@android:drawable/ic_delete"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="minusPressed"
+        android:paddingBottom="25dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:id="@+id/refuel_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="649dp"
+        android:background="@android:drawable/ic_input_add"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="plusPressed"
+        android:textColor="#ffffffff" />
+
+
+    <TextView
+        android:id="@+id/fuelQuantityDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="152dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="150dp"
+        android:paddingLeft="50dp"
+        android:paddingTop="20dp"
+        android:text="0" />
+
+
+    <Button
+        android:id="@+id/confirm_refuel_button"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fuelQuantityDisplay"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="50dp"
+        android:layout_toEndOf="@+id/refuel_cancel_button"
+        android:layout_toRightOf="@id/cancelButton"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:onClick="confirmRefuel"
+        android:text="@string/confirm_transaction_button" />
+
+    <Button
+        android:id="@+id/refuel_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fuelQuantityDisplay"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="38dp"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:onClick="cancelRefuel"
+        android:text="@string/cancel_button" />
+
+
+</RelativeLayout>

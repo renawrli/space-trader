@@ -53,4 +53,14 @@ public class GameScreenActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TravelActivity.class);
         startActivity(intent);
     }
+
+    public void toShipyard(View view) {
+        Intent intent = new Intent(this, ShipyardActivity.class);
+        Log.d("onClick", "toShipyard: ");
+        startActivity(intent);
+    }
+
+    public void toPlanetInfo(View view) {
+        //this activity does not exist
+    }
 }

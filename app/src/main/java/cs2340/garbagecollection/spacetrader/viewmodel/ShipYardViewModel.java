@@ -19,7 +19,7 @@ public class ShipYardViewModel extends AndroidViewModel {
     }
 
     /** Returns true if player enters valid amount of fuel to tank */
-    public boolean checkFuelAdd(Player p, Ship ship, int amountAdd) {
+    public boolean checkFuelAdd(Ship ship, int amountAdd) {
         return (amountAdd + ship.getFuel() <= ship.getShipType().getFuelCapacity());
     }
 
@@ -28,16 +28,24 @@ public class ShipYardViewModel extends AndroidViewModel {
         return (fuelNeeded * PRICE_PER_FUEL) <= p.getCredits();
     }
 
+    public int getRefuelCost(Ship ship) {
+        return (ship.getFuelCapacity() - ship.getFuel())*PRICE_PER_FUEL;
+    }
+
+    public boolean needsFuel(Ship ship) {
+        return getRefuelCost(ship) > 0;
+    }
+
     /** Returns the total price of fuel that user wants to add */
     public int fuelPrice(int fuelNeeded) {
         return fuelNeeded * PRICE_PER_FUEL;
     }
 
     /** To be called after passing the checks, update the model */
-    public void buyFuel(Player p, Ship ship, int amountAdd, int fuelNeeded) {
+    public void buyFuel(Player p, Ship ship, int fuelNeeded) {
         int newCreditAmount = p.getCredits() - (fuelNeeded * PRICE_PER_FUEL);
         p.setCredits(newCreditAmount);
-        ship.addFuel(amountAdd);
+        ship.addFuel(fuelNeeded);
     }
 
     /** getter **/
