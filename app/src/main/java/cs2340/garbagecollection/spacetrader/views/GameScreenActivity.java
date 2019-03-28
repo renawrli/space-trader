@@ -61,6 +61,8 @@ public class GameScreenActivity extends AppCompatActivity {
     }
 
     public void toPlanetInfo(View view) {
-        //this activity does not exist
+        Intent intent = new Intent(this, PlanetInfoActivity.class);
+        Log.d("onClick", "toPlanetInfo: ");
+        startActivity(intent);
     }
 }

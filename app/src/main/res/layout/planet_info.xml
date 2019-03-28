@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="	#E0E0E0"
+    android:layoutDirection="ltr">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPurple" />
+    <TextView
+        android:id="@+id/planet_info_banner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="12dp"
+        android:text="@string/planet_info_banner"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/planet_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/planet_info_name_label"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/planet_name_displayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/planet_name_label"
+        android:layout_alignBottom="@+id/planet_name_label"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/planet_government_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/planet_name_label"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/planet_info_government_label"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/planet_government_displayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/planet_government_label"
+        android:layout_alignBottom="@+id/planet_government_label"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/planet_tech_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/planet_government_label"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="@string/planet_info_tech_label"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/planet_tech_displayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/planet_tech_label"
+        android:layout_alignBottom="@+id/planet_tech_label"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="50dp"
+        android:paddingTop="25dp"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/exit_planet_info_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/planet_tech_label"
+        android:layout_centerHorizontal="true"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:onClick="exitPlanetInfo"
+        android:text="@string/exit_planet_button_text" />
+</RelativeLayout>

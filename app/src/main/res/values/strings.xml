@@ -84,5 +84,9 @@
     <string name="add_fuel_units">Units of fuel:  </string>
     <string name="encounter_label">You have encountered a</string>
     <string name="insufficient_tank_capacity_toast">Insufficent tank capacity</string>
-
+    <string name="planet_info_name_label">Planet name: </string>
+    <string name="planet_info_government_label">Government type: </string>
+    <string name="planet_info_banner">Planet Information </string>
+    <string name="planet_info_tech_label">Tech level: </string>
+    <string name="exit_planet_button_text">Exit </string>
 </resources>
