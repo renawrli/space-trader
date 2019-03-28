@@ -80,4 +80,8 @@
     <string name="warp_text">WARP</string>
     <string name="distance_to_planet_label">Distance</string>
     <string name="fuel_cost_label">Fuel Required</string>
+    <string name="pirate_label">PIRATE</string>
+    <string name="police_label">POLICE</string>
+    <string name="trader_label">TRADER</string>
+    <string name="encounter_label">You have encountered a</string>
 </resources>
