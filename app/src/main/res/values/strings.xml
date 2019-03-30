@@ -90,5 +90,8 @@
     <string name="planet_info_tech_label">Tech level: </string>
     <string name="exit_planet_button_text">Exit </string>
     <string name="goods_label">Goods </string>
-    <string name="trader_question">Would you like to purchase from this trader? </string>
+    <string name="trader_question">You may choose to buy goods or exit. </string>
+    <string name="police_statement">Because you have firearms or narcotics, you must pay a </string>
+    <string name="fine">fine. </string>
+
 </resources>

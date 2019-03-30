@@ -22,4 +22,53 @@
         android:textColor="@android:color/white"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/police_encounter_statement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/police_statement"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/fine_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/police_encounter_statement"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/fine"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/currentMoneyText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="@string/remaining_money_text"
+        android:fontFamily="@font/montserrat"/>
+
+    <Button
+        android:id="@+id/leaveMarketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPurple"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/exit_button"
+        android:textColor="@android:color/white" />
+
 </RelativeLayout>
