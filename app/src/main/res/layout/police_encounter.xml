@@ -23,10 +23,22 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/police_encounter_statement"
+        android:id="@+id/police_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
+        android:paddingTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/police_text"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/police_encounter_statement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/police_label"
         android:paddingLeft="40dp"
         android:paddingTop="15dp"
         android:layout_centerHorizontal="true"
@@ -40,7 +52,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/police_encounter_statement"
-        android:paddingLeft="40dp"
         android:paddingTop="10dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
@@ -52,7 +63,7 @@
         android:id="@+id/currentMoneyText"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
-        android:paddingBottom="5dp"
+        android:paddingBottom="20dp"
         android:paddingLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,7 +72,7 @@
         android:fontFamily="@font/montserrat"/>
 
     <Button
-        android:id="@+id/leaveMarketButton"
+        android:id="@+id/leavePoliceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -70,5 +81,20 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/exit_button"
         android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/moneyLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/openCargoSpots"
+        android:paddingLeft="10dp"
+        android:layout_alignTop="@+id/currentMoneyText"
+        android:layout_toRightOf="@id/currentMoneyText"
+        android:fontFamily="@font/montserrat"
+        android:text="0"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
+
+
 
 </RelativeLayout>

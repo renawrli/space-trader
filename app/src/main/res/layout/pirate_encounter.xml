@@ -22,5 +22,41 @@
         android:textColor="@android:color/white"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/pirate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/pirate_text"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/pirate_encounter_statement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pirate_label"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/pirate_statement"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/leavePirateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPurple"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/exit_button"
+        android:textColor="@android:color/white" />
+
 
 </RelativeLayout>

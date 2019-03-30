@@ -92,6 +92,10 @@
     <string name="goods_label">Goods </string>
     <string name="trader_question">You may choose to buy goods or exit. </string>
     <string name="police_statement">Because you have firearms or narcotics, you must pay a </string>
-    <string name="fine">fine. </string>
+    <string name="fine">$30 fine. </string>
+    <string name="police_text">POLICE </string>
+    <string name="trader_text">TRADER </string>
+    <string name="pirate_text">PIRATE </string>
+    <string name="pirate_statement">A pirate has stolen your goods. You have no more cargo. </string>
 
 </resources>
