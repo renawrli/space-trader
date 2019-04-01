@@ -17,6 +17,6 @@ public class PirateViewModel extends AndroidViewModel {
 
     /** when a pirate steals all your loot **/
     public void lootStolen(Ship ship) {
-        ship.resetShip();
+        ship.resetGoods();
     }
 }
