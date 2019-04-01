@@ -79,4 +79,10 @@ public class Ship {
         return cargoArr.length - size;
     }
 
+    public void resetShip() {
+        size = 0;
+        cargoArr = new TradeGood[shipType.getCapacity()];
+        fuel = shipType.getFuelCapacity();
+    }
+
 }
