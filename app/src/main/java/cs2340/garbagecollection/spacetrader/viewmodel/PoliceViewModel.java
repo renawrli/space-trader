@@ -4,6 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
 
+import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.model.Ship;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
 
@@ -15,6 +16,7 @@ public class PoliceViewModel extends AndroidViewModel {
         super(application);
     }
 
+    private int FINE = 50;
     /**
      * checks if there are firearms or narcotics on the ship
      * @return true if there are illegal goods
@@ -26,5 +28,15 @@ public class PoliceViewModel extends AndroidViewModel {
             }
         }
         return false;
+    }
+
+    /** fines the player if illegal goods are found in their ship **/
+    public void finePlayer(Player p) {
+        int credits = p.getCredits();
+        if (credits < FINE) {
+            p.setCredits(0);
+        } else {
+            p.setCredits(credits - FINE);
+        }
     }
 }
