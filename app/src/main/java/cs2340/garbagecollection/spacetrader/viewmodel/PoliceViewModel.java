@@ -17,6 +17,12 @@ public class PoliceViewModel extends AndroidViewModel {
     }
 
     private int FINE = 50;
+
+    /** Getter for FINE **/
+    public int getFINE() {
+        return FINE;
+    }
+
     /**
      * checks if there are firearms or narcotics on the ship
      * @return true if there are illegal goods
