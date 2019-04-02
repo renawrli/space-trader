@@ -69,8 +69,8 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
 
             if (encounterType.equals(3)) {
 
-                //val traderAct = Intent(view.context, TraderActivity::class.java)
-                //view.context.startActivity(traderAct)
+                val traderAct = Intent(view.context, TraderActivity::class.java)
+                view.context.startActivity(traderAct)
                 System.out.println("launching trader encounter")
             } else if (encounterType.equals(1)) {
 

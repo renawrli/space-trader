@@ -16,6 +16,7 @@ import cs2340.garbagecollection.spacetrader.R;
 import cs2340.garbagecollection.spacetrader.model.Market;
 import cs2340.garbagecollection.spacetrader.model.MarketListAdapterBuy;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
+import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
 
@@ -24,6 +25,7 @@ public class TraderActivity extends AppCompatActivity {
     TextView encounterType;
     TextView encounterStatement;
     Button exitButton;
+    MarketViewModelKotlin marketViewModelKotlin;
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -39,6 +41,8 @@ public class TraderActivity extends AppCompatActivity {
         encounterType = findViewById(R.id.trader_label);
         encounterStatement = findViewById(R.id.purchaseQuestion);
         exitButton = findViewById(R.id.leaveTraderButton);
+
+        marketViewModelKotlin = new MarketViewModelKotlin(getApplication());
 
         recyclerView = findViewById(R.id.goods);
         layoutManager = new LinearLayoutManager(this);
@@ -57,6 +61,7 @@ public class TraderActivity extends AppCompatActivity {
             }
 
         }
+        goodPriceList = (ArrayList<Integer>) marketViewModelKotlin.calcPriceList(goodsList, game.getCurrLocation());
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
