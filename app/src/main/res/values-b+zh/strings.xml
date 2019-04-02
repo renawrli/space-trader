@@ -83,4 +83,23 @@
     <string name="warp_text">旅游</string>
     <string name="distance_to_planet_label">路程</string>
     <string name="fuel_cost_label">燃料要求</string>
+
+    <string name="shipyard_fuel_level">燃料水平</string>
+    <string name="add_fuel_units">燃料水平</string>
+    <string name="encounter_label">你碰到了一个</string>
+    <string name="insufficient_tank_capacity_toast">油箱空间不够</string>
+    <string name="planet_info_name_label">行星名字</string>
+    <string name="planet_info_government_label">政府类型：</string>
+    <string name="planet_info_banner">行星信息</string>
+    <string name="planet_info_tech_label">技术水平</string>
+    <string name="exit_planet_button_text">出门</string>
+    <string name="goods_label">商品</string>
+    <string name="trader_question">你会买东西或者出去</string>
+    <string name="police_statement">因为你有毒品或者枪</string>
+    <string name="fine">$三十 的罚款</string>
+    <string name="police_text">警察</string>
+    <string name="trader_text">商人</string>
+    <string name="pirate_text">海盗</string>
+    <string name="pirate_statement">一个海盗偷了你的商品</string>
+
 </resources>

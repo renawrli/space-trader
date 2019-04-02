@@ -81,4 +81,24 @@
     <string name="warp_text">سفر</string>
     <string name="distance_to_planet_label">مسافة</string>
     <string name="fuel_cost_label">سعر الوقود</string>
+
+
+    <string name="shipyard_fuel_level">مستوى الوقود:</string>
+    <string name="add_fuel_units">مستوى الوقود":" </string>
+    <string name="encounter_label">توجدت على </string>
+    <string name="insufficient_tank_capacity_toast">محال غير كاف:</string>
+    <string name="planet_info_name_label">اسم الكوكب</string>
+    <string name="planet_info_government_label">نوة الحكومة:</string>
+    <string name="planet_info_banner">معلومات الكوكب</string>
+    <string name="planet_info_tech_label">مستوى التكنولوجية</string>
+    <string name="exit_planet_button_text">خرج</string>
+    <string name="goods_label">السلع</string>
+    <string name="trader_question">تستطيع ان تشتري او تخرج</string>
+    <string name="police_statement">بسبب المسادسات او المخادرات، انت من اللازم تتفع</string>
+    <string name="fine">$٣٠ خدمة </string>
+    <string name="police_text">الشرط</string>
+    <string name="trader_text">تاجر</string>
+    <string name="pirate_text">قرصن</string>
+    <string name="pirate_statement">القرصن مسروق اغراداك!</string>
+
 </resources>

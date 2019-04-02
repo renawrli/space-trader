@@ -81,4 +81,23 @@
     <string name="warp_text">Voyager</string>
     <string name="distance_to_planet_label">Distance</string>
     <string name="fuel_cost_label">Carburuant Requisée</string>
+
+    <string name="shipyard_fuel_level">Niveau de Carburant: </string>
+    <string name="add_fuel_units">Niveau de Carburant:</string>
+    <string name="encounter_label">Vous avez rencontré un</string>
+    <string name="insufficient_tank_capacity_toast">Capacité pas assez</string>
+    <string name="planet_info_name_label">Nom de la Planète:</string>
+    <string name="planet_info_government_label">Type de Gouvernemnet</string>
+    <string name="planet_info_banner">L"'"Information de la Planète</string>
+    <string name="planet_info_tech_label">Niveau de Technologie":"</string>
+    <string name="exit_planet_button_text">Sortir</string>
+    <string name="goods_label">Marchandises</string>
+    <string name="trader_question">Vous pouvez acheter des choses ou sortir.</string>
+    <string name="police_statement">Parce que tu as des narcotiques ou des armes, tu doit payer un </string>
+    <string name="fine">$30 amaende. </string>
+    <string name="police_text">POLICE </string>
+    <string name="trader_text">COMERÇANT </string>
+    <string name="pirate_text">PIRATE</string>
+    <string name="pirate_statement">Un pirate a voler votre marchandises</string>
+
 </resources>
