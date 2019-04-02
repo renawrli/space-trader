@@ -64,6 +64,9 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
             val encounterType = EncounterViewModel.generateEncounterType()
             System.out.println("encounter num: " + encounterType)
 
+            val intent = Intent(view.context, GameScreenActivity::class.java)
+            view.context.startActivity(intent)
+
             if (encounterType.equals(3)) {
 
                 //val traderAct = Intent(view.context, TraderActivity::class.java)
@@ -80,8 +83,7 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
                 view.context.startActivity(policeAct)
                 System.out.println("launching police encounter")
             }
-            val intent = Intent(view.context, GameScreenActivity::class.java)
-           // view.context.startActivity(intent)
+
 
 
 
