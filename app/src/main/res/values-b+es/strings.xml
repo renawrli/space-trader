@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">SpaceTrader</string>
+    <string name="name_label">Name:</string>
+    <string name="skill_points_label">Remaining Skill Points:</string>
+    <string name="create_player_screen_label">CREATE A PLAYER</string>
+    <string name="pilot_points_label">Pilot:</string>
+    <string name="fighter_points_label">Fighter:</string>
+    <string name="trader_points_label">Trader:</string>
+    <string name="engineer_points_label">Engineer:</string>
+    <string name="create_player_label">CREATE</string>
+    <string name="difficulty_label">Difficulty</string>
+    <string-array name="difficulties">
+        <item>Beginner</item>
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Impossible</item>
+    </string-array>
+    <string name="creating_universe_label">Creating the Universe</string>
+    <string name="market_place_button">Marketplace</string>
+    <string name="welcome_to_planet_label">Welcome to Planet </string>
+    <string name="travel_button">Travel</string>
+    <string name="shipyard_button">Ship Yard</string>
+    <string name="planetinfo_button">Planet Info</string>
+    <string name="sell_button">Sell</string>
+    <string name="buy_button">Buy</string>
+    <string name="confirm_transaction_button">Confirm Transaction</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="not_enough_money_toast">Insufficient funds</string>
+    <string name="not_enough_space_toast">Insufficient cargo space</string>
+    <string name="not_enough_goods_toast">Insufficient goods to sell</string>
+    <string name="successful_purchase_toast">Purchase successful</string>
+    <string name="successful_sale_toast">Sale successful</string>
+    <string name="how_many">How Many Items?</string>
+    <string name="buy_goods_text">BUY GOODS</string>
+    <string name="sell_goods_text">SELL GOODS</string>
+    <string name="open_cargo_text">Open Cargo</string>
+    <string name="remaining_money_text">Money</string>
+    <string name="market_text">Market</string>
+    <string name="item_text">Item</string>
+    <string name="travel_text">Travel</string>
+    <string name="price_text">Price</string>
+    <string name="your_cargo_text">Your Cargo</string>
+    <string name="exit_button">Exit</string>
+    <string-array name="goodNames">
+        <item>Water</item>
+        <item>Furs</item>
+        <item>Food</item>
+        <item>Ore</item>
+        <item>Games</item>
+        <item>Firearms</item>
+        <item>Medicine</item>
+        <item>Machines</item>
+        <item>Narcotics</item>
+        <item>Robots</item>
+    </string-array>
+    <string name="openCargoText">"Remaining Cargo Spots":</string>
+    <string name="remainingMoneyText">"Credits":</string>
+    <string name="displayCargoButton">"Current Cargo"</string>
+    <string name="universeCreationLabel">You are at Planet Nigeria</string>
+    <string name="marketPlaceButton">"Marketplace"</string>
+    <string name="sellButton">"Sell Goods"</string>
+    <string name="buyGoodsText">"Buy Goods"</string>
+    <string name="cargoDisplay">"CURRENT CARGO"</string>
+    <string name="confirmTransactionButton">"Confirm Transaction"</string>
+    <string name="location_label">Current Location: </string>
+    <string name="fuel_level_label">Fuel Level: </string>
+    <string name="choose_planet_label">Planets In Range </string>
+    <string name="shipyard_text">Shipyard </string>
+    <string name="fuel_dialogue_text">You have fuel to fly </string>
+    <string name="full_tank_text">A full tank costs </string>
+    <string name="refuel_label">REFUEL </string>
+    <string name="target_planet_text">Target Planet </string>
+    <string name="name_text">Name: </string>
+    <string name="tech_level_text">Tech Level: </string>
+    <string name="government_text">Government: </string>
+    <string name="resources_text">Resources: </string>
+    <string name="police_level_text">Police Level: </string>
+    <string name="piracy_level_text">Piracy Level: </string>
+    <string name="warp_text">WARP</string>
+    <string name="distance_to_planet_label">Distance</string>
+    <string name="fuel_cost_label">Fuel Required</string>
+    <string name="shipyard_fuel_level">Fuel level: </string>
+    <string name="add_fuel_units">Units of fuel:  </string>
+    <string name="encounter_label">You have encountered a</string>
+    <string name="insufficient_tank_capacity_toast">Insufficent tank capacity</string>
+    <string name="planet_info_name_label">Planet name: </string>
+    <string name="planet_info_government_label">Government type: </string>
+    <string name="planet_info_banner">Planet Information </string>
+    <string name="planet_info_tech_label">Tech level: </string>
+    <string name="exit_planet_button_text">Exit </string>
+    <string name="goods_label">Goods </string>
+    <string name="trader_question">You may choose to buy goods or exit. </string>
+    <string name="police_statement">Because you have firearms or narcotics, you must pay a </string>
+    <string name="fine">$30 fine. </string>
+    <string name="police_text">POLICE </string>
+    <string name="trader_text">TRADER </string>
+    <string name="pirate_text">PIRATE </string>
+    <string name="pirate_statement">A pirate has stolen your goods. You have no more cargo. </string>
+
+</resources>
