@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.model
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.support.v4.content.ContextCompat.startActivity
@@ -10,15 +11,14 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import cs2340.garbagecollection.spacetrader.R
+import cs2340.garbagecollection.spacetrader.viewmodel.EncounterViewModel
 import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel
-import cs2340.garbagecollection.spacetrader.views.ConfigurationActivity
+import cs2340.garbagecollection.spacetrader.views.*
 import cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game
-import cs2340.garbagecollection.spacetrader.views.GameScreenActivity
 import java.util.ArrayList
 
 
 class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, fuelUnitsCost: List<Int>, private val mContext: Context) : RecyclerView.Adapter<PlanetListAdapterKotlin.ViewHolder>() {
-
     private var mPlanetNames = ArrayList<String>()
     private var mDistances = ArrayList<Int>()
     private var mFuelUnitsCost = ArrayList<Int>()
@@ -60,8 +60,31 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
             val game = ConfigurationActivity.game;
             TravelViewModel.travel(TravelViewModel.planetsInRange()[adapterPosition], game.getPlayer().ship)
             System.out.println("curr planet is " + game.getCurrLocation().name);
+
+            val encounterType = EncounterViewModel.generateEncounterType()
+            System.out.println("encounter num: " + encounterType)
+
+            if (encounterType.equals(3)) {
+
+                //val traderAct = Intent(view.context, TraderActivity::class.java)
+                //view.context.startActivity(traderAct)
+                System.out.println("launching trader encounter")
+            } else if (encounterType.equals(1)) {
+
+                val pirateAct = Intent(view.context, PirateActivity::class.java)
+                view.context.startActivity(pirateAct)
+                System.out.println("launching pirate encounter")
+            } else if (encounterType.equals(2)) {
+
+                val policeAct = Intent(view.context, PoliceActivity::class.java)
+                view.context.startActivity(policeAct)
+                System.out.println("launching police encounter")
+            }
             val intent = Intent(view.context, GameScreenActivity::class.java)
-            view.context.startActivity(intent)
+           // view.context.startActivity(intent)
+
+
+
             //this is where we should start the process of traveling to the selected planet
         }
 

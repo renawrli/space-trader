@@ -2,6 +2,7 @@ package cs2340.garbagecollection.spacetrader.viewmodel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
@@ -11,15 +12,14 @@ import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Ship;
 import cs2340.garbagecollection.spacetrader.model.Player;
+import cs2340.garbagecollection.spacetrader.views.PirateActivity;
 
 import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
 
 public class TravelViewModel extends AndroidViewModel {
-
     public TravelViewModel (@NonNull Application application) {
         super(application);
     }
-
     /** how many units in the universe you travel per unit of fuel **/
     private static final int DIST_PER_FUEL = 20;
 
@@ -107,10 +107,12 @@ public class TravelViewModel extends AndroidViewModel {
 
     /** travels to a Planet. Assumes it's within range **/
     public static void travel(Planet destination, Ship ship) {
+
         int dist = game.getCurrLocation().calcDistance(destination);
         int fuelConsumed = dist / DIST_PER_FUEL;
         ship.deductFuel(fuelConsumed);
-
         game.setCurrLocation(destination);
     }
+
+
 }

@@ -25,10 +25,11 @@ public class GameScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("onCreate", "onCreate: game screen activity launched");
         SharedPreferences mPrefs = getPreferences(MODE_PRIVATE);
         setContentView(R.layout.game_screen);
         welcomeText = (TextView)findViewById(R.id.universeCreationLabel);
-        welcomeText.setText(welcomeText.getText() + " " + currentPlanet.getName());
+        welcomeText.setText(getResources().getString(R.string.welcome_to_planet_label) + " " + currentPlanet.getName());
         Game myGame = game;
         String filename = "gameFile.txt";
         Gson gson = new Gson();

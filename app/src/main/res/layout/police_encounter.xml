@@ -78,6 +78,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPurple"
+        android:onClick="exitPolice"
         android:fontFamily="@font/montserrat"
         android:text="@string/exit_button"
         android:textColor="@android:color/white" />
