@@ -23,4 +23,8 @@ public enum GovernmentType {
     GovernmentType(String governmentType) {
         this.governmentType = governmentType;
     }
+
+    public String getGovernmentType() {
+        return governmentType;
+    }
 }

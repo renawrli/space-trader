@@ -25,11 +25,13 @@ public class PlanetInfoActivity extends AppCompatActivity {
 
         updateTextViews();
     }
+
     public void updateTextViews() {
         nameDisplay.setText(game.getCurrLocation().getName());
-        governmentDisplay.setText(game.getCurrLocation().getGovernment().toString());
-        techDisplay.setText(game.getCurrLocation().getTechnology().toString());
+        governmentDisplay.setText(game.getCurrLocation().getGovernment().getGovernmentType());
+        techDisplay.setText(game.getCurrLocation().getTechnology().getTechLevel());
     }
+
     public void exitPlanetInfo(View view) {
         finish();
     }
