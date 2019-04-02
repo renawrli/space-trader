@@ -1,31 +1,31 @@
 <resources>
     <string name="app_name">SpaceTrader</string>
-    <string name="name_label">Name:</string>
-    <string name="skill_points_label">Remaining Skill Points:</string>
-    <string name="create_player_screen_label">CREATE A PLAYER</string>
-    <string name="pilot_points_label">Pilot:</string>
-    <string name="fighter_points_label">Fighter:</string>
-    <string name="trader_points_label">Trader:</string>
-    <string name="engineer_points_label">Engineer:</string>
-    <string name="create_player_label">CREATE</string>
-    <string name="difficulty_label">Difficulty</string>
+    <string name="name_label">Nombre:</string>
+    <string name="skill_points_label">Puntos de hablidad restante:</string>
+    <string name="create_player_screen_label">CREE EL JUGADOR</string>
+    <string name="pilot_points_label">Piloto:</string>
+    <string name="fighter_points_label">Luchador:</string>
+    <string name="trader_points_label">Vendedor:</string>
+    <string name="engineer_points_label">Ingeniero:</string>
+    <string name="create_player_label">CREAR</string>
+    <string name="difficulty_label">Dificultad</string>
     <string-array name="difficulties">
-        <item>Beginner</item>
-        <item>Easy</item>
+        <item>Principante</item>
+        <item>Faciíl</item>
         <item>Normal</item>
-        <item>Hard</item>
-        <item>Impossible</item>
+        <item>Difiíciil</item>
+        <item>Imposible</item>
     </string-array>
-    <string name="creating_universe_label">Creating the Universe</string>
-    <string name="market_place_button">Marketplace</string>
-    <string name="welcome_to_planet_label">Welcome to Planet </string>
-    <string name="travel_button">Travel</string>
-    <string name="shipyard_button">Ship Yard</string>
-    <string name="planetinfo_button">Planet Info</string>
-    <string name="sell_button">Sell</string>
-    <string name="buy_button">Buy</string>
-    <string name="confirm_transaction_button">Confirm Transaction</string>
-    <string name="cancel_button">Cancel</string>
+    <string name="creating_universe_label">Creando el Universo</string>
+    <string name="market_place_button">Mercado</string>
+    <string name="welcome_to_planet_label">Bienvenido a Planeta </string>
+    <string name="travel_button">Viaje</string>
+    <string name="shipyard_button">Astillero</string>
+    <string name="planetinfo_button">Información de Planeta</string>
+    <string name="sell_button">Vender</string>
+    <string name="buy_button">Comprar</string>
+    <string name="confirm_transaction_button">Confirme Transacción</string>
+    <string name="cancel_button">Cancelar</string>
     <string name="not_enough_money_toast">Insufficient funds</string>
     <string name="not_enough_space_toast">Insufficient cargo space</string>
     <string name="not_enough_goods_toast">Insufficient goods to sell</string>
@@ -36,23 +36,23 @@
     <string name="sell_goods_text">SELL GOODS</string>
     <string name="open_cargo_text">Open Cargo</string>
     <string name="remaining_money_text">Money</string>
-    <string name="market_text">Market</string>
+    <string name="market_text">Mercado</string>
     <string name="item_text">Item</string>
-    <string name="travel_text">Travel</string>
-    <string name="price_text">Price</string>
+    <string name="travel_text">Viaje</string>
+    <string name="price_text">Precio</string>
     <string name="your_cargo_text">Your Cargo</string>
-    <string name="exit_button">Exit</string>
+    <string name="exit_button">Salida</string>
     <string-array name="goodNames">
-        <item>Water</item>
-        <item>Furs</item>
-        <item>Food</item>
-        <item>Ore</item>
-        <item>Games</item>
-        <item>Firearms</item>
-        <item>Medicine</item>
-        <item>Machines</item>
-        <item>Narcotics</item>
-        <item>Robots</item>
+        <item>Agua</item>
+        <item>Piel</item>
+        <item>Comida</item>
+        <item>Mineral</item>
+        <item>Juegos</item>
+        <item>Armas de fuegos</item>
+        <item>Medicina</item>
+        <item>Máquina</item>
+        <item>Narcóticos</item>
+        <item>Robotos</item>
     </string-array>
     <string name="openCargoText">"Remaining Cargo Spots":</string>
     <string name="remainingMoneyText">"Credits":</string>

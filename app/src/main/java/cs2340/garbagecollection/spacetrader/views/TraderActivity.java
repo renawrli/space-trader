@@ -16,7 +16,6 @@ import cs2340.garbagecollection.spacetrader.R;
 import cs2340.garbagecollection.spacetrader.model.Market;
 import cs2340.garbagecollection.spacetrader.model.MarketListAdapterBuy;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
-import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
 
