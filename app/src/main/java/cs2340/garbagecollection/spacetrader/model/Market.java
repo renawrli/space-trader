@@ -24,7 +24,6 @@ public class Market {
     public static List<TradeGood> getAllBuyableGoods(TechLevel planetTLevel) {
         int planetTechLevel = planetTLevel.ordinal();
         List<TradeGood> goodsList = new ArrayList<>();
-
         for(TradeGood t: TradeGood.values()) {
             if (t.getMTLP() <= planetTechLevel) {
                 goodsList.add(t);
