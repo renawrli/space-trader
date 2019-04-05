@@ -16,18 +16,18 @@ public enum ShipType {
     WASP(35, 14);
 
     /** the ship's cargo capacity */
-    private int capacity;
+    private int cargoCapacity;
 
     /** the ship's fuel capacity */
     private int fuelCapacity;
 
     ShipType(int capacity, int fuelCapacity) {
-        this.capacity = capacity;
+        this.cargoCapacity = capacity;
         this.fuelCapacity = fuelCapacity;
     }
 
     public int getCapacity() {
-        return capacity;
+        return cargoCapacity;
     }
 
     public int getFuelCapacity() {

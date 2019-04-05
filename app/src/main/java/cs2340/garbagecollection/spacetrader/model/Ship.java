@@ -16,7 +16,7 @@ public class Ship {
      * Ship is created with correct cargo capacity and fuel capacity
      * @param shipType shipType that player is using
      */
-    Ship(ShipType shipType) {
+    public Ship(ShipType shipType) {
         this.shipType = shipType;
         cargoArr = new TradeGood[shipType.getCapacity()];
         fuel = shipType.getFuelCapacity();
