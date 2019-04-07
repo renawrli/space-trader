@@ -80,9 +80,12 @@ public class ConfigurationActivity extends AppCompatActivity {
 
         /** Sets difficulty spinner values, uses String values **/
         difficultySpinner = findViewById(R.id.difficultySpinner);
-        //difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this, android.R.layout.simple_spinner_item, Difficulty.values()));
-        ArrayAdapter<CharSequence> difficultyArrayAdapter = ArrayAdapter.createFromResource(this, R.array.difficulties, android.R.layout.simple_spinner_item);
-        difficultyArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this,
+        // android.R.layout.simple_spinner_item, Difficulty.values()));
+        ArrayAdapter<CharSequence> difficultyArrayAdapter = ArrayAdapter.createFromResource(
+                this, R.array.difficulties, android.R.layout.simple_spinner_item);
+        difficultyArrayAdapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
         difficultySpinner.setAdapter(difficultyArrayAdapter);
         nameField = findViewById(R.id.nameInput);
         pDisplay = findViewById(R.id.pilotPointsDisplay);
@@ -99,13 +102,16 @@ public class ConfigurationActivity extends AppCompatActivity {
         playerName = nameField.getText().toString();
         // prints directions to user if invalid data is entered
         if (configVM.invalidName(playerName)) {
-            Toast.makeText(ConfigurationActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ConfigurationActivity.this, "Please enter a name",
+                    Toast.LENGTH_SHORT).show();
         }
         if (configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
-            Toast.makeText(ConfigurationActivity.this, "Please use all points", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ConfigurationActivity.this, "Please use all points",
+                    Toast.LENGTH_SHORT).show();
         }
         if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
-            Toast.makeText(ConfigurationActivity.this, "You used too many points", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ConfigurationActivity.this, "You used too many points",
+                    Toast.LENGTH_SHORT).show();
         }
         // resets screen if any invalid data is entered
         if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
@@ -114,7 +120,8 @@ public class ConfigurationActivity extends AppCompatActivity {
             resetScreen();
         } else {
             // Create player and Game
-            player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints, engineerPoints);
+            player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints,
+                    engineerPoints);
             Difficulty difficulty = Difficulty.EASY; //
             for (Difficulty dif : Difficulty.values()) {
                 if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))

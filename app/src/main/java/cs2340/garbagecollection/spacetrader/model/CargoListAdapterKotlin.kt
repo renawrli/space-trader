@@ -11,7 +11,8 @@ import java.util.ArrayList
 
 
 
-class CargoListAdapterKotlin(itemNames: List<String>, itemCounts: List<Int>) : RecyclerView.Adapter<CargoListAdapterKotlin.ViewHolder>() {
+class CargoListAdapterKotlin(itemNames: List<String>, itemCounts: List<Int>) :
+        RecyclerView.Adapter<CargoListAdapterKotlin.ViewHolder>() {
 
 
     private var mItemNames = ArrayList<String>()
@@ -23,7 +24,8 @@ class CargoListAdapterKotlin(itemNames: List<String>, itemCounts: List<Int>) : R
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.market_list_item, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.market_list_item,
+                viewGroup, false)
         return ViewHolder(view)
     }
 
