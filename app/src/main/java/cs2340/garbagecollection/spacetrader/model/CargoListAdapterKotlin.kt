@@ -43,7 +43,6 @@ class CargoListAdapterKotlin(itemNames: List<String>, itemCounts: List<Int>) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         internal var itemName: TextView = itemView.findViewById(R.id.itemName)
         internal var itemCount: TextView = itemView.findViewById(R.id.itemPrice)
-        internal var parentLayout: RelativeLayout = itemView.findViewById(R.id.marketItemLayout)
 
 
     }
