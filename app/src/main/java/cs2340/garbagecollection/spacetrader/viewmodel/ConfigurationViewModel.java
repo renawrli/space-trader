@@ -43,7 +43,8 @@ public class ConfigurationViewModel extends AndroidViewModel {
         return game;
     }
     /** Creates a Player **/
-    public Player createPlayer(String name, int pilotPts, int fighterPts, int traderPts, int engineerPts) {
+    public Player createPlayer(String name, int pilotPts, int fighterPts, int traderPts,
+                               int engineerPts) {
         Player player = new Player(name, pilotPts,fighterPts, traderPts, engineerPts);
         Log.d("Printing Player", player.toString());
         return player;
