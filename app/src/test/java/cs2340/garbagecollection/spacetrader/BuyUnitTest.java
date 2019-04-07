@@ -15,6 +15,7 @@ import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
 import static org.junit.Assert.*;
 
 /** Andrew's JUnit to test the buy() method in MarketViewModel **/
+@SuppressWarnings("JavaDoc")
 public class BuyUnitTest {
     private Player player;
     private Planet planet;

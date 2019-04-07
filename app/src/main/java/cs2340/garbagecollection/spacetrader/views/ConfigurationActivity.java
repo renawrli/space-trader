@@ -78,7 +78,6 @@ public class ConfigurationActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_configuration);
 
-        /** Sets difficulty spinner values, uses String values **/
         difficultySpinner = findViewById(R.id.difficultySpinner);
         //difficultySpinner.setAdapter(new ArrayAdapter<Difficulty>(this,
         // android.R.layout.simple_spinner_item, Difficulty.values()));
