@@ -93,6 +93,11 @@
     <string name="pirate_text">PIRATA</string>
     <string name="pirate_statement">Un pirato ha robado tus bienes. No tienes más carga.</string>
     <string name="delete_game">Supremir</string>
+    <string name="not_enough_money_toast">Fondos insuficientes</string>
+    <string name="refuel_label">Repostar</string>
+    <string name="exit_planet_button_text">Salida</string>
+    <string name="police_statement">Si tienes armas de fuego o narcóticos, debes pagar un</string>
+    <string name="fine">Multa de $30.</string>
 
 
 </resources>

@@ -74,7 +74,7 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
                 System.out.println("launching pirate encounter")
             } else if (encounterType == 2) {
 
-                val policeAct = Intent(view.context, PoliceActivity::class.java)
+                val policeAct = Intent(view.context, PoliceActivityKotlin::class.java)
                 view.context.startActivity(policeAct)
                 System.out.println("launching police encounter")
             }

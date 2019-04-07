@@ -94,7 +94,7 @@
     <string name="exit_planet_button_text">خروج</string>
     <string name="goods_label">السلع</string>
     <string name="trader_question">تستطيع ان تشتري او تخرج</string>
-    <string name="police_statement">بسبب المسادسات او المخادرات، انت من اللازم تتفع</string>
+    <string name="police_statement">أذا كانت عنداك مسادسات او مخادرات، انت من اللازم تتفع</string>
     <string name="fine">$٣٠ خدمة </string>
     <string name="police_text">الشرط</string>
     <string name="trader_text">تاجر</string>

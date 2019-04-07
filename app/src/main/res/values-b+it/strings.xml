@@ -43,16 +43,16 @@
     <string name="your_cargo_text">Il tuo Carico</string>
     <string name="exit_button">Uscita</string>
     <string-array name="goodNames">
-        <item>Water</item>
-        <item>Furs</item>
-        <item>Food</item>
-        <item>Ore</item>
-        <item>Games</item>
-        <item>Firearms</item>
-        <item>Medicine</item>
-        <item>Machines</item>
-        <item>Narcotics</item>
-        <item>Robots</item>
+        <item>Acqua</item>
+        <item>Pellicciera</item>
+        <item>Cibo</item>
+        <item>Minerale</item>
+        <item>Giocco</item>
+        <item>Armi</item>
+        <item>Medicina</item>
+        <item>Macchine</item>
+        <item>Narcotici</item>
+        <item>Robot</item>
     </string-array>
     <string name="openCargoText">Carico Riamente</string>
     <string name="remainingMoneyText">Il Denaro:</string>
@@ -91,7 +91,7 @@
     <string name="exit_planet_button_text">Uscita</string>
     <string name="goods_label">i bene</string>
     <string name="trader_question">Puoi scegliere di acquistare beni o uscire.</string>
-    <string name="police_statement">Perché hai armi da fuoco o narcotici, devi pagare a</string>
+    <string name="police_statement">Si hai armi da fuoco o narcotici, devi pagare a</string>
     <string name="fine">$30 tassa</string>
     <string name="police_text">Polizia</string>
     <string name="trader_text">"Commerciante "</string>

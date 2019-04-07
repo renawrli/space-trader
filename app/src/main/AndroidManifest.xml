@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".views.TravelActivity" />
+        <activity android:name=".views.PoliceActivityKotlin" />
 
         <meta-data
             android:name="preloaded_fonts"

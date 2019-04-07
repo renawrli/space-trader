@@ -5,7 +5,7 @@
     <string name="pilot_points_label">Piloto":"</string>
     <string name="fighter_points_label">Lutador":"</string>
     <string name="trader_points_label">Comerciante":"</string>
-    <string name="engineer_points_label">Técnico/Técnica":"</string>
+    <string name="engineer_points_label">Técnico":"</string>
     <string name="create_player_label">Crio</string>
     <string name="difficulty_label">Dificuldade</string>
     <string-array name="difficulties">
@@ -17,7 +17,7 @@
     </string-array>
     <string name="creating_universe_label">Criando o universo</string>
     <string name="welcome_to_planet_label">Bem vindo ao Planeta </string>
-    <string name="market_place_button">Marketplace</string>
+    <string name="market_place_button">Mercato</string>
     <string name="sell_button">Vender</string>
     <string name="buy_button">Comprar</string>
     <string name="confirm_transaction_button">Confirme a transação</string>
@@ -93,7 +93,7 @@
     <string name="exit_planet_button_text">Saída</string>
     <string name="goods_label">Mercadoria</string>
     <string name="trader_question">Você quer comprar mercadorias ou sair?</string>
-    <string name="police_statement">Porque você tem narcóticos ou armas, você tem que pagar um </string>
+    <string name="police_statement">Si você tem narcóticos ou armas, você tem que pagar um </string>
     <string name="fine">$ 30 taxa. </string>
     <string name="police_text">POLÍCIA </string>
     <string name="trader_text">COMERCIANTE </string>
