@@ -101,5 +101,6 @@
     <string name="trader_text">商人</string>
     <string name="pirate_text">海盗</string>
     <string name="pirate_statement">一个海盗偷了你的商品</string>
+    <string name="delete_game">删掉</string>
 
 </resources>

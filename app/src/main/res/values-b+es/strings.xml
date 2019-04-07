@@ -92,6 +92,7 @@
     <string name="trader_text">COMERCIANTE</string>
     <string name="pirate_text">PIRATA</string>
     <string name="pirate_statement">Un pirato ha robado tus bienes. No tienes más carga.</string>
+    <string name="delete_game">Supremir</string>
 
 
 </resources>

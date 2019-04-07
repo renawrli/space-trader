@@ -99,4 +99,15 @@
         android:fontFamily="@font/montserrat"
         android:onClick="exitPlanetInfo"
         android:text="@string/exit_planet_button_text" />
+    <Button
+        android:id="@+id/deleteGame"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/planet_tech_label"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/exit_planet_info_button"
+        android:background="#F5F5F5"
+        android:fontFamily="@font/montserrat"
+        android:onClick="deleteGame"
+        android:text="@string/delete_game" />
 </RelativeLayout>

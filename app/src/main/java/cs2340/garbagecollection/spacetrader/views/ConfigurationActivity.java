@@ -54,7 +54,6 @@ public class ConfigurationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FileInputStream fis = null;
         try {
-            Log.d("awe", "aaegwawegae");
             fis = this.openFileInput("gameFile.txt");
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader bufferedReader = new BufferedReader(isr);
@@ -63,10 +62,11 @@ public class ConfigurationActivity extends AppCompatActivity {
             while ((line = bufferedReader.readLine()) != null) {
                 sb.append(line);
             }
-            String json = sb.toString();
-            Log.d("awe", json);
-            Gson gson = new Gson();
-            game = gson.fromJson(json, Game.class);
+            if(sb.toString() != "") {
+                String json = sb.toString();
+                Gson gson = new Gson();
+                game = gson.fromJson(json, Game.class);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

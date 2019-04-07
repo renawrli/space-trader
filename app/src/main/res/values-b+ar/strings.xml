@@ -100,5 +100,6 @@
     <string name="trader_text">تاجر</string>
     <string name="pirate_text">قرصن</string>
     <string name="pirate_statement">القرصن مسروق اغراداك!</string>
+    <string name="delete_game">حذف</string>
 
 </resources>
