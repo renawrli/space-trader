@@ -25,6 +25,7 @@ public class PoliceViewModel extends AndroidViewModel {
 
     /**
      * checks if there are firearms or narcotics on the ship
+     * @param ship
      * @return true if there are illegal goods
      */
     public boolean checkIllegalGoods(Ship ship) {
@@ -36,7 +37,8 @@ public class PoliceViewModel extends AndroidViewModel {
         return false;
     }
 
-    /** fines the player if illegal goods are found in their ship **/
+    /** fines the player if illegal goods are found in their ship
+     * @param p**/
     public void finePlayer(Player p) {
         int credits = p.getCredits();
         if (credits < FINE) {

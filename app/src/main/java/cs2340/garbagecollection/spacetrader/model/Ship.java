@@ -22,7 +22,8 @@ public class Ship {
         fuel = shipType.getFuelCapacity();
     }
 
-    /** add's cargo to the end of backing array **/
+    /** add's cargo to the end of backing array
+     * @param cargo**/
     public void addCargo(TradeGood cargo) {
         cargoArr[size] = cargo;
         size++;

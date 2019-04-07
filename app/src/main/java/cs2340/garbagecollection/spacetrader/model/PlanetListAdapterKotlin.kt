@@ -46,7 +46,6 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
         internal var planetName: TextView = itemView.findViewById(R.id.planetName)
         internal var distanceToPlanet: TextView = itemView.findViewById(R.id.distanceToPlanet)
         internal var fuelToPlanet: TextView = itemView.findViewById(R.id.fuelToPlanet)
-        internal var parentLayout: RelativeLayout = itemView.findViewById(R.id.planetItemLayout)
 
         init {
             itemView.setOnClickListener(this)

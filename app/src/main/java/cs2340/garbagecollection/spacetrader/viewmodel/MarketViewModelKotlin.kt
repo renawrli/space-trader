@@ -117,7 +117,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
             }
             countList.add(counter)
         }
-        System.out.println("num " + countList)
+        System.out.println("num $countList")
         return countList
     }
 

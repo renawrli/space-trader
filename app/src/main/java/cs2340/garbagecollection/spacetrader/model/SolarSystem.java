@@ -21,7 +21,8 @@ public class SolarSystem {
         this.name = name;
     }
 
-    /** adds singular planet to the solar system **/
+    /** adds singular planet to the solar system
+     * @param planet**/
     public void addPlanet(Planet planet) {
         planets.add(planet);
     }

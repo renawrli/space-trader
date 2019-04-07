@@ -14,7 +14,9 @@ public class PirateViewModel extends AndroidViewModel {
         super(application);
     }
 
-    /** when a pirate steals all your loot **/
+    /** when a pirate steals all your loot
+     * @param ship
+     * **/
     public void lootStolen(Ship ship) {
         ship.resetGoods();
     }

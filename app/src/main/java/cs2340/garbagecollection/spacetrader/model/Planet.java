@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.model;
 
+@SuppressWarnings("ALL")
 public class Planet {
     /** planet's name */
     private String name;
@@ -68,7 +69,8 @@ public class Planet {
         badEvent = null;
     }
 
-    /** calculates distance from this planet to another one **/
+    /** calculates distance from this planet to another one
+     * @param p**/
     public int calcDistance(Planet p) {
         double distance = 0;
         int xDist = Math.abs(x - p.getX());
@@ -140,6 +142,7 @@ public class Planet {
     public void setBadEvent(IE badEvent) {
         this.badEvent = badEvent;
     }
+    @SuppressWarnings("JavaDoc")
     public IE getBadEvent () {
         return badEvent;
     }

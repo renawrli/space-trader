@@ -58,7 +58,8 @@ public class TravelViewModel extends AndroidViewModel {
         return validPlanets;
     }
 
-    /** Returns a list of distances from currPlanet to each planet in planetList **/
+    /** Returns a list of distances from currPlanet to each planet in planetList
+     * @param validPlanets**/
     //Fuad's version
 //    public static List<Integer> listDistances() {
 //        Planet currPlanet = game.getCurrLocation();
@@ -92,7 +93,8 @@ public class TravelViewModel extends AndroidViewModel {
         return fuelList;
     }
 
-    /** takes in a list of valid planets and returns them in string format **/
+    /** takes in a list of valid planets and returns them in string format
+     * @param validPlanets**/
     public static List<String> validPlanetsString(List<Planet> validPlanets) {
         ArrayList<String> planetNames = new ArrayList<>();
         for (int i = 0; i < validPlanets.size(); i++) {
@@ -101,7 +103,9 @@ public class TravelViewModel extends AndroidViewModel {
         return planetNames;
     }
 
-    /** travels to a Planet. Assumes it's within range **/
+    /** travels to a Planet. Assumes it's within range
+     * @param destination
+     * @param ship**/
     public static void travel(Planet destination, Ship ship) {
 
         int dist = game.getCurrLocation().calcDistance(destination);

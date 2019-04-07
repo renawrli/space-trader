@@ -122,6 +122,10 @@ public class MarketViewModel extends AndroidViewModel {
         return goodCount >= numGoods;
     }
 
+    /**
+     * The following two methods should only be used after checking buying/selling is allowed
+     */
+
     /** buys good and adds to Player's cargo bay **/
     public void buy(Player p, TradeGood good, Planet planet, int numGoods) {
         // decrement money and add to cargoArr
@@ -141,7 +145,13 @@ public class MarketViewModel extends AndroidViewModel {
         p.getShip().sellCargo(good, numGoods);
     }
 
-    //    private ArrayList<String> cargoDisplayList(TradeGood[] cargo) {
+    /**
+     * Displays list of cargo from an array to ArrayList,
+     * if null it is not added
+     * @param cargo all the cargo on the ship including null
+     * @return cargoNames not null
+     */
+//    private ArrayList<String> cargoDisplayList(TradeGood[] cargo) {
 //        ArrayList<String> cargoNames = new ArrayList<>();
 //        for (int i = 0; i < cargo.length ; i++) {
 //            for (int j = 0; j < TradeGood.values().length; j++) {

@@ -21,6 +21,7 @@ public class BuyUnitTest {
     private Planet planet;
     private MarketViewModel marketVM;
     private TradeGood[] expectedResult;
+    @SuppressWarnings("JavaDoc")
     @Before
     public void setUp() {
         player = new Player("Antony", 4, 4, 4, 4);
