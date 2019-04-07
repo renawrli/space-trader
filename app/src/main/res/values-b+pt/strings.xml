@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">SpaceTrader</string>
+    <string name="name_label">Nome":"</string>
+    <string name="skill_points_label">Pontos de habilidade":"</string>
+    <string name="pilot_points_label">Piloto":"</string>
+    <string name="fighter_points_label">Lutador":"</string>
+    <string name="trader_points_label">Comerciante":"</string>
+    <string name="engineer_points_label">Técnico/Técnica":"</string>
+    <string name="create_player_label">Crio</string>
+    <string name="difficulty_label">Dificuldade</string>
+    <string-array name="difficulties">
+        <item>Principiante</item>
+        <item>Fácil</item>
+        <item>Intermediário</item>
+        <item>Difícil</item>
+        <item>Impossível</item>
+    </string-array>
+    <string name="creating_universe_label">Criando o universo</string>
+    <string name="welcome_to_planet_label">Bem vindo ao Planeta </string>
+    <string name="market_place_button">Marketplace</string>
+    <string name="sell_button">Vender</string>
+    <string name="buy_button">Comprar</string>
+    <string name="confirm_transaction_button">Confirme a transação</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="not_enough_money_toast">Dinheiro insuficiente</string>
+    <string name="not_enough_space_toast">Espaço insuficiente</string>
+    <string name="not_enough_goods_toast">Insuficiente mercadoria</string>
+    <string name="successful_purchase_toast">Compra bem sucedida</string>
+    <string name="successful_sale_toast">Venda bem sucedida</string>
+    <string name="how_many">Quantos você quer?</string>
+    <string name="buy_goods_text">Você quer comprar?</string>
+    <string name="open_cargo_text">Espaço de mudança</string>
+    <string name="remaining_money_text">Dinheiro</string>
+    <string name="exit_button">Saída</string>
+    <string name="your_cargo_text">Sua carga</string>
+    <string-array name="goodNames">
+        <item>Agua</item>
+        <item>Casacos</item>
+        <item>Cozinhar</item>
+        <item>Minério</item>
+        <item>Jogos</item>
+        <item>Brasão</item>
+        <item>Droga</item>
+        <item>Maquinarias</item>
+        <item>Narcóticos</item>
+        <item>Robôs</item>
+    </string-array>
+    <string name="travel_button">Viagem</string>
+    <string name="create_player_screen_label">Crie um jogo</string>
+    <string name="shipyard_button">Estaleiro</string>
+    <string name="planetinfo_button">Informação do planeta</string>
+    <string name="sell_goods_text">Vender bens</string>
+    <string name="market_text">Mercado</string>
+    <string name="item_text">Item</string>
+    <string name="travel_text">Viagem</string>
+    <string name="price_text">Preço do bem</string>
+
+    <string name="openCargoText">Carga aberta</string>
+    <string name="remainingMoneyText">Dinheiro":"</string>
+    <string name="displayCargoButton">Carga</string>
+    <string name="universeCreationLabel">Você está no planeta</string>
+    <string name="marketPlaceButton">Mercado</string>
+    <string name="sellButton">Vender bens</string>
+    <string name="buyGoodsText">Você quer comprar</string>
+    <string name="cargoDisplay">Carga</string>
+    <string name="confirmTransactionButton">Confirme</string>
+    <string name="location_label">Localização</string>
+    <string name="fuel_level_label">Nível de combustível</string>
+    <string name="choose_planet_label">Escolha o planeta</string>
+    <string name="shipyard_text">Estaleiro</string>
+    <string name="fuel_dialogue_text">Você pode roubar</string>
+    <string name="full_tank_text">O preço do combustível</string>
+    <string name="refuel_label">Adicionar combustível</string>
+    <string name="target_planet_text">Planeta Alvo</string>
+    <string name="name_text">Nome":"</string>
+    <string name="tech_level_text">Nível tecnológico":"</string>
+    <string name="government_text">Governo":"</string>
+    <string name="resources_text">Recurso":" </string>
+    <string name="police_level_text">Nível Polícia":" </string>
+    <string name="piracy_level_text">Nível Pirata":" </string>
+    <string name="warp_text">Viagem</string>
+    <string name="distance_to_planet_label">Distância</string>
+    <string name="fuel_cost_label">Carburador Necessário</string>
+
+    <string name="shipyard_fuel_level">Nível Carburador":" </string>
+    <string name="add_fuel_units">Nível Carburado":"</string>
+    <string name="encounter_label">Você encontrou um</string>
+    <string name="insufficient_tank_capacity_toast">Combustível insuficiente</string>
+    <string name="planet_info_name_label">Nome do planeta":"</string>
+    <string name="planet_info_government_label">Tipo de governo</string>
+    <string name="planet_info_banner">Informação do Planeta</string>
+    <string name="planet_info_tech_label">Nível de tecnologia":"</string>
+    <string name="exit_planet_button_text">Saída</string>
+    <string name="goods_label">Mercadoria</string>
+    <string name="trader_question">Você quer comprar mercadorias ou sair?</string>
+    <string name="police_statement">Porque você tem narcóticos ou armas, você tem que pagar um </string>
+    <string name="fine">$ 30 taxa. </string>
+    <string name="police_text">POLÍCIA </string>
+    <string name="trader_text">COMERCIANTE </string>
+    <string name="pirate_text">PIRATA</string>
+    <string name="pirate_statement">Um pirata roubando seus produtos </string>
+    <string name="delete_game">Remova o Joga</string>
+</resources>
+
+
+

@@ -31,7 +31,7 @@
     <string name="buy_goods_text">ما ستشتري</string>
     <string name="open_cargo_text">مسالحة</string>
     <string name="remaining_money_text">مال</string>
-    <string name="exit_button">ىخرج</string>
+    <string name="exit_button">خروج</string>
     <string name="your_cargo_text">مسالحتاك</string>
     <string-array name="goodNames">
         <item>ماء</item>
@@ -91,7 +91,7 @@
     <string name="planet_info_government_label">نوة الحكومة:</string>
     <string name="planet_info_banner">معلومات الكوكب</string>
     <string name="planet_info_tech_label">مستوى التكنولوجية</string>
-    <string name="exit_planet_button_text">خرج</string>
+    <string name="exit_planet_button_text">خروج</string>
     <string name="goods_label">السلع</string>
     <string name="trader_question">تستطيع ان تشتري او تخرج</string>
     <string name="police_statement">بسبب المسادسات او المخادرات، انت من اللازم تتفع</string>

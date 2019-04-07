@@ -31,7 +31,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/shipyard_fuel_level"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/currentFuelLevel"
@@ -43,7 +43,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="0/0"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
 
@@ -58,7 +58,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="12dp"
         android:text="@string/full_tank_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/fullTankCost"
@@ -71,7 +71,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="12dp"
         android:text="0"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <Button
         android:id="@+id/refuelButton"
@@ -96,7 +96,7 @@
         android:text="0"
         android:paddingLeft="20dp"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/remainingMoneyText"
@@ -109,7 +109,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/remaining_money_text"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/leaveShipyardButton"
