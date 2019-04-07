@@ -1,14 +1,11 @@
 package cs2340.garbagecollection.spacetrader.viewmodel
 
-import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.support.annotation.NonNull;
+import android.app.Application
+import android.arch.lifecycle.AndroidViewModel
 import cs2340.garbagecollection.spacetrader.R
-
-import cs2340.garbagecollection.spacetrader.model.Difficulty;
-import cs2340.garbagecollection.spacetrader.model.Planet;
-import cs2340.garbagecollection.spacetrader.model.Player;
-import cs2340.garbagecollection.spacetrader.model.TradeGood;
+import cs2340.garbagecollection.spacetrader.model.Planet
+import cs2340.garbagecollection.spacetrader.model.Player
+import cs2340.garbagecollection.spacetrader.model.TradeGood
 import java.util.ArrayList
 
 
@@ -27,7 +24,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
     /** calculates price of a TradeGood at a planet
      *  planet should be the currLocation in Game class since that's the Planet we're selling on
      */
-    fun calcPrice(good : TradeGood, planet : Planet) : Int {
+    private fun calcPrice(good : TradeGood, planet : Planet) : Int {
         return good.basePrice + good.ipl * (planet.technology.ordinal - good.mtlp) + good.getVar()
     }
 
@@ -80,7 +77,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
     /** sells good, removes from Player's cargo bay **/
     fun sell(p : Player, good : TradeGood, planet : Planet, numGoods : Int) {
         // increment money and remove from cargoArr
-        p.credits = p.credits + numGoods*calcPrice(good, planet);
+        p.credits = p.credits + numGoods*calcPrice(good, planet)
 //        for(i in 1..numGoods) {
 //            p.ship.sellCargo(good, numGoods)
 //        }
@@ -105,7 +102,7 @@ class MarketViewModelKotlin(application: Application) : AndroidViewModel(applica
                 }
             }
         }
-        System.out.println("uniqueGoods " + uniqueGoods)
+        System.out.println("uniqueGoods $uniqueGoods")
         return uniqueGoods
     }
     /** translates a List of TradeGoods into a List of the translated String equivalents **/

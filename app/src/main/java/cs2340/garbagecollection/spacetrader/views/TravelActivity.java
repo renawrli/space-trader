@@ -55,7 +55,7 @@ public class TravelActivity extends AppCompatActivity {
         planetDistances = TravelViewModel.listDistances(validPlanets);
         planetFuelCosts = TravelViewModel.listFuel(planetDistances);
         layoutManager = new LinearLayoutManager(this);
-        adapter = new PlanetListAdapterKotlin(planetNames, planetDistances, planetFuelCosts, this);
+        adapter = new PlanetListAdapterKotlin(planetNames, planetDistances, planetFuelCosts);
         reachablePlanets.setHasFixedSize(true);
         reachablePlanets.setLayoutManager(layoutManager);
         reachablePlanets.setAdapter(adapter);
