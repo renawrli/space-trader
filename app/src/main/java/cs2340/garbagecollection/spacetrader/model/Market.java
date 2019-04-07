@@ -1,7 +1,5 @@
 package cs2340.garbagecollection.spacetrader.model;
 
-import android.content.Context;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +31,7 @@ public class Market {
     }
 
     /**returns a List of all goods you can buy on a planet
-     * @param planetTLevel - TechLevel of the planet the Player is onS
+     * @param planetTLevel - TechLevel of the planet the Player is on
      * **/
     public static List<TradeGood> getAllSellableGoods(TechLevel planetTLevel) {
         int planetTechLevel = planetTLevel.ordinal();

@@ -2,17 +2,13 @@ package cs2340.garbagecollection.spacetrader.viewmodel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Ship;
-import cs2340.garbagecollection.spacetrader.model.Player;
-import cs2340.garbagecollection.spacetrader.views.PirateActivity;
 
 import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
 

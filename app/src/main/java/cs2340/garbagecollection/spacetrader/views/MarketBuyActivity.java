@@ -15,10 +15,8 @@ import java.util.List;
 
 import cs2340.garbagecollection.spacetrader.R;
 import cs2340.garbagecollection.spacetrader.model.CargoListAdapterKotlin;
-import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Market;
 import cs2340.garbagecollection.spacetrader.model.MarketListAdapterBuy;
-import cs2340.garbagecollection.spacetrader.model.Ship;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;
 import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModelKotlin;
 

@@ -1,7 +1,6 @@
 package cs2340.garbagecollection.spacetrader;
 
 import android.app.Application;
-import android.media.Image;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -5,7 +5,6 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
 
 import cs2340.garbagecollection.spacetrader.R;
-import cs2340.garbagecollection.spacetrader.model.Difficulty;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;

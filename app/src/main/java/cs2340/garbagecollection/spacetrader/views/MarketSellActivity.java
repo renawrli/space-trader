@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,7 +15,6 @@ import java.util.List;
 
 import cs2340.garbagecollection.spacetrader.R;
 import cs2340.garbagecollection.spacetrader.model.CargoListAdapterKotlin;
-import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.Market;
 import cs2340.garbagecollection.spacetrader.model.MarketListAdapterSell;
 import cs2340.garbagecollection.spacetrader.model.TradeGood;

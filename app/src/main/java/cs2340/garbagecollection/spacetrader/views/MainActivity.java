@@ -2,7 +2,6 @@ package cs2340.garbagecollection.spacetrader.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 import cs2340.garbagecollection.spacetrader.R;
 
