@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -32,6 +33,9 @@ class PoliceActivityKotlin : AppCompatActivity() {
         if (hasIllegalGoods) {
             policeVM.finePlayer(game.player)
         }
+
+        val intent = Intent(view.context, GameScreenActivity::class.java)
         finish()
+        view.context.startActivity(intent)
     }
 }

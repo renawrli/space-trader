@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".views.TravelActivity" />
         <activity android:name=".views.PoliceActivityKotlin" />
+        <activity android:name=".views.PirateActivityKotlin" />
+        <activity android:name=".views.TraderActivityKotlin" />
 
         <meta-data
             android:name="preloaded_fonts"
