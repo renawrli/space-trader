@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="60dp"
     android:layoutDirection="ltr"
-    android:id="@+id/planetItemLayout">
+    android:id="@+id/planetItemLayout"
+    android:background="@drawable/gb500x80">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/planetName"
-        android:textColor="#000000"
+        android:textColor="@android:color/white"
         android:textSize="16dp"
         android:fontFamily="@font/montserrat"
         android:layout_alignParentLeft="true"
@@ -17,6 +18,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/distanceToPlanetLabel"
         android:layout_toLeftOf="@+id/distanceToPlanet"
+        android:textColor="@android:color/white"
         android:text="@string/distance_to_planet_label"
         android:layout_marginLeft="10dp"/>
     <TextView
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/fuelToPlanetLabel"
         android:layout_toLeftOf="@+id/fuelToPlanet"
+        android:textColor="@android:color/white"
         android:text="@string/fuel_cost_label"
         android:layout_marginLeft="10dp"/>
     <TextView
@@ -31,7 +34,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/distanceToPlanet"
         android:textSize="16dp"
-        android:textColor="#515151"
+        android:textColor="@android:color/white"
         android:fontFamily="@font/montserrat"
         android:layout_toLeftOf="@+id/fuelToPlanetLabel"
         android:layout_marginRight="15dp"/>
@@ -41,7 +44,7 @@
         android:id="@+id/fuelToPlanet"
         android:textSize="16dp"
         android:layout_marginLeft="15dp"
-        android:textColor="#515151"
+        android:textColor="@android:color/white"
         android:fontFamily="@font/montserrat"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp"/>

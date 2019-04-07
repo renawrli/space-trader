@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="ltr">
+    android:layoutDirection="ltr"
+    android:background="@drawable/general_background">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPurple" />
+        android:background="@drawable/general_button"/>
 
     <TextView
         android:id="@+id/targetPlanetText"
@@ -30,7 +31,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/name_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/techLevelLabel"
@@ -41,7 +42,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/tech_level_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/governmentLabel"
@@ -52,7 +53,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/government_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/resourcesLabel"
@@ -63,7 +64,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/resources_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/policeLevelLabel"
@@ -74,7 +75,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/police_level_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/piracyLevelLabel"
@@ -86,7 +87,7 @@
         android:paddingTop="30dp"
         android:paddingBottom="40dp"
         android:text="@string/piracy_level_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
 

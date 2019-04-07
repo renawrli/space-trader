@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="	#E0E0E0"
-    android:layoutDirection="ltr">
+    android:background="@drawable/general_background"
+    android:layoutDirection="ltr"
+    >
 
     <TextView
         android:id="@+id/universeCreationLabel"
@@ -14,31 +15,31 @@
         android:paddingTop="130dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/welcome_to_planet_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/marketPlaceButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/universeCreationLabel"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp"
         android:backgroundTint="#F5F5F5"
         android:fontFamily="@font/montserrat"
         android:onClick="toMarket"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
         android:text="@string/market_place_button"
         android:textStyle="bold"
         />
 
     <Button
         android:id="@+id/travelButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/marketPlaceButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -49,12 +50,12 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/travel_button"
         android:onClick="viewTravelOptions"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/shipyardButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/travelButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -69,8 +70,8 @@
 
     <Button
         android:id="@+id/planetinfoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/shipyardButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"

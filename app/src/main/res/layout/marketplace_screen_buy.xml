@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="ltr">
+    android:layoutDirection="ltr"
+    android:background="@drawable/general_background" >
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPurple" />
+        android:background="@drawable/general_button" />
 
 
     <TextView
@@ -56,7 +57,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/market_text"
         android:textSize="16sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Goods"
@@ -74,7 +75,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/your_cargo_text"
         android:textSize="16sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cargoGoods"
@@ -95,7 +96,7 @@
         android:fontFamily="@font/montserrat"
         android:text="0"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/openCargoText"
@@ -107,7 +108,7 @@
         android:inputType="textPersonName"
         android:text="@string/open_cargo_text"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/moneyLeft"
@@ -119,7 +120,7 @@
         android:fontFamily="@font/montserrat"
         android:text="0"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/remainingMoneyText"
@@ -131,7 +132,7 @@
         android:inputType="textPersonName"
         android:text="@string/remaining_money_text"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
 
 </RelativeLayout>

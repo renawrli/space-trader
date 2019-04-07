@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="ltr">
+    android:layoutDirection="ltr"
+    android:background="@drawable/general_background">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPurple" />
+        android:background="@drawable/general_button"  />
 
     <TextView
         android:id="@+id/nameLabel"
@@ -19,7 +20,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="@string/name_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
 
     <EditText
@@ -30,6 +31,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="51dp"
         android:layout_toEndOf="@+id/nameLabel"
+        android:textColor="@android:color/white"
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:paddingRight="50dp" />
@@ -44,7 +46,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="15dp"
         android:text="@string/difficulty_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
 
     <Spinner
@@ -65,7 +67,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="@string/skill_points_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
     <TextView
@@ -75,11 +77,11 @@
         android:layout_below="@id/difficultySpinner"
         android:layout_marginLeft="0dp"
         android:layout_toRightOf="@+id/skillPointsLabel"
-        android:paddingLeft="50dp"
+        android:paddingLeft="25dp"
         android:paddingTop="25dp"
         android:text="16"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
     <TextView
@@ -88,10 +90,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/skillPointsLabel"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="50dp"
+        android:paddingLeft="10dp"
         android:paddingTop="25dp"
         android:text="@string/pilot_points_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
     <Button
@@ -101,7 +103,7 @@
         android:layout_below="@id/remainingPointsDisplay"
         android:layout_alignTop="@+id/pilotPointsPlus"
         android:layout_centerHorizontal="true"
-        android:background="@android:drawable/ic_delete"
+        android:background="@mipmap/minus_icon"
         android:onClick="decPilot" />
 
     <TextView
@@ -110,6 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/remainingPointsDisplay"
         android:layout_toRightOf="@+id/pilotPointsMinus"
+        android:textColor="@android:color/white"
         android:paddingTop="8dp"
         android:text="0"
         android:textAlignment="center" />
@@ -132,10 +135,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/pilotPointsLabel"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="50dp"
+        android:paddingLeft="10dp"
         android:paddingTop="25dp"
         android:text="@string/fighter_points_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
     <Button
@@ -145,7 +148,7 @@
 
         android:layout_below="@id/pilotPointsMinus"
         android:layout_centerHorizontal="true"
-        android:background="@android:drawable/ic_delete"
+        android:background="@mipmap/minus_icon"
         android:onClick="decFighter"
         android:paddingLeft="25dp" />
 
@@ -155,6 +158,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/pilotPointsDisplay"
         android:layout_toEndOf="@+id/fighterPointsMinus"
+        android:textColor="@android:color/white"
         android:paddingTop="29dp"
         android:text="0"
         android:textAlignment="center" />
@@ -175,10 +179,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/fighterPointsLabel"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="50dp"
+        android:paddingLeft="10dp"
         android:paddingTop="25dp"
         android:text="@string/trader_points_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
     <Button
@@ -188,7 +192,7 @@
         android:layout_below="@id/fighterPointsDisplay"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:background="@android:drawable/ic_delete"
+        android:background="@mipmap/minus_icon"
         android:onClick="decTrader"
         android:paddingLeft="25dp" />
 
@@ -198,6 +202,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/fighterPointsDisplay"
         android:layout_toEndOf="@+id/traderPointsMinus"
+        android:textColor="@android:color/white"
         android:paddingTop="31dp"
         android:text="0"
         android:textAlignment="center" />
@@ -218,10 +223,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/traderPointsLabel"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="50dp"
+        android:paddingLeft="10dp"
         android:paddingTop="25dp"
         android:text="@string/engineer_points_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
     <Button
@@ -230,7 +235,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/traderPointsMinus"
         android:layout_centerHorizontal="true"
-        android:background="@android:drawable/ic_delete"
+        android:background="@mipmap/minus_icon"
         android:onClick="decEngineer"
         android:paddingLeft="25dp"
         android:paddingBottom="60dp" />
@@ -241,6 +246,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/traderPointsDisplay"
         android:layout_toEndOf="@+id/engineerPointsMinus"
+        android:textColor="@android:color/white"
         android:paddingTop="30dp"
         android:text="0"
         android:textAlignment="center" />

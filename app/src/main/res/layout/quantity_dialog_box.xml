@@ -1,8 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffffff"
-    android:backgroundTint="	#E0E0E0"
+    android:background="@drawable/general_background"
     android:orientation="vertical">
 
 
@@ -18,7 +17,7 @@
         android:fontFamily="@font/montserrat"
         android:gravity="center_horizontal"
         android:text="@string/how_many"
-        android:textColor="#ff000000"
+        android:textColor="@android:color/white"
         android:textSize="28sp" />
 
     <Button
@@ -67,6 +66,7 @@
         android:layout_marginTop="85dp"
         android:layout_marginEnd="150dp"
         android:paddingLeft="50dp"
+        android:textColor="@android:color/white"
         android:paddingTop="20dp"
         android:text="0" />
 

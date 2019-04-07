@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="	#E0E0E0"
+    android:background="@drawable/general_background"
     android:layoutDirection="ltr">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPurple" />
+        android:background="@drawable/general_button" />
     <TextView
         android:id="@+id/planet_info_banner_text"
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="@string/planet_info_name_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
     <TextView
         android:id="@+id/planet_name_displayed"
@@ -41,7 +41,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="-"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
     <TextView
         android:id="@+id/planet_government_label"
@@ -52,7 +52,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="@string/planet_info_government_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
     <TextView
         android:id="@+id/planet_government_displayed"
@@ -64,7 +64,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="-"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
     <TextView
         android:id="@+id/planet_tech_label"
@@ -75,7 +75,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="@string/planet_info_tech_label"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
     <TextView
         android:id="@+id/planet_tech_displayed"
@@ -87,7 +87,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:text="-"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
     <Button
         android:id="@+id/exit_planet_info_button"
@@ -95,6 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/planet_tech_label"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
         android:background="#F5F5F5"
         android:fontFamily="@font/montserrat"
         android:onClick="exitPlanetInfo"
@@ -103,10 +104,11 @@
         android:id="@+id/deleteGame"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/planet_tech_label"
-        android:layout_centerHorizontal="true"
-        android:layout_toLeftOf="@id/exit_planet_info_button"
+        android:layout_below="@+id/exit_planet_info_button"
+        android:layout_marginRight="25dp"
         android:background="#F5F5F5"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
         android:onClick="deleteGame"
         android:text="@string/delete_game" />

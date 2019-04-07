@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="ltr">
+    android:layoutDirection="ltr"
+    android:background="@drawable/trader_encounter">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPurple" />
+        android:background="@drawable/general_button"/>
 
 
     <TextView
@@ -32,7 +33,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/trader_text"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/goods_label"
@@ -43,12 +44,11 @@
         android:text="@string/goods_label"
         android:textSize="16sp"
         android:paddingLeft="40dp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/goods"
         android:layout_width="wrap_content"
-        android:paddingLeft="40dp"
         android:layout_height="220dp"
         android:layout_below="@+id/goods_label"
         android:layout_marginTop="10dp"
@@ -64,7 +64,7 @@
         android:paddingBottom="15dp"
         android:text="@string/trader_question"
         android:textSize="16sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/leaveTraderButton"
