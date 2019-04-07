@@ -1,8 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -19,8 +17,6 @@ import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 import cs2340.garbagecollection.spacetrader.model.Difficulty;

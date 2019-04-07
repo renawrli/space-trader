@@ -1,6 +1,5 @@
 package cs2340.garbagecollection.spacetrader.model;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;

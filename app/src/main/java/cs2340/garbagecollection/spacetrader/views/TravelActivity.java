@@ -12,9 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import cs2340.garbagecollection.spacetrader.R;
-import cs2340.garbagecollection.spacetrader.model.Game;
 import cs2340.garbagecollection.spacetrader.model.PlanetListAdapterKotlin;
-import cs2340.garbagecollection.spacetrader.viewmodel.EncounterViewModel;
 import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel;
 import cs2340.garbagecollection.spacetrader.model.Planet;
 

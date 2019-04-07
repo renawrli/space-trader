@@ -5,7 +5,6 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
 
 import cs2340.garbagecollection.spacetrader.model.Ship;
-import cs2340.garbagecollection.spacetrader.model.TradeGood;
 
 /**
  * This ViewModel supports activities associated with Pirate random encounters
