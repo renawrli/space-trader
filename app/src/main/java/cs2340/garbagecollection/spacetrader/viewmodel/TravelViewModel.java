@@ -3,6 +3,7 @@ package cs2340.garbagecollection.spacetrader.viewmodel;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,7 +108,9 @@ public class TravelViewModel extends AndroidViewModel {
      * @param destination
      * @param ship**/
     public static void travel(Planet destination, Ship ship) {
-
+        Log.d("Destination's previous government: ", destination.getGovernment().toString());
+        destination.changeGovernment();
+        Log.d("Destination's new government: ", destination.getGovernment().toString());
         int dist = game.getCurrLocation().calcDistance(destination);
         int fuelConsumed = dist / DIST_PER_FUEL;
         ship.deductFuel(fuelConsumed);
