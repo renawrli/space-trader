@@ -74,6 +74,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
+        android:paddingBottom="25dp"
         android:text="@string/planet_info_tech_label"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
