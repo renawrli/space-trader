@@ -122,5 +122,23 @@
         android:text="@string/exit_button"
         android:textColor="@android:color/white"
         android:onClick="exitShipyardPressed"/>
+    <TextView
+        android:id="@+id/buyNewShipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remainingMoneyText"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/buy_ship_label"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buyNewShipText"
+        android:id="@+id/shipList"
+        android:layout_above="@+id/leaveShipyardButton"/>
 
 </RelativeLayout>

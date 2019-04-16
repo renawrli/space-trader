@@ -83,7 +83,7 @@
     <string name="shipyard_fuel_level">Fuel level: </string>
     <string name="add_fuel_units">Units of fuel:  </string>
     <string name="encounter_label">You have encountered a</string>
-    <string name="insufficient_tank_capacity_toast">Insufficent tank capacity</string>
+    <string name="insufficient_tank_capacity_toast">Insufficient tank capacity</string>
     <string name="planet_info_name_label">Planet name: </string>
     <string name="planet_info_government_label">Government type: </string>
     <string name="planet_info_banner">Planet Information </string>
@@ -104,5 +104,6 @@
     <string name="blackhole_text">Black Hole</string>
     <string name="fuel_fine_label">3 Units of Fuel</string>
     <string name="blackhole_statement">Because you ran into a black hole, your trip took longer than expected costing you </string>
+    <string name="buy_ship_label">Buy New Ship:</string>
 
 </resources>
