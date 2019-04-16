@@ -54,7 +54,7 @@ public class ShipyardActivity extends AppCompatActivity {
             shipNames.add(shipType.toString());
             goodPriceList.add(shipType.getCreditCost());
         }
-        recyclerView.setAdapter(new ShipListAdapter(shipNames, goodPriceList, this));
+        recyclerView.setAdapter(new ShipListAdapter(shipNames, goodPriceList, this, shipyardVM));
 
         updateTextViews();
     }
