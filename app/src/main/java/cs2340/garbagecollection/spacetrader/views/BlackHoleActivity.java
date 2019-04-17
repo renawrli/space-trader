@@ -23,7 +23,7 @@ public class BlackHoleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blackhole_encounter);
-        Log.d("onCreate", "onCreate: drought activity launched");
+        Log.d("onCreate", "onCreate: blackhole activity launched");
 
         blackHoleVM = new BlackHoleViewModel(getApplication());
 

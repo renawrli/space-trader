@@ -8,10 +8,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import cs2340.garbagecollection.spacetrader.R;
+import cs2340.garbagecollection.spacetrader.model.TradeGood;
 import cs2340.garbagecollection.spacetrader.viewmodel.DroughtViewModel;
+import cs2340.garbagecollection.spacetrader.viewmodel.MarketViewModel;
+import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
 
 public class DroughtActivity extends AppCompatActivity {
     DroughtViewModel droughtVM;
+    MarketViewModel marketVM;
     TextView banner;
     TextView encounterType;
     TextView encounterStatement;
@@ -24,6 +28,7 @@ public class DroughtActivity extends AppCompatActivity {
         Log.d("onCreate", "onCreate: drought activity launched");
 
         droughtVM = new DroughtViewModel(getApplication());
+        marketVM = new MarketViewModel(getApplication());
 
         banner = findViewById(R.id.drought_encounter_banner_text);
         encounterType = findViewById(R.id.drought_label);
@@ -35,7 +40,7 @@ public class DroughtActivity extends AppCompatActivity {
 
     public void exitDrought(View view) {
         //insert method to increase water price
-
+        int waterPrice = marketVM.calcPrice(TradeGood.WATER, game.getCurrLocation());
         finish();
     }
 }
