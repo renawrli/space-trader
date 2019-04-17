@@ -26,6 +26,7 @@ public class ShipyardActivity extends AppCompatActivity {
     ShipYardViewModel shipyardVM;
     TextView currentMoney;
     TextView refuelCost;
+    TextView playerShip;
     TextView fuelLevel;
     Button leaveShipyardButton;
     Button refuelButton;
@@ -48,6 +49,7 @@ public class ShipyardActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
+        playerShip = findViewById(R.id.playerShipLabel);
         ArrayList<Integer> goodPriceList = new ArrayList<>();
         ArrayList<String> shipNames = new ArrayList<>();
         for (ShipType shipType: ShipType.values()) {
@@ -78,6 +80,7 @@ public class ShipyardActivity extends AppCompatActivity {
         currentMoney.setText(game.getPlayer().getCredits()+"");
         fuelLevel.setText(game.getPlayer().getShip().getFuel() + "/"+ game.getPlayer().getShip().getFuelCapacity());
         refuelCost.setText(shipyardVM.getRefuelCost(game.getPlayer().getShip())+"");
+        playerShip.setText(game.getPlayer().getShip().getShipType().toString());
     }
 
     public void exitShipyardPressed(View view) {

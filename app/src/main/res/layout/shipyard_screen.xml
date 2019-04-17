@@ -123,7 +123,19 @@
         android:textColor="@android:color/white"
         android:onClick="exitShipyardPressed"/>
     <TextView
-        android:id="@+id/buyNewShipText"
+    android:id="@+id/buyNewShipText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/currShipText"
+    android:layout_marginTop="5dp"
+    android:paddingLeft="50dp"
+    android:paddingTop="5dp"
+    android:fontFamily="@font/montserrat"
+    android:text="@string/buy_ship_label"
+    android:textSize="14sp"
+    android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/currShipText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/remainingMoneyText"
@@ -131,7 +143,20 @@
         android:paddingLeft="50dp"
         android:paddingTop="5dp"
         android:fontFamily="@font/montserrat"
-        android:text="@string/buy_ship_label"
+        android:text="@string/curr_ship_label"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/playerShipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remainingMoneyText"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_toRightOf="@id/currShipText"
+        android:text="@string/curr_ship_label"
         android:textSize="14sp"
         android:textColor="@android:color/white"/>
     <android.support.v7.widget.RecyclerView

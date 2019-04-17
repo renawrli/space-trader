@@ -105,5 +105,6 @@
     <string name="fuel_fine_label">3 Units of Fuel</string>
     <string name="blackhole_statement">Because you ran into a black hole, your trip took longer than expected costing you </string>
     <string name="buy_ship_label">Buy New Ship:</string>
+    <string name="curr_ship_label">Current Ship:</string>
 
 </resources>
