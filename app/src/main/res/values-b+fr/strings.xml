@@ -101,4 +101,13 @@
     <string name="pirate_statement">Un pirate a voler votre marchandises</string>
     <string name="delete_game">Effacer</string>
 
+    <string name="drought_text">Sécheresse</string>
+    <string name="price_change_label">50 crédits</string>
+    <string name="drought_statement">Parce que cette planète traverse une sécheresse, le prix d"'"eau a été augmenté de</string>
+    <string name="blackhole_text">Trou Noir</string>
+    <string name="fuel_fine_label">3 unités de carburant</string>
+    <string name="blackhole_statement">Parce que vous avez rencontré un trou noir, votre voyage a pris plus de temps que prévu, ce qui vous a coûté</string>
+    <string name="buy_ship_label">Acheter un Nouveau Vaisseau:</string>
+    <string name="curr_ship_label">Ton Vaisseau:</string>
+
 </resources>

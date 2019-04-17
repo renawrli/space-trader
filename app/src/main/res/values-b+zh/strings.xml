@@ -103,4 +103,13 @@
     <string name="pirate_statement">一个海盗偷了你的商品</string>
     <string name="delete_game">删掉</string>
 
+    <string name="drought_text">干旱</string>
+    <string name="price_change_label">五十块</string>
+    <string name="drought_statement">因为这个行星有干旱所以水的价增加了</string>
+    <string name="blackhole_text">黑洞</string>
+    <string name="fuel_fine_label">三燃料单位</string>
+    <string name="blackhole_statement">因为你碰到了黑洞，你的旅程时间增加了让你掉</string>
+    <string name="buy_ship_label">买新的船只：</string>
+    <string name="curr_ship_label">你的船只：</string>
+
 </resources>

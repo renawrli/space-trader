@@ -102,4 +102,14 @@
     <string name="pirate_statement">القرصن مسروق اغراداك!</string>
     <string name="delete_game">حذف</string>
 
+
+    <string name="drought_text">جفاف</string>
+    <string name="price_change_label">50 دولار</string>
+    <string name="drought_statement">لأن هذا الكوكب يمر بالجفاف ، زادت أماكن المياه</string>
+    <string name="blackhole_text">ثقب أسود</string>
+    <string name="fuel_fine_label">3 وحدات من الوقود</string>
+    <string name="blackhole_statement">نظرًا لأنك واجهت حفرة سوداء ، فقد استغرقت رحلتك وقتًا أطول مما كان متوقعًا مما كلفك ذلك</string>
+    <string name="buy_ship_label">شراء سفينة جديدة</string>
+    <string name="curr_ship_label">سفينتك</string>
+
 </resources>

@@ -100,6 +100,15 @@
     <string name="pirate_text">PIRATA</string>
     <string name="pirate_statement">Um pirata roubando seus produtos </string>
     <string name="delete_game">Remova o Joga</string>
+
+    <string name = "drought_text"> Seca </ string>
+    <string name = "price_change_label"> 50 créditos </ string>
+    <string name = "drought_statement"> Como este planeta está passando por uma seca, os locais de água aumentaram em </ string>
+    <string name = "blackhole_text"> Buraco Negro </ string>
+    <string name = "fuel_fine_label"> 3 unidades de combustível </ string>
+    <string name = "blackhole_statement"> Como você entrou em um buraco negro, sua viagem demorou mais do que o esperado para custar você </ string>
+    <string name = "buy_ship_label"> Comprar novo navio: </ string>
+    <string name = "curr_ship_label"> Envio atual: </ string>
 </resources>
 
 

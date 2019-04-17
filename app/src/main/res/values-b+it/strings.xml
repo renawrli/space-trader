@@ -99,4 +99,13 @@
     <string name="pirate_statement">Un pirata ha rubato i tuoi beni. Non hai più carico.</string>
     <string name="delete_game">Elimina gioco</string>
 
+    <string name = "drought_text"> Siccità </ string>
+    <string name = "price_change_label"> 50 crediti </ string>
+    <string name = "drought_statement"> Poiché questo pianeta sta attraversando una siccità, i luoghi d"'"acqua sono aumentati di </ string>
+    <string name = "blackhole_text"> Buco nero </ string>
+    <string name = "fuel_fine_label"> 3 unità di carburante </ string>
+    <string name = "blackhole_statement"> Perché ti sei imbattuto in un buco nero, il tuo viaggio ha richiesto più tempo del previsto e ti costava </ string>
+    <string name = "buy_ship_label"> Acquista nuova nave: </ string>
+    <string name = "curr_ship_label"> Nave corrente: </ string>
+
 </resources>

@@ -99,5 +99,13 @@
     <string name="police_statement">Si tienes armas de fuego o narcóticos, debes pagar un</string>
     <string name="fine">Multa de $30.</string>
 
+    <string name="drought_text">Sequía</string>
+    <string name="price_change_label">50 creditos</string>
+    <string name="drought_statement">Debido a que este planeta está sufriendo una sequía, los lugares de agua han aumentado en</string>
+    <string name="blackhole_text">Calabozo</string>
+    <string name="fuel_fine_label">3 unidades de combustible</string>
+    <string name="blackhole_statement">Debido a que se encontró con un agujero negro, su viaje duró más de lo esperado y le costó</string>
+    <string name="buy_ship_label">Comprar Barco:</string>
+    <string name="curr_ship_label">El Barco:</string>
 
 </resources>
