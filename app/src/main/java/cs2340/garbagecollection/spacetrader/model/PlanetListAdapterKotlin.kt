@@ -77,6 +77,16 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
                 val policeAct = Intent(view.context, PoliceActivityKotlin::class.java)
                 view.context.startActivity(policeAct)
                 System.out.println("launching police encounter")
+            } else if (encounterType == 4) {
+
+                val droughtAct = Intent(view.context, DroughtActivity::class.java)
+                view.context.startActivity(droughtAct)
+                System.out.println("launching drought encounter")
+            } else if (encounterType == 5) {
+
+                val blackHoleAct = Intent(view.context, BlackHoleActivity::class.java)
+                view.context.startActivity(blackHoleAct)
+                System.out.println("launching blackhole encounter")
             }
 
 

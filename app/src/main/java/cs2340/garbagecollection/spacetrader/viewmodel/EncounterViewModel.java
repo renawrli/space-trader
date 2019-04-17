@@ -14,8 +14,8 @@ public class EncounterViewModel extends AndroidViewModel {
     private static final int PIRATE_RATE = 5;
     private static final int POLICE_RATE = 15;
     private static final int TRADER_RATE = 20;
-    private static final int DROUGHT_RATE = 8;
-    private static final int BLACKHOLE_RATE = 12;
+    private static final int DROUGHT_RATE = 15;
+    private static final int BLACKHOLE_RATE = 25;
 
     /**
      * returns a number representing encounter type
