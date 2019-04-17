@@ -68,12 +68,19 @@ public class ShipYardViewModel extends AndroidViewModel {
 
     public void buyNewShip(Player p, Ship ship) {
         int newCargoSize = 0;
-        for (TradeGood good: p.getShip().getCargoArr()) {
-            if (newCargoSize < ship.getCargoArr().length) {
+        /*for (TradeGood good: p.getShip().getCargoArr()) {
+            //if (newCargoSize < ship.getCargoArr().length) {
                 ship.addCargo(good);
                 newCargoSize++;
-            }
+            //}
+        }*/
+        int newCargoPos = 0;
+        p.getShip().setSize(0);
+        while (newCargoPos < ship.getCargoArr().length && newCargoPos < p.getShip().getCargoArr().length) {
+           ship.addCargo(p.getShip().getCargoArr()[newCargoPos]);
+           newCargoPos++;
         }
+        //ship.getCargoArr()[0] = p.getShip().getCargoArr()[0];
         p.setCredits(p.getCredits() - ship.getShipType().getCreditCost());
         p.setShip(ship);
     }

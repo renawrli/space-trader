@@ -66,7 +66,7 @@ public class Ship {
     public int getSize() {
         return size;
     }
-
+    public void setSize(int newSize) {size = newSize;}
     public int getFuel() {return fuel; }
 
     public ShipType getShipType() { return shipType; }
