@@ -31,6 +31,8 @@
         <activity android:name=".views.PoliceActivityKotlin" />
         <activity android:name=".views.PirateActivityKotlin" />
         <activity android:name=".views.TraderActivityKotlin" />
+        <activity android:name=".views.BlackHoleActivity" />
+        <activity android:name=".views.DroughtActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

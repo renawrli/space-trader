@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import cs2340.garbagecollection.spacetrader.R
+import cs2340.garbagecollection.spacetrader.viewmodel.EncounterVMK
 import cs2340.garbagecollection.spacetrader.viewmodel.EncounterViewModel
 import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel
 import cs2340.garbagecollection.spacetrader.views.*
@@ -56,7 +57,7 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
             TravelViewModel.travel(TravelViewModel.planetsInRange()[adapterPosition], game.player.ship)
             System.out.println("curr planet is " + game.currLocation.name)
 
-            val encounterType = EncounterViewModel.generateEncounterType()
+            val encounterType = EncounterVMK.generateEncounterType()
             System.out.println("encounter num: $encounterType")
 
             val intent = Intent(view.context, GameScreenActivity::class.java)

@@ -8,12 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import cs2340.garbagecollection.spacetrader.R;
+import cs2340.garbagecollection.spacetrader.viewmodel.BlackHoleVMK;
 import cs2340.garbagecollection.spacetrader.viewmodel.BlackHoleViewModel;
 
 import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.game;
 
 public class BlackHoleActivity extends AppCompatActivity {
-    BlackHoleViewModel blackHoleVM;
+    BlackHoleVMK blackHoleVM;
     TextView banner;
     TextView encounterType;
     TextView encounterStatement;
@@ -25,7 +26,7 @@ public class BlackHoleActivity extends AppCompatActivity {
         setContentView(R.layout.blackhole_encounter);
         Log.d("onCreate", "onCreate: blackhole activity launched");
 
-        blackHoleVM = new BlackHoleViewModel(getApplication());
+        blackHoleVM = new BlackHoleVMK(getApplication());
 
         banner = findViewById(R.id.blackhole_encounter_banner_text);
         encounterType = findViewById(R.id.blackhole_label);
