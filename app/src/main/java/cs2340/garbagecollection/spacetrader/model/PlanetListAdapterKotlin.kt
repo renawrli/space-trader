@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import cs2340.garbagecollection.spacetrader.R
+import cs2340.garbagecollection.spacetrader.viewmodel.EncounterVMK
 import cs2340.garbagecollection.spacetrader.viewmodel.EncounterViewModel
 import cs2340.garbagecollection.spacetrader.viewmodel.TravelViewModel
 import cs2340.garbagecollection.spacetrader.views.*
@@ -56,7 +57,7 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
             TravelViewModel.travel(TravelViewModel.planetsInRange()[adapterPosition], game.player.ship)
             System.out.println("curr planet is " + game.currLocation.name)
 
-            val encounterType = EncounterViewModel.generateEncounterType()
+            val encounterType = EncounterVMK.generateEncounterType()
             System.out.println("encounter num: $encounterType")
 
             val intent = Intent(view.context, GameScreenActivity::class.java)
@@ -74,9 +75,19 @@ class PlanetListAdapterKotlin(planetNames: List<String>, distances: List<Int>, f
                 System.out.println("launching pirate encounter")
             } else if (encounterType == 2) {
 
-                val policeAct = Intent(view.context, PoliceActivity::class.java)
+                val policeAct = Intent(view.context, PoliceActivityKotlin::class.java)
                 view.context.startActivity(policeAct)
                 System.out.println("launching police encounter")
+            } else if (encounterType == 4) {
+
+                val droughtAct = Intent(view.context, DroughtActivity::class.java)
+                view.context.startActivity(droughtAct)
+                System.out.println("launching drought encounter")
+            } else if (encounterType == 5) {
+
+                val blackHoleAct = Intent(view.context, BlackHoleActivity::class.java)
+                view.context.startActivity(blackHoleAct)
+                System.out.println("launching blackhole encounter")
             }
 
 

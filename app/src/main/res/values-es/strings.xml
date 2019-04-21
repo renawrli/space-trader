@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="not_enough_money_toast">Fondos insuficientes</string>
-    <string name="refuel_label">Repostar</string>
-    <string name="exit_planet_button_text">Salida</string>
-    <string name="police_statement">Debido a que tiene armas de fuego o narcóticos, debes pagar un</string>
-    <string name="fine">Multa de $30.</string>
-</resources>

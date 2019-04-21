@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">SpaceTrader</string>
+    <string name="name_label">Nome:</string>
+    <string name="skill_points_label">punti abilità rimanenti</string>
+    <string name="create_player_screen_label">crea un giocatore</string>
+    <string name="pilot_points_label">Pilota:</string>
+    <string name="fighter_points_label">Combattente:</string>
+    <string name="trader_points_label">Commerciante:</string>
+    <string name="engineer_points_label">Ingegnere:</string>
+    <string name="create_player_label">Creare</string>
+    <string name="difficulty_label">Difficolta</string>
+    <string-array name="difficulties">
+        <item>Beginner</item>
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Impossible</item>
+    </string-array>
+    <string name="creating_universe_label">Creando l\"\'\"Universo</string>
+    <string name="market_place_button">Mercato</string>
+    <string name="welcome_to_planet_label">Benvenuto A</string>
+    <string name="travel_button">Viaggio</string>
+    <string name="shipyard_button">Cantiere</string>
+    <string name="planetinfo_button">Informazioni sur Pianeta</string>
+    <string name="sell_button">Vendere</string>
+    <string name="buy_button">Comprare</string>
+    <string name="confirm_transaction_button">Confirmare</string>
+    <string name="cancel_button">Annulla</string>
+    <string name="not_enough_money_toast">fondi insufficienti</string>
+    <string name="not_enough_space_toast">spazio di carico insufficiente</string>
+    <string name="not_enough_goods_toast">articoli insufficienti da vendere</string>
+    <string name="successful_purchase_toast">Acquisto Riucito</string>
+    <string name="successful_sale_toast">Vendere Riucito</string>
+    <string name="how_many">Quanti?</string>
+    <string name="buy_goods_text">Comprare</string>
+    <string name="sell_goods_text">Vendere</string>
+    <string name="open_cargo_text">Carico Aperto</string>
+    <string name="remaining_money_text">Il Denaro</string>
+    <string name="market_text">Mercato</string>
+    <string name="item_text">Articolo</string>
+    <string name="travel_text">Viaggio</string>
+    <string name="price_text">Prezzo</string>
+    <string name="your_cargo_text">Il tuo Carico</string>
+    <string name="exit_button">Uscita</string>
+    <string-array name="goodNames">
+        <item>Acqua</item>
+        <item>Pellicciera</item>
+        <item>Cibo</item>
+        <item>Minerale</item>
+        <item>Giocco</item>
+        <item>Armi</item>
+        <item>Medicina</item>
+        <item>Macchine</item>
+        <item>Narcotici</item>
+        <item>Robot</item>
+    </string-array>
+    <string name="openCargoText">Carico Riamente</string>
+    <string name="remainingMoneyText">Il Denaro:</string>
+    <string name="displayCargoButton">Carico:</string>
+    <string name="universeCreationLabel">Sei al pianeta de Nigeria</string>
+    <string name="marketPlaceButton">Mercato</string>
+    <string name="sellButton">Vendere</string>
+    <string name="buyGoodsText">Comprare</string>
+    <string name="cargoDisplay">Carico</string>
+    <string name="confirmTransactionButton">Confirmare</string>
+    <string name="location_label">Posizione Attuale:</string>
+    <string name="fuel_level_label">"Caruburante: "</string>
+    <string name="choose_planet_label">Pianeti nel Raggio</string>
+    <string name="shipyard_text">Cantiere:</string>
+    <string name="fuel_dialogue_text">Hai Carburante</string>
+    <string name="full_tank_text">un intero serbatoio costa</string>
+    <string name="refuel_label">Rifornimento</string>
+    <string name="target_planet_text">Pianete Bersaglio:</string>
+    <string name="name_text">"Nome: "</string>
+    <string name="tech_level_text">Livello Tecnologico:</string>
+    <string name="government_text">"Governo: "</string>
+    <string name="resources_text">Risorce:</string>
+    <string name="police_level_text">Livello di Polizia:</string>
+    <string name="piracy_level_text">Livello dei Pirati:</string>
+    <string name="warp_text">Viaggio</string>
+    <string name="distance_to_planet_label">Distanza</string>
+    <string name="fuel_cost_label">Carburante Richiesto:</string>
+    <string name="shipyard_fuel_level">Carburante:</string>
+    <string name="add_fuel_units">Carburante:</string>
+    <string name="encounter_label">Hai Incontrato</string>
+    <string name="insufficient_tank_capacity_toast">capacità del serbatoio insufficiente</string>
+    <string name="planet_info_name_label">Nome di Pianeta:</string>
+    <string name="planet_info_government_label">Tipo di Governo:</string>
+    <string name="planet_info_banner">Informazioni sur Pianeta</string>
+    <string name="planet_info_tech_label">Livello Tecnologico:</string>
+    <string name="exit_planet_button_text">Uscita</string>
+    <string name="goods_label">i bene</string>
+    <string name="trader_question">Puoi scegliere di acquistare beni o uscire.</string>
+    <string name="police_statement">Si hai armi da fuoco o narcotici, devi pagare a</string>
+    <string name="fine">$30 tassa</string>
+    <string name="police_text">Polizia</string>
+    <string name="trader_text">"Commerciante "</string>
+    <string name="pirate_text">"Pirati "</string>
+    <string name="pirate_statement">Un pirata ha rubato i tuoi beni. Non hai più carico.</string>
+    <string name="delete_game">Elimina gioco</string>
+
+    <string name = "drought_text"> Siccità </string>
+    <string name = "price_change_label"> 50 crediti </string>
+    <string name = "drought_statement"> Poiché questo pianeta sta attraversando una siccità, i luoghi d"'"acqua sono aumentati di </string>
+    <string name = "blackhole_text"> Buco nero </string>
+    <string name = "fuel_fine_label"> 3 unità di carburante </string>
+    <string name = "blackhole_statement"> Perché ti sei imbattuto in un buco nero, il tuo viaggio ha richiesto più tempo del previsto e ti costava </string>
+    <string name = "buy_ship_label"> Acquista nuova nave: </string>
+    <string name = "curr_ship_label"> Nave corrente: </string>
+
+</resources>

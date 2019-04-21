@@ -1,5 +1,7 @@
 package cs2340.garbagecollection.spacetrader.model;
 
+import java.util.Random;
+
 @SuppressWarnings("ALL")
 public class Planet {
     /** planet's name */
@@ -80,6 +82,14 @@ public class Planet {
         distance += Math.pow((xDistSquared + yDistSquared), 0.5);
 
         return (int) distance;
+    }
+
+    /** changes government type randomly **/
+    public void changeGovernment() {
+        int numGovernments = GovernmentType.values().length;
+        Random rand = new Random();
+        int index = rand.nextInt(numGovernments);
+        government = GovernmentType.values()[index];
     }
 
     /** Getters and Setters */

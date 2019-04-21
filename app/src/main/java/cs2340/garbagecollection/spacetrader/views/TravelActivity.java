@@ -30,6 +30,7 @@ public class TravelActivity extends AppCompatActivity {
     private TextView currLocationText;
     private TextView fuelLevelText;
     private RecyclerView.LayoutManager layoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

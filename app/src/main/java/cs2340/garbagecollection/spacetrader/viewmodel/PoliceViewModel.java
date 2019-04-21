@@ -37,7 +37,7 @@ public class PoliceViewModel extends AndroidViewModel {
         return false;
     }
 
-    /** fines the player if illegal goods are found in their ship
+    /** fines the player
      * @param p**/
     public void finePlayer(Player p) {
         int credits = p.getCredits();

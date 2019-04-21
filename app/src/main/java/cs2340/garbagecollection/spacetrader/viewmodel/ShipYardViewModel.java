@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 
 import cs2340.garbagecollection.spacetrader.model.Player;
 import cs2340.garbagecollection.spacetrader.model.Ship;
+import cs2340.garbagecollection.spacetrader.model.TradeGood;
 
 /**
  * This ViewModel supports activities associated with adding fuel to the ship.
@@ -59,5 +60,28 @@ public class ShipYardViewModel extends AndroidViewModel {
     /** getter **/
     public static int getPricePerFuel() {
         return PRICE_PER_FUEL;
+    }
+
+    public boolean canBuyShip(Player p, int creditsNeeded) {
+        return p.getCredits() >= creditsNeeded;
+    }
+
+    public void buyNewShip(Player p, Ship ship) {
+        int newCargoSize = 0;
+        /*for (TradeGood good: p.getShip().getCargoArr()) {
+            //if (newCargoSize < ship.getCargoArr().length) {
+                ship.addCargo(good);
+                newCargoSize++;
+            //}
+        }*/
+        int newCargoPos = 0;
+        p.getShip().setSize(0);
+        while (newCargoPos < ship.getCargoArr().length && newCargoPos < p.getShip().getCargoArr().length) {
+           ship.addCargo(p.getShip().getCargoArr()[newCargoPos]);
+           newCargoPos++;
+        }
+        //ship.getCargoArr()[0] = p.getShip().getCargoArr()[0];
+        p.setCredits(p.getCredits() - ship.getShipType().getCreditCost());
+        p.setShip(ship);
     }
 }

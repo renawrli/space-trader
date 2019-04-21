@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/general_button"/>
+
+
+    <TextView
+        android:id="@+id/drought_encounter_banner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="12dp"
+        android:text="@string/encounter_label"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/drought_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/drought_text"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/drought_encounter_statement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drought_label"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/drought_statement"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/price_change_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drought_encounter_statement"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/price_change_label"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/leaveDroughtButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPurple"
+        android:onClick="exitDrought"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/exit_button"
+        android:textColor="@android:color/white" />
+
+
+
+</RelativeLayout>

@@ -31,7 +31,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="@string/shipyard_fuel_level"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/currentFuelLevel"
@@ -43,7 +43,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="30dp"
         android:text="0/0"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
 
 
@@ -58,7 +58,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="12dp"
         android:text="@string/full_tank_text"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/fullTankCost"
@@ -71,7 +71,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingTop="12dp"
         android:text="0"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <Button
         android:id="@+id/refuelButton"
@@ -96,7 +96,7 @@
         android:text="0"
         android:paddingLeft="20dp"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/remainingMoneyText"
@@ -109,7 +109,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/remaining_money_text"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/leaveShipyardButton"
@@ -122,5 +122,48 @@
         android:text="@string/exit_button"
         android:textColor="@android:color/white"
         android:onClick="exitShipyardPressed"/>
+    <TextView
+    android:id="@+id/buyNewShipText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/currShipText"
+    android:layout_marginTop="5dp"
+    android:paddingLeft="50dp"
+    android:paddingTop="5dp"
+    android:fontFamily="@font/montserrat"
+    android:text="@string/buy_ship_label"
+    android:textSize="14sp"
+    android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/currShipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remainingMoneyText"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/curr_ship_label"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/playerShipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remainingMoneyText"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:fontFamily="@font/montserrat"
+        android:layout_toRightOf="@id/currShipText"
+        android:text="@string/curr_ship_label"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buyNewShipText"
+        android:id="@+id/shipList"
+        android:layout_above="@+id/leaveShipyardButton"/>
 
 </RelativeLayout>

@@ -64,6 +64,7 @@ public enum TradeGood {
         return basePrice;
     }
 
+
     public int getIPL() {
         return IPL;
     }

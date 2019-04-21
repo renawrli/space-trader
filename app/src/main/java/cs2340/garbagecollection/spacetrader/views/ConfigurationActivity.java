@@ -1,6 +1,8 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -48,6 +50,8 @@ public class ConfigurationActivity extends AppCompatActivity {
     private TextView engineerDisplay;
     private Button createPlayerButton;
 
+    MediaPlayer mySound;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,8 +97,25 @@ public class ConfigurationActivity extends AppCompatActivity {
         fighterDisplay = findViewById(R.id.fighterPointsDisplay);
         remPointsDisplay = findViewById(R.id.remainingPointsDisplay);
         createPlayerButton = findViewById(R.id.createPlayerButton);
+
+        // play custom music
+        mySound = MediaPlayer.create(ConfigurationActivity.this,R.raw.backgroundmusic);
+        mySound.setLooping(true);
+        mySound.start();
+//        context = this;
+//        Button button = (Button) findViewById(R.id.music);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MediaPlayer mp = MediaPlayer.create(context, R.raw.backgroundmusic);
+//                mp.start();
+//            }
+//        });
     }
 
+//    public void playMusic(View view) {
+//        mySound.start();
+//    }
 
     public void createPlayer(View view) {
         ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());

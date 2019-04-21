@@ -83,7 +83,7 @@
     <string name="shipyard_fuel_level">Fuel level: </string>
     <string name="add_fuel_units">Units of fuel:  </string>
     <string name="encounter_label">You have encountered a</string>
-    <string name="insufficient_tank_capacity_toast">Insufficent tank capacity</string>
+    <string name="insufficient_tank_capacity_toast">Insufficient tank capacity</string>
     <string name="planet_info_name_label">Planet name: </string>
     <string name="planet_info_government_label">Government type: </string>
     <string name="planet_info_banner">Planet Information </string>
@@ -91,12 +91,20 @@
     <string name="exit_planet_button_text">Exit </string>
     <string name="goods_label">Goods </string>
     <string name="trader_question">You may choose to buy goods or exit. </string>
-    <string name="police_statement">Because you have firearms or narcotics, you must pay a </string>
+    <string name="police_statement">If you have firearms or narcotics, you must pay a </string>
     <string name="fine">$30 fine. </string>
     <string name="police_text">POLICE </string>
     <string name="trader_text">TRADER </string>
     <string name="pirate_text">PIRATE </string>
     <string name="pirate_statement">A pirate has stolen your goods. You have no more cargo. </string>
     <string name="delete_game">Delete Game</string>
+    <string name="drought_text">Drought</string>
+    <string name="price_change_label">50 credits</string>
+    <string name="drought_statement">Because this planet is going through a drought, water places have increased by </string>
+    <string name="blackhole_text">Black Hole</string>
+    <string name="fuel_fine_label">3 Units of Fuel</string>
+    <string name="blackhole_statement">Because you ran into a black hole, your trip took longer than expected costing you </string>
+    <string name="buy_ship_label">Buy New Ship:</string>
+    <string name="curr_ship_label">Current Ship:</string>
 
 </resources>

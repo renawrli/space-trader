@@ -93,12 +93,21 @@
     <string name="exit_planet_button_text">Sortir</string>
     <string name="goods_label">Marchandises</string>
     <string name="trader_question">Vous pouvez acheter des choses ou sortir.</string>
-    <string name="police_statement">Parce que tu as des narcotiques ou des armes, tu doit payer un </string>
+    <string name="police_statement">Si tu as des narcotiques ou des armes, tu doit payer un </string>
     <string name="fine">$30 amaende. </string>
     <string name="police_text">POLICE </string>
     <string name="trader_text">COMERÇANT </string>
     <string name="pirate_text">PIRATE</string>
     <string name="pirate_statement">Un pirate a voler votre marchandises</string>
     <string name="delete_game">Effacer</string>
+
+    <string name="drought_text">Sécheresse</string>
+    <string name="price_change_label">50 crédits</string>
+    <string name="drought_statement">Parce que cette planète traverse une sécheresse, le prix d"'"eau a été augmenté de</string>
+    <string name="blackhole_text">Trou Noir</string>
+    <string name="fuel_fine_label">3 unités de carburant</string>
+    <string name="blackhole_statement">Parce que vous avez rencontré un trou noir, votre voyage a pris plus de temps que prévu, ce qui vous a coûté</string>
+    <string name="buy_ship_label">Acheter un Nouveau Vaisseau:</string>
+    <string name="curr_ship_label">Ton Vaisseau:</string>
 
 </resources>
