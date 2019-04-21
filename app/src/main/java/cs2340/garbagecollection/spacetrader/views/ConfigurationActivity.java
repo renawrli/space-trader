@@ -102,20 +102,13 @@ public class ConfigurationActivity extends AppCompatActivity {
         mySound = MediaPlayer.create(ConfigurationActivity.this,R.raw.backgroundmusic);
         mySound.setLooping(true);
         mySound.start();
-//        context = this;
-//        Button button = (Button) findViewById(R.id.music);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                MediaPlayer mp = MediaPlayer.create(context, R.raw.backgroundmusic);
-//                mp.start();
-//            }
-//        });
     }
 
-//    public void playMusic(View view) {
-//        mySound.start();
-//    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mySound.release();
+    }
 
     public void createPlayer(View view) {
         ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());

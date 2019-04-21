@@ -1,6 +1,7 @@
 package cs2340.garbagecollection.spacetrader.views;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,6 +32,8 @@ public class TravelActivity extends AppCompatActivity {
     private TextView fuelLevelText;
     private RecyclerView.LayoutManager layoutManager;
 
+    MediaPlayer mySound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +42,25 @@ public class TravelActivity extends AppCompatActivity {
         reachablePlanets = findViewById(R.id.reachablePlanets);
         currLocationText = findViewById(R.id.locationLabel);
         fuelLevelText = findViewById(R.id.fuelLevelLabel);
+
+        // custom music
+        mySound = MediaPlayer.create(TravelActivity.this,R.raw.backgroundmusic);
+        mySound.setLooping(true);
+        mySound.start();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySound.release();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mySound.release();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();

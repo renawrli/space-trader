@@ -2,6 +2,7 @@ package cs2340.garbagecollection.spacetrader.views;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,6 +21,8 @@ public class PlanetInfoActivity extends AppCompatActivity {
     TextView governmentDisplay;
     TextView techDisplay;
 
+    MediaPlayer mySound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,17 @@ public class PlanetInfoActivity extends AppCompatActivity {
         techDisplay = findViewById(R.id.planet_tech_displayed);
 
         updateTextViews();
+
+        // custom music
+        mySound = MediaPlayer.create(PlanetInfoActivity.this,R.raw.backgroundmusic);
+        mySound.setLooping(true);
+        mySound.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySound.release();
     }
 
     public void updateTextViews() {

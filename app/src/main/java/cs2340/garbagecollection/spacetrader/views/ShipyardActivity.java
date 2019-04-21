@@ -1,6 +1,7 @@
 package cs2340.garbagecollection.spacetrader.views;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,6 +34,8 @@ public class ShipyardActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
 
+    MediaPlayer mySound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +62,17 @@ public class ShipyardActivity extends AppCompatActivity {
         recyclerView.setAdapter(new ShipListAdapter(shipNames, goodPriceList, this, shipyardVM));
 
         updateTextViews();
+
+        // custom music
+        mySound = MediaPlayer.create(ShipyardActivity.this,R.raw.backgroundmusic);
+        mySound.setLooping(true);
+        mySound.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySound.release();
     }
 
     @Override

@@ -1,6 +1,7 @@
 package cs2340.garbagecollection.spacetrader.views;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,6 +34,7 @@ public class MarketSellActivity extends AppCompatActivity {
     private TextView cargoDisplay;
     private MarketViewModelKotlin marketViewModelKotlin;
 
+    MediaPlayer mySound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +80,16 @@ public class MarketSellActivity extends AppCompatActivity {
         cargoRecyclerView.setAdapter(new CargoListAdapterKotlin(translatedCargoList, numGoods));
 
         updateTextViews();
+        // custom music
+        mySound = MediaPlayer.create(MarketSellActivity.this,R.raw.backgroundmusic);
+        mySound.setLooping(true);
+        mySound.start();
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySound.release();
     }
     @Override
     protected void onResume() {

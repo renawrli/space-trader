@@ -3,6 +3,7 @@ package cs2340.garbagecollection.spacetrader.views;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,7 @@ import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.g
 public class GameScreenActivity extends AppCompatActivity {
     TextView welcomeText;
     Planet currentPlanet = game.getCurrLocation();
+    MediaPlayer mySound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,23 @@ public class GameScreenActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        // custom music
+        mySound = MediaPlayer.create(GameScreenActivity.this,R.raw.backgroundmusic);
+        mySound.setLooping(true);
+        mySound.start();
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySound.release();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mySound.release();
     }
 
     public void toMarket(View view) {
