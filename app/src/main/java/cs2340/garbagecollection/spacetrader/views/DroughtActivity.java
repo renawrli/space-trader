@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -21,6 +22,8 @@ public class DroughtActivity extends AppCompatActivity {
     TextView encounterStatement;
     Button exitButton;
 
+    MediaPlayer mySound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,10 @@ public class DroughtActivity extends AppCompatActivity {
         encounterType = findViewById(R.id.drought_label);
         encounterStatement = findViewById(R.id.drought_encounter_statement);
         exitButton = findViewById(R.id.leaveDroughtButton);
+
+        // custom music
+        mySound = MediaPlayer.create(DroughtActivity.this,R.raw.howcouldthishappendrought);
+        mySound.start();
 
     }
 

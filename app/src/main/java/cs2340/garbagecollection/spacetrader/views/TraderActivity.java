@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,7 +29,7 @@ public class TraderActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-
+    MediaPlayer mySound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,9 @@ public class TraderActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(new MarketListAdapterBuy(goodNamesListTranslated, goodPriceList, this));
+        // custom music
+        mySound = MediaPlayer.create(TraderActivity.this,R.raw.noteverydaytrader);
+        mySound.start();
     }
 
     public void exitTrader(View view) {

@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -20,6 +21,8 @@ public class BlackHoleActivity extends AppCompatActivity {
     TextView encounterStatement;
     Button exitButton;
 
+    MediaPlayer mySound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,10 @@ public class BlackHoleActivity extends AppCompatActivity {
         encounterType = findViewById(R.id.blackhole_label);
         encounterStatement = findViewById(R.id.blackhole_encounter_statement);
         exitButton = findViewById(R.id.leaveBlackHoleButton);
+
+        // custom music
+        mySound = MediaPlayer.create(BlackHoleActivity.this,R.raw.relaxxxxxblackhole);
+        mySound.start();
 
     }
 

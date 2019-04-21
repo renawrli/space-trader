@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -19,6 +20,7 @@ public class PirateActivity extends AppCompatActivity {
     TextView encounterStatement;
     Button exitButton;
 
+    MediaPlayer mySound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,9 @@ public class PirateActivity extends AppCompatActivity {
         pirateVM = new PirateViewModel(getApplication());
 
         Log.d("onCreate", "onCreate: pirate encounter, goods stolen");
-
+        // custom music
+        mySound = MediaPlayer.create(PirateActivity.this,R.raw.illkillyoupirate);
+        mySound.start();
     }
 
     public void exitPirate(View view) {

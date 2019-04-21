@@ -1,5 +1,6 @@
 package cs2340.garbagecollection.spacetrader.views;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -19,6 +20,7 @@ public class PoliceActivity extends AppCompatActivity {
     TextView moneyTextView;
     Button exitButton;
 
+    MediaPlayer mySound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,9 @@ public class PoliceActivity extends AppCompatActivity {
         exitButton = findViewById(R.id.leavePoliceButton);
 
         moneyTextView.setText(game.getPlayer().getCredits()+"");
+        // custom music
+        mySound = MediaPlayer.create(PoliceActivity.this,R.raw.thataintitpolice);
+        mySound.start();
     }
 
 

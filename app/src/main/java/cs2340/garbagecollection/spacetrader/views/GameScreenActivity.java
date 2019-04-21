@@ -22,6 +22,7 @@ import static cs2340.garbagecollection.spacetrader.views.ConfigurationActivity.g
 public class GameScreenActivity extends AppCompatActivity {
     TextView welcomeText;
     Planet currentPlanet = game.getCurrLocation();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
