@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="ltr" >
+    android:layoutDirection="ltr"
+    android:background="@drawable/black_hole_encounter">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -32,7 +33,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/blackhole_text"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/blackhole_encounter_statement"
@@ -45,7 +46,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/blackhole_statement"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/price_change_label"
@@ -57,7 +58,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/fuel_fine_label"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/leaveBlackHoleButton"
