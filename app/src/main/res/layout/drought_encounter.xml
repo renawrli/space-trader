@@ -28,37 +28,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:paddingTop="15dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
+        android:paddingTop="15dp"
         android:text="@string/drought_text"
+        android:textColor="@android:color/white"
         android:textSize="23sp"
-        android:textColor="@android:color/white"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/drought_encounter_statement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/drought_label"
-        android:paddingLeft="40dp"
-        android:paddingTop="15dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
         android:text="@string/drought_statement"
+        android:textColor="@android:color/white"
         android:textSize="23sp"
-        android:textColor="@android:color/white"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/price_change_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/drought_encounter_statement"
-        android:paddingTop="10dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
+        android:paddingTop="10dp"
         android:text="@string/price_change_label"
+        android:textColor="@android:color/white"
         android:textSize="23sp"
-        android:textColor="@android:color/white"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/leaveDroughtButton"
