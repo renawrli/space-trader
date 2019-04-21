@@ -33,7 +33,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/police_text"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/police_encounter_statement"
@@ -46,7 +46,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/police_statement"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/fine_label"
@@ -58,7 +58,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/fine"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/currentMoneyText"
@@ -68,7 +68,7 @@
         android:paddingLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:text="@string/remaining_money_text"
         android:fontFamily="@font/montserrat"/>
 
@@ -95,7 +95,7 @@
         android:fontFamily="@font/montserrat"
         android:text="0"
         android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
 
 
