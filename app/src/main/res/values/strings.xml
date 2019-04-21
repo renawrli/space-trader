@@ -100,7 +100,7 @@
     <string name="delete_game">Delete Game</string>
     <string name="drought_text">Drought</string>
     <string name="price_change_label">50 credits</string>
-    <string name="drought_statement">Because this planet is going through a drought, water places have increased by </string>
+    <string name="drought_statement">Because this planet is going through a drought, water prices have increased by </string>
     <string name="blackhole_text">Black Hole</string>
     <string name="fuel_fine_label">3 Units of Fuel</string>
     <string name="blackhole_statement">Because you ran into a black hole, your trip took longer than expected costing you </string>
