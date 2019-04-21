@@ -47,7 +47,9 @@ public class DroughtActivity extends AppCompatActivity {
 
     public void exitDrought(View view) {
         //insert method to increase water price
-        int waterPrice = marketVM.calcPrice(TradeGood.WATER, game.getCurrLocation() );
+        int waterPrice = marketVM.calcPrice(TradeGood.WATER, game.getCurrLocation()) ;
+        waterPrice += 50;
+
         finish();
     }
 }
