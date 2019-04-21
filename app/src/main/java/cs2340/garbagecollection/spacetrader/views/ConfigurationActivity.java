@@ -29,7 +29,7 @@ import cs2340.garbagecollection.spacetrader.model.Game;
 
 
 public class ConfigurationActivity extends AppCompatActivity {
-    private static final int MAX_POINTS = 16;
+    private static int MAX_POINTS = 16;
     private int remPoints = MAX_POINTS;
 
     private Player player;
@@ -113,34 +113,40 @@ public class ConfigurationActivity extends AppCompatActivity {
     public void createPlayer(View view) {
         ConfigurationViewModel configVM = new ConfigurationViewModel(getApplication());
         playerName = nameField.getText().toString();
+        Difficulty difficulty = Difficulty.EASY;
+        String[] diffs = getResources().getStringArray(R.array.difficulties);
+        String selDif = difficultySpinner.getSelectedItem().toString();
+        int saveIn = 0;
+        for (int i = 0; i < diffs.length; i++) {
+            if (selDif.equals(diffs[i])) {
+                saveIn = i;
+            }
+        }
+        difficulty = Difficulty.values()[saveIn];
+        Difficulty gameDifficulty = difficulty;
         // prints directions to user if invalid data is entered
         if (configVM.invalidName(playerName)) {
             Toast.makeText(ConfigurationActivity.this, "Please enter a name",
                     Toast.LENGTH_SHORT).show();
         }
-        if (configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
+        if (configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints, gameDifficulty)) {
             Toast.makeText(ConfigurationActivity.this, "Please use all points",
                     Toast.LENGTH_SHORT).show();
         }
-        if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)) {
+        if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints, gameDifficulty)) {
             Toast.makeText(ConfigurationActivity.this, "You used too many points",
                     Toast.LENGTH_SHORT).show();
         }
         // resets screen if any invalid data is entered
-        if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints)
-                || configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints)
+        if (configVM.pointsTooHigh(pilotPoints, fighterPoints, traderPoints, engineerPoints, gameDifficulty)
+                || configVM.pointsTooLow(pilotPoints, fighterPoints, traderPoints, engineerPoints, gameDifficulty)
                 || configVM.invalidName(playerName)) {
             resetScreen();
         } else {
             // Create player and Game
             player = configVM.createPlayer(playerName, pilotPoints, fighterPoints, traderPoints,
                     engineerPoints);
-            Difficulty difficulty = Difficulty.EASY; //
-            for (Difficulty dif : Difficulty.values()) {
-                if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))
-                    difficulty = dif;
-            }
-            Difficulty gameDifficulty = difficulty;
+
             game = configVM.createGame(gameDifficulty, player);
             Intent intent = new Intent(this, GameScreenActivity.class);
             this.finish();
@@ -167,11 +173,54 @@ public class ConfigurationActivity extends AppCompatActivity {
     }
 
     private void updateDisplays() {
+        Difficulty difficulty = Difficulty.EASY;
+        String[] diffs = getResources().getStringArray(R.array.difficulties);
+        String selDif = difficultySpinner.getSelectedItem().toString();
+        int saveIn = 0;
+        for (int i = 0; i < diffs.length; i++) {
+            if (selDif.equals(diffs[i])) {
+                saveIn = i;
+            }
+        }
+        difficulty = Difficulty.values()[saveIn];
+        /*for (Difficulty dif : Difficulty.values()) {
+            if (dif.getDifficulty().equals(difficultySpinner.getSelectedItem()))
+                difficulty = dif;
+        }*/
+        System.out.println("Sel dif is" + selDif);
+        System.out.println("pre if is " + difficulty);
+        if (difficulty.equals(Difficulty.NORMAL)) {
+            System.out.println(difficulty);
+            System.out.println("Enter Normal");
+           MAX_POINTS = 16;
+           remPoints = MAX_POINTS - fighterPoints - traderPoints - engineerPoints - pilotPoints;
+        } else if (difficulty.equals(Difficulty.BEGINNER)) {
+            System.out.println("Enter Beginner");
+            System.out.println(difficulty);
+            MAX_POINTS = 26;
+            remPoints = MAX_POINTS - fighterPoints - traderPoints - engineerPoints - pilotPoints;
+        } else if (difficulty.equals(Difficulty.EASY)) {
+            System.out.println("Enter Easy");
+            System.out.println(difficulty);
+            MAX_POINTS = 20;
+            remPoints = MAX_POINTS - fighterPoints - traderPoints - engineerPoints - pilotPoints;
+        } else if (difficulty.equals(Difficulty.HARD)) {
+            System.out.println("Enter Hard");
+            System.out.println(difficulty);
+            MAX_POINTS = 10;
+            remPoints = MAX_POINTS - fighterPoints - traderPoints - engineerPoints - pilotPoints;
+        } else {
+            System.out.println("Enter Impossible");
+            System.out.println(difficulty);
+            MAX_POINTS = 5;
+            remPoints = MAX_POINTS - fighterPoints - traderPoints - engineerPoints - pilotPoints;
+        }
         pDisplay.setText(pilotPoints + "");
         engineerDisplay.setText(engineerPoints + "");
         traderDisplay.setText(traderPoints + "");
         fighterDisplay.setText(fighterPoints + "");
         remPointsDisplay.setText(remPoints + "");
+
     }
 
     public void decFighter(View view) {

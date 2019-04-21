@@ -14,7 +14,12 @@ import cs2340.garbagecollection.spacetrader.model.Difficulty;
  * This ViewModel supports activities associated with initially creating the Player
  */
 public class ConfigurationViewModel extends AndroidViewModel {
-    private final int MAX_POINTS = 16;
+    private final int MAX_POINTS_BEGINNER = 26;
+    private final int MAX_POINTS_EASY = 20;
+    private final int MAX_POINTS_MEDIUM = 16;
+    private final int MAX_POINTS_HARD = 10;
+    private final int MAX_POINTS_IMPOSSIBLE = 5;
+
 
     public ConfigurationViewModel (@NonNull Application application) {
         super(application);
@@ -25,8 +30,18 @@ public class ConfigurationViewModel extends AndroidViewModel {
      * @param fighterPts
      * @param traderPts
      * @param engineerPts**/
-    public boolean pointsTooHigh(int pilotPts, int fighterPts, int traderPts, int engineerPts) {
-        return (pilotPts + fighterPts + traderPts + engineerPts) > MAX_POINTS;
+    public boolean pointsTooHigh(int pilotPts, int fighterPts, int traderPts, int engineerPts, Difficulty difficulty) {
+        if (difficulty.equals(Difficulty.NORMAL)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) > MAX_POINTS_MEDIUM;
+        } else if (difficulty.equals(Difficulty.BEGINNER)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) > MAX_POINTS_BEGINNER;
+        } else if (difficulty.equals(Difficulty.EASY)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) > MAX_POINTS_EASY;
+        } else if (difficulty.equals(Difficulty.HARD)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) > MAX_POINTS_HARD;
+        } else {
+            return (pilotPts + fighterPts + traderPts + engineerPts) > MAX_POINTS_IMPOSSIBLE;
+        }
     }
 
     /** Checks if a potential Player's skill points are lower than the allowed amount
@@ -34,8 +49,18 @@ public class ConfigurationViewModel extends AndroidViewModel {
      * @param fighterPts
      * @param traderPts
      * @param engineerPts**/
-    public boolean pointsTooLow(int pilotPts, int fighterPts, int traderPts, int engineerPts) {
-        return (pilotPts + fighterPts + traderPts + engineerPts) < MAX_POINTS;
+    public boolean pointsTooLow(int pilotPts, int fighterPts, int traderPts, int engineerPts, Difficulty difficulty) {
+        if (difficulty.equals(Difficulty.NORMAL)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) < MAX_POINTS_MEDIUM;
+        } else if (difficulty.equals(Difficulty.BEGINNER)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) < MAX_POINTS_BEGINNER;
+        } else if (difficulty.equals(Difficulty.EASY)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) < MAX_POINTS_EASY;
+        } else if (difficulty.equals(Difficulty.HARD)) {
+            return (pilotPts + fighterPts + traderPts + engineerPts) < MAX_POINTS_HARD;
+        } else {
+            return (pilotPts + fighterPts + traderPts + engineerPts) < MAX_POINTS_IMPOSSIBLE;
+        }
     }
 
     /** Checks that the player entered a valid name
