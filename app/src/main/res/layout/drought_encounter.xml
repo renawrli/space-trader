@@ -33,7 +33,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/drought_text"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/drought_encounter_statement"
@@ -46,7 +46,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/drought_statement"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/price_change_label"
@@ -58,7 +58,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/price_change_label"
         android:textSize="23sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/leaveDroughtButton"

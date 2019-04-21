@@ -24,6 +24,7 @@ public class GameScreenActivity extends AppCompatActivity {
     TextView welcomeText;
     Planet currentPlanet = game.getCurrLocation();
     MediaPlayer mySound;
+    int audioLength;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,15 +54,23 @@ public class GameScreenActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        mySound.seekTo(audioLength);
+        mySound.start();
+    }
+    @Override
     protected void onPause() {
         super.onPause();
-        mySound.release();
+        mySound.pause();
+        audioLength = mySound.getCurrentPosition();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mySound.release();
+        audioLength = mySound.getCurrentPosition();
     }
 
     public void toMarket(View view) {
